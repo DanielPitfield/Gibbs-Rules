@@ -35,9 +35,14 @@ const Home: NextPage<HomePageProps> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GibbsRule ruleInfo={props.dailyGibbsRule} />
-      <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} />
+      <header>
+        <h1>Gibbs Rules</h1>
+      </header>
 
+      <main>
+        <GibbsRule ruleInfo={props.dailyGibbsRule} />
+        {/* <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} /> */}
+      </main>
     </div>
   );
 }

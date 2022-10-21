@@ -16,11 +16,13 @@ const Quote = (props: QuoteProps) => {
 
   return (
     <div className="quote-wrapper" data-flair={props.flair}>
-      <div className="quote-image">
-        {props.showImage && image ? <Image src={image} alt={props.person} width={350} height={210} layout="fixed" /> : <span>{props.person}</span>}
+      <div className="quote-container">
+        <div className="quote-title">{props.title}</div>
+        <div className="quote-image">
+          {props.showImage && image ? <Image src={image} alt={props.person} width={550} height={270} layout="fixed" /> : <span>{props.person}</span>}
+        </div>
+        <div className="quote-message">{props.message}</div>
       </div>
-      <div className="quote-title">{props.title}</div>
-      <div className="quote-message">{props.message}</div>
     </div>
   );
 };
