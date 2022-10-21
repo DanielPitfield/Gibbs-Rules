@@ -1,17 +1,32 @@
-import type { NextPage } from "next";
+import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import GibbsRule from "../Components/GibbsRule";
 import ZivaMisquote from "../Components/ZivaMisquote";
-import { gibbsRules } from "../Data/GibbsRules";
+import { gibbsRules, GibbsRuleTemplate } from "../Data/GibbsRules";
 import { tonyJokes } from "../Data/TonyJokes";
-import { zivaMisquotes } from "../Data/ZivaMisquotes";
+import { zivaMisquotes, ZivaMisquoteTemplate } from "../Data/ZivaMisquotes";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
 
-const Home: NextPage = () => {
+/** Model of the properties of the component */
+type HomePageProps = { dailyGibbsRule: GibbsRuleTemplate, dailyZivaMisquote: ZivaMisquoteTemplate }
+
+/**
+ * Server-side renders the properties of the component.
+ * @returns Properties of the component.
+ */
+export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
   const dailyGibbsRule = getDeterministicArrayItems(1, gibbsRules)[0];
   const dailyZivaMisquote = getDeterministicArrayItems(1, zivaMisquotes)[0];
-  //const dailyTonyJoke = getDeterministicArrayItems(1, tonyJokes)[0];
 
+  return { props: { dailyGibbsRule, dailyZivaMisquote } }
+}
+
+/**
+ * Renders the home page.
+ * @param props Properties of the home page.
+ * @returns The home page.
+ */
+const Home: NextPage<HomePageProps> = (props) => {
   return (
     <div>
       <Head>
@@ -20,11 +35,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <GibbsRule ruleInfo={dailyGibbsRule}/>
-      <ZivaMisquote misquoteInfo={dailyZivaMisquote}/>
+      <GibbsRule ruleInfo={props.dailyGibbsRule} />
+      <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} />
 
     </div>
   );
-};
+}
 
 export default Home;
