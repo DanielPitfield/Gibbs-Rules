@@ -1,3 +1,3 @@
-export type TonyJoke = {joke: string};
+export type TonyJokeTemplate = { joke: string };
 
 export const tonyJokes = [];

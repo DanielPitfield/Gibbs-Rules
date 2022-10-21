@@ -1,7 +1,7 @@
 // TODO: Add the episode(s) in which the rule was said?
-export type GibbsRule = { number: number; rule: string };
+export type GibbsRuleTemplate = { number: number; rule: string };
 
-export const gibbsRules: GibbsRule[] = [
+export const gibbsRules: GibbsRuleTemplate[] = [
   { number: 1, rule: "Never let suspects sit together." },
   { number: 1, rule: "Never screw over your partner." },
   { number: 2, rule: "Always wear gloves at a crime scene." },
