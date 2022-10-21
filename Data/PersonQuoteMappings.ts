@@ -3,12 +3,12 @@ import { GibbsRule, gibbsRules } from "./GibbsRules";
 import { TonyJoke, tonyJokes } from "./TonyJokes";
 import { ZivaMisquote, zivaMisquotes } from "./ZivaMisquotes";
 
-type QuoteArray = GibbsRule[] | ZivaMisquote[] | TonyJoke[];
+type Quote = GibbsRule | ZivaMisquote | TonyJoke;
 
 type PersonQuoteMapping = {
   person: Person;
   imagePath: string;
-  array: QuoteArray;
+  array: Quote[];
 };
 
 export const PersonQuoteMappings: PersonQuoteMapping[] = [
