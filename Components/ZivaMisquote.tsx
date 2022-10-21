@@ -11,9 +11,9 @@ const ZivaMisquote = (props: ZivaMisquoteProps) => {
       <Quote person={"Ziva"} message={props.misquoteInfo.misquote} showImage={true} />
       {props.misquoteInfo.response && (
         <Quote
-          person={"Tony" /* props.misquoteInfo.response.character */}
+          person={props.misquoteInfo.response.person}
           message={props.misquoteInfo.response.correction}
-          showImage={true}
+          showImage
         />
       )}
     </>
