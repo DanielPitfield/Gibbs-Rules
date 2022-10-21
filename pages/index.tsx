@@ -41,7 +41,7 @@ const Home: NextPage<HomePageProps> = (props) => {
 
       <main>
         <GibbsRule ruleInfo={props.dailyGibbsRule} />
-        {/* <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} /> */}
+        <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} />
       </main>
     </div>
   );

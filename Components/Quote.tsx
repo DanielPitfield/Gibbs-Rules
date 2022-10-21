@@ -5,10 +5,10 @@ export type Person = "Gibbs" | "Ziva" | "Tony";
 
 interface QuoteProps {
   person: Person;
+  title?: string;
+  flair?: "emergency" | "golden";
   showImage: boolean;
   message: string;
-  title: string;
-  flair?: "emergency" | "golden";
 }
 
 const Quote = (props: QuoteProps) => {
@@ -17,9 +17,13 @@ const Quote = (props: QuoteProps) => {
   return (
     <div className="quote-wrapper" data-flair={props.flair}>
       <div className="quote-container">
-        <div className="quote-title">{props.title}</div>
+        {props.title && <div className="quote-title">{props.title}</div>}
         <div className="quote-image">
-          {props.showImage && image ? <Image src={image} alt={props.person} width={550} height={270} layout="fixed" /> : <span>{props.person}</span>}
+          {props.showImage && image ? (
+            <Image src={image} alt={props.person} width={550} height={270} layout="fixed" />
+          ) : (
+            <span>{props.person}</span>
+          )}
         </div>
         <div className="quote-message">{props.message}</div>
       </div>
