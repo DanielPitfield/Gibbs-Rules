@@ -6,8 +6,8 @@ interface GibbsRuleProps {
 }
 
 const GibbsRule = (props: GibbsRuleProps) => {
-    // TODO: Rule number
-  return <Quote person={"Gibbs"} message={props.ruleInfo.rule} showImage={true}></Quote>;
+  // TODO: Rule number
+  return <Quote person={"Gibbs"} message={props.ruleInfo.rule} title={`Rule #${props.ruleInfo.number}`} flair={props.ruleInfo.flair} showImage={true}></Quote>;
 };
 
 export default GibbsRule;

@@ -1,0 +1,12 @@
+.quote-wrapper {
+    &[data-flair="golden"] {
+        .quote-message {
+            color: goldenrod;
+        }
+    }
+    &[data-flair="emergency"] {
+        .quote-message {
+            color: darkred;
+        }
+    }
+}
