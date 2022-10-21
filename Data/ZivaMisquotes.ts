@@ -3,7 +3,12 @@ export type ZivaMisquoteCorrection = { character: string; correction: string };
 
 export type ZivaMisquoteTemplate = {
   misquote: string;
-  response: ZivaMisquoteCorrection;
+  response?: ZivaMisquoteCorrection;
 };
 
-export const zivaMisquotes = [];
+export const zivaMisquotes = [
+  {
+    misquote: "You are a broken tape, Gibbs.",
+    response: { character: "Tony", correction: "Record. A broken record." },
+  },
+];
