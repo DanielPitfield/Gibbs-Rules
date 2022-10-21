@@ -29,7 +29,8 @@ export function getDeterministicArrayItems<T>(
 ): T[] {
   const seedValue = todaySeed();
 
-  const chance = new Chance(seedValue);
+  //const chance = new Chance(seedValue); TODO: Uncomment after testing
+  const chance = new Chance();
 
   return chance.shuffle(array.slice()).slice(0, numItems);
 }
