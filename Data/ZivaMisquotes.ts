@@ -1,9 +1,6 @@
-import { Person } from "../Components/Quote";
+import { ConversationTemplate } from "../Components/Conversation";
 
-export type QuoteTemplate = { person: Person; quote: string };
-export type Conversation = QuoteTemplate[];
-
-export const zivaMisquotes: Conversation[] = [
+export const zivaMisquotes: ConversationTemplate[] = [
   [
     { person: "Ziva", quote: "You are a broken tape, Gibbs." },
     { person: "Tony", quote: "Record. A broken record." },

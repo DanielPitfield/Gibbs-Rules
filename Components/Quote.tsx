@@ -1,7 +1,7 @@
-import { PersonMappings } from "../Data/PersonMappings";
+import { Person, PersonMappings } from "../Data/PersonMappings";
 import Image from "next/image";
 
-export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee";
+export type QuoteTemplate = { person: Person; quote: string };
 
 interface QuoteProps {
   person: Person;
