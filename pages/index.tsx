@@ -5,11 +5,11 @@ import { NavBar } from "../Components/NavBar";
 import ZivaMisquote from "../Components/ZivaMisquote";
 import { gibbsRules, GibbsRuleTemplate } from "../Data/GibbsRules";
 import { tonyJokes } from "../Data/TonyJokes";
-import { zivaMisquotes, ZivaMisquoteTemplate } from "../Data/ZivaMisquotes";
+import { Conversation, zivaMisquotes } from "../Data/ZivaMisquotes";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
 
 /** Model of the properties of the component */
-type HomePageProps = { dailyGibbsRule: GibbsRuleTemplate, dailyZivaMisquote: ZivaMisquoteTemplate }
+type HomePageProps = { dailyGibbsRule: GibbsRuleTemplate; dailyZivaMisquote: Conversation };
 
 /**
  * Server-side renders the properties of the component.
@@ -19,8 +19,8 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
   const dailyGibbsRule = getDeterministicArrayItems(1, gibbsRules)[0];
   const dailyZivaMisquote = getDeterministicArrayItems(1, zivaMisquotes)[0];
 
-  return { props: { dailyGibbsRule, dailyZivaMisquote } }
-}
+  return { props: { dailyGibbsRule, dailyZivaMisquote } };
+};
 
 /**
  * Renders the home page.
@@ -36,16 +36,14 @@ const Home: NextPage<HomePageProps> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <NavBar/>
+      <NavBar />
 
       <main>
         <GibbsRule ruleInfo={props.dailyGibbsRule} />
-        <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} />
+        <ZivaMisquote misquoteConversation={props.dailyZivaMisquote} />
       </main>
-
-      
     </div>
   );
-}
+};
 
 export default Home;

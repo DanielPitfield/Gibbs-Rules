@@ -1,16 +1,23 @@
 import { Person } from "../Components/Quote";
 
-// The name of the character and their response/correction to the misquote
-export type ZivaMisquoteCorrection = { person: Person; correction: string };
+export type QuoteTemplate = { person: Person; quote: string };
+export type Conversation = QuoteTemplate[];
 
-export type ZivaMisquoteTemplate = {
-  misquote: string;
-  response?: ZivaMisquoteCorrection;
-};
-
-export const zivaMisquotes: ZivaMisquoteTemplate[] = [
-  {
-    misquote: "You are a broken tape, Gibbs.",
-    response: { person: "Tony", correction: "Record. A broken record." },
-  },
+export const zivaMisquotes: Conversation[] = [
+  [
+    { person: "Ziva", quote: "You are a broken tape, Gibbs." },
+    { person: "Tony", quote: "Record. A broken record." },
+  ],
+  [
+    { person: "Ziva", quote: "Once in a blue lagoon." },
+    { person: "Tony", quote: "Moon. Once in a blue moon." },
+  ],
+  [
+    { person: "Ziva", quote: "I hit a stone wall." },
+    { person: "Tony", quote: "Brick wall." },
+  ],
+  [
+    { person: "Ziva", quote: "What's wrong McGee? You look like you've seen a goat." },
+    { person: "McGee", quote: "A ghost, Ziva" },
+  ],
 ];
