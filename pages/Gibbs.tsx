@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "../Components/Button";
 import GibbsRule from "../Components/GibbsRule";
 import { NavBar } from "../Components/NavBar";
-import { gibbsRules } from "../Data/GibbsRules";
+import { gibbsRules } from "../Data/QuoteArrays/GibbsRules";
 
 const Gibbs: NextPage = () => {
   const [currentRuleIndex, setCurrentRuleIndex] = useState<number>(0);
@@ -41,7 +41,7 @@ const Gibbs: NextPage = () => {
       <Button mode="default" disabled={previousDisabled} onClick={previousRule}>
         Previous
       </Button>
-      
+
       <Button mode="default" disabled={nextDisabled} onClick={nextRule}>
         Next
       </Button>

@@ -1,15 +1,19 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import GibbsRule from "../Components/GibbsRule";
 import { NavBar } from "../Components/NavBar";
+import GibbsRule from "../Components/GibbsRule";
 import Conversation, { ConversationTemplate } from "../Components/Conversation";
-import { gibbsRules, GibbsRuleTemplate } from "../Data/GibbsRules";
-import { tonyJokes } from "../Data/TonyJokes";
-import { zivaMisquotes } from "../Data/ZivaMisquotes";
+import { gibbsRules, GibbsRuleTemplate } from "../Data/QuoteArrays/GibbsRules";
+import { zivaMisquotes } from "../Data/QuoteArrays/ZivaMisquotes";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
+import { tonyJokes } from "../Data/QuoteArrays/TonyJokes";
 
 /** Model of the properties of the component */
-type HomePageProps = { dailyGibbsRule: GibbsRuleTemplate; dailyZivaMisquote: ConversationTemplate };
+type HomePageProps = {
+  dailyGibbsRule: GibbsRuleTemplate;
+  dailyZivaMisquote: ConversationTemplate;
+  dailyTonyJoke: ConversationTemplate;
+};
 
 /**
  * Server-side renders the properties of the component.
@@ -18,8 +22,9 @@ type HomePageProps = { dailyGibbsRule: GibbsRuleTemplate; dailyZivaMisquote: Con
 export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
   const dailyGibbsRule = getDeterministicArrayItems(1, gibbsRules)[0];
   const dailyZivaMisquote = getDeterministicArrayItems(1, zivaMisquotes)[0];
+  const dailyTonyJoke = getDeterministicArrayItems(1, tonyJokes)[0];
 
-  return { props: { dailyGibbsRule, dailyZivaMisquote } };
+  return { props: { dailyGibbsRule, dailyZivaMisquote, dailyTonyJoke } };
 };
 
 /**
@@ -41,6 +46,7 @@ const Home: NextPage<HomePageProps> = (props) => {
       <main>
         <GibbsRule ruleInfo={props.dailyGibbsRule} />
         <Conversation conversation={props.dailyZivaMisquote} />
+        <Conversation conversation={props.dailyTonyJoke} />
       </main>
     </div>
   );

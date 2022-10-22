@@ -1,4 +1,4 @@
-import { ConversationTemplate } from "../Components/Conversation";
+import { ConversationTemplate } from "../../Components/Conversation";
 
 export const zivaMisquotes: ConversationTemplate[] = [
   [

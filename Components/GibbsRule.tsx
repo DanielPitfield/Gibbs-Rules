@@ -1,4 +1,4 @@
-import { GibbsRuleTemplate } from "../Data/GibbsRules";
+import { GibbsRuleTemplate } from "../Data/QuoteArrays/GibbsRules";
 import Quote from "./Quote";
 
 interface GibbsRuleProps {
