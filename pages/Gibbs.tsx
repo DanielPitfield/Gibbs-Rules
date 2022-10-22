@@ -3,25 +3,25 @@ import Head from "next/head";
 import { useState } from "react";
 import { Button } from "../Components/Button";
 import GibbsRule from "../Components/GibbsRule";
+import { NavBar } from "../Components/NavBar";
 import { gibbsRules } from "../Data/GibbsRules";
 
-const Gibbs: NextPage = (props) => {
+const Gibbs: NextPage = () => {
   const [currentRuleIndex, setCurrentRuleIndex] = useState<number>(0);
 
-  const previousRule = () => {
-    if (currentRuleIndex <= 0) {
-      return;
-    }
+  const previousDisabled = currentRuleIndex <= 0;
+  const nextDisabled = currentRuleIndex >= gibbsRules.length - 1;
 
-    setCurrentRuleIndex(currentRuleIndex - 1);
+  const previousRule = () => {
+    if (!previousDisabled) {
+      setCurrentRuleIndex(currentRuleIndex - 1);
+    }
   };
 
   const nextRule = () => {
-    if (currentRuleIndex === gibbsRules.length - 1) {
-      return;
+    if (!nextDisabled) {
+      setCurrentRuleIndex(currentRuleIndex + 1);
     }
-
-    setCurrentRuleIndex(currentRuleIndex + 1);
   };
 
   return (
@@ -32,18 +32,17 @@ const Gibbs: NextPage = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <h1>Gibbs Rules</h1>
-      </header>
+      <NavBar />
 
       <main>
         <GibbsRule ruleInfo={gibbsRules[currentRuleIndex]} />
       </main>
 
-      <Button mode="accept" onClick={previousRule}>
+      <Button mode="default" disabled={previousDisabled} onClick={previousRule}>
         Previous
       </Button>
-      <Button mode="accept" onClick={nextRule}>
+      
+      <Button mode="default" disabled={nextDisabled} onClick={nextRule}>
         Next
       </Button>
     </div>

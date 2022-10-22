@@ -1,7 +1,7 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
-import Link from "next/link";
 import GibbsRule from "../Components/GibbsRule";
+import { NavBar } from "../Components/NavBar";
 import ZivaMisquote from "../Components/ZivaMisquote";
 import { gibbsRules, GibbsRuleTemplate } from "../Data/GibbsRules";
 import { tonyJokes } from "../Data/TonyJokes";
@@ -36,18 +36,14 @@ const Home: NextPage<HomePageProps> = (props) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header>
-        <h1>Gibbs Rules</h1>
-      </header>
+      <NavBar/>
 
       <main>
         <GibbsRule ruleInfo={props.dailyGibbsRule} />
         <ZivaMisquote misquoteInfo={props.dailyZivaMisquote} />
       </main>
 
-      <Link href="/Gibbs">
-        <a>All Gibbs Rules</a>
-      </Link>
+      
     </div>
   );
 }
