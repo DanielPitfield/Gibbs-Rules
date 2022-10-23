@@ -13,7 +13,7 @@ const GibbsRule = (props: GibbsRuleProps) => {
       flair={props.ruleInfo.flair}
       showImage
       message={props.ruleInfo.rule}
-    ></Quote>
+    />
   );
 };
 
