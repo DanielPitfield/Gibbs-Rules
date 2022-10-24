@@ -15,8 +15,10 @@ const Conversation = (props: ConversationProps) => {
             key={index}
             person={quoteTemplate.person}
             image={quoteTemplate.image}
-            message={quoteTemplate.quote}
             showImage
+            title={quoteTemplate.title}
+            flair={quoteTemplate.flair}
+            message={quoteTemplate.message}
           />
         );
       })}

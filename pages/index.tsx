@@ -1,16 +1,15 @@
 import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { NavBar } from "../Components/NavBar";
-import GibbsRule from "../Components/GibbsRule";
 import Conversation, { ConversationTemplate } from "../Components/Conversation";
-import { gibbsRules, GibbsRuleTemplate } from "../Data/QuoteArrays/GibbsRules";
+import { gibbsRules } from "../Data/QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "../Data/QuoteArrays/ZivaMisquotes";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
 import { tonyJokes } from "../Data/QuoteArrays/TonyJokes";
 
 /** Model of the properties of the component */
 type HomePageProps = {
-  dailyGibbsRule: GibbsRuleTemplate;
+  dailyGibbsRule: ConversationTemplate;
   dailyZivaMisquote: ConversationTemplate;
   dailyTonyJoke: ConversationTemplate;
 };
@@ -44,7 +43,7 @@ const Home: NextPage<HomePageProps> = (props) => {
       <NavBar />
 
       <main>
-        <GibbsRule ruleInfo={props.dailyGibbsRule} />
+        <Conversation conversation={props.dailyGibbsRule} />
         <Conversation conversation={props.dailyZivaMisquote} />
         <Conversation conversation={props.dailyTonyJoke} />
       </main>

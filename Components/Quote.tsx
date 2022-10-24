@@ -1,14 +1,15 @@
 import { Person, PersonMappings } from "../Data/PersonMappings";
 import Image, { StaticImageData } from "next/image";
 
-export type QuoteTemplate = { person: Person; image?: StaticImageData, quote: string };
+export type Flair = "emergency" | "golden";
+export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
 
 interface QuoteProps {
   person: Person;
-  title?: string;
-  flair?: "emergency" | "golden";
   image?: StaticImageData;
   showImage: boolean;
+  title?: string;
+  flair?: Flair;
   message: string;
 }
 
