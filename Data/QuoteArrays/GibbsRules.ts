@@ -1,5 +1,7 @@
+import { StaticImageData } from "next/image";
+
 // TODO: Add the episode(s) in which the rule was said?
-export type GibbsRuleTemplate = { number: number; rule: string, flair?: "emergency" | "golden" };
+export type GibbsRuleTemplate = { number: number; rule: string, image?:StaticImageData, flair?: "emergency" | "golden" };
 
 export const gibbsRules: GibbsRuleTemplate[] = [
   { number: 1, rule: "Never let suspects sit together." },

@@ -6,9 +6,25 @@ import McgeeImg from "./images/mcgee.jpg";
 
 export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee";
 
+export const GibbsImages = {
+  DEFAULT: GibbsImg,
+};
+
+export const ZivaImages = {
+  DEFAULT: ZivaImg,
+};
+
+export const TonyImages = {
+  DEFAULT: TonyImg,
+};
+
+export const McgeeImages = {
+  DEFAULT: McgeeImg,
+};
+
 export const PersonMappings: { person: Person; images: StaticImageData[] }[] = [
-  { person: "Gibbs", images: [GibbsImg] },
-  { person: "Ziva", images: [ZivaImg] },
-  { person: "Tony", images: [TonyImg] },
-  { person: "McGee", images: [McgeeImg] },
+  { person: "Gibbs", images: Object.values(GibbsImages) },
+  { person: "Ziva", images: Object.values(ZivaImages) },
+  { person: "Tony", images: Object.values(TonyImages) },
+  { person: "McGee", images: Object.values(McgeeImages) },
 ];

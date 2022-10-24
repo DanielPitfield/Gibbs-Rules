@@ -1,36 +1,29 @@
 import { Person, PersonMappings } from "../Data/PersonMappings";
 import Image, { StaticImageData } from "next/image";
 
-export type QuoteTemplate = { person: Person; quote: string };
+export type QuoteTemplate = { person: Person; image?: StaticImageData, quote: string };
 
 interface QuoteProps {
   person: Person;
   title?: string;
   flair?: "emergency" | "golden";
-  imageIndex?: number;
+  image?: StaticImageData;
   showImage: boolean;
   message: string;
 }
 
 const Quote = (props: QuoteProps) => {
-  const getImage = (): StaticImageData | null => {
+  const getImage = (): StaticImageData | undefined => {
     if (!props.showImage) {
-      return null;
+      return;
     }
 
-    const imageArray = PersonMappings.find((mapping) => props.person === mapping.person)?.images;
-
-    if (!imageArray) {
-      return null;
+    if (!props.image) {
+      const imageArray = PersonMappings.find((mapping) => props.person === mapping.person)?.images;
+      return imageArray?.[Math.floor(Math.random() * imageArray.length)];
     }
 
-    // props.imageIndex is a valid index
-    if (props.imageIndex && props.imageIndex >= 0 && props.imageIndex <= imageArray.length - 1) {
-      return imageArray[props.imageIndex];
-    }
-
-    // A randomly selected image
-    return imageArray[Math.floor(Math.random() * imageArray.length)];
+    return props.image;
   };
 
   const image = getImage();

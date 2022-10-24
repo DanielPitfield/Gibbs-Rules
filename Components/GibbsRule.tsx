@@ -11,6 +11,7 @@ const GibbsRule = (props: GibbsRuleProps) => {
       person={"Gibbs"}
       title={`Rule #${props.ruleInfo.number}`}
       flair={props.ruleInfo.flair}
+      image={props.ruleInfo.image}
       showImage
       message={props.ruleInfo.rule}
     />
