@@ -19,36 +19,32 @@ body {
   padding: 0;
   background-color: #6b8eaa;
 
-  #__next {
+  header {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     flex-grow: 1;
-    header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      flex-grow: 1;
-      background-color: #496b86;
-      padding: 1em;
-      flex-basis: 8em;
+    background-color: lighten(black, 20%);
+    padding: 1em;
+    flex-basis: 8em;
 
-      h1,
-      h2 {
-        color: white;
-        margin: 0;
-        font-weight: normal;
-      }
-
-      h2 {
-        margin-left: 1em;
-        opacity: 0.5;
-      }
+    h1,
+    h2 {
+      color: white;
+      margin: 0;
+      font-weight: normal;
     }
 
-    main {
-      display: flex;
-      justify-content: space-evenly;
-      flex-grow: 1;
+    h2 {
+      margin-left: 1em;
+      opacity: 0.5;
     }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
   }
 }
