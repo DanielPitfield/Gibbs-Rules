@@ -1,9 +1,27 @@
 .conversation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    flex-grow: 1;
+    box-shadow: 0 0 0.7em #727171;
+
+    &[data-person="Gibbs"] {
+        background-color: #9eb1c5;
+    }
+
+    &[data-person="Ziva"] {
+        background-color: #bba2d1;
+    }
+
+    &[data-person="Tony"] {
+        background-color: #a8af83;
+    }
 
     .conversation-title {
         text-align: center;
         color: white;
-        font-size: 1.7em;
+        font-size: 2.3em;
         font-weight: normal;
         font-style: italic;
     }

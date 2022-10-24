@@ -16,7 +16,7 @@ const converstationTitles: { person: Person; converstationTitle: string }[] = [
 
 const Conversation = (props: ConversationProps) => {
   return (
-    <div className="conversation">
+    <div className="conversation" data-person={props.person}>
       <h2 className="conversation-title">{converstationTitles.find((x) => x.person === props.person)?.converstationTitle}</h2>
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
