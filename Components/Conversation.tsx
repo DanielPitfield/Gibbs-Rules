@@ -8,11 +8,11 @@ interface ConversationProps {
 
 const Conversation = (props: ConversationProps) => {
   return (
-    <>
+    <div className="conversation">
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}
-    </>
+    </div>
   );
 };
 
