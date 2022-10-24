@@ -3,13 +3,11 @@ import Head from "next/head";
 import { NavBar } from "../Components/NavBar";
 import Conversation, { ConversationTemplate } from "../Components/Conversation";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
-import { DailyCharactersInfo, Person } from "../Data/PersonMappings";
-import Settings from "../Components/Settings";
-import { useState } from "react";
+import { DailyCharactersInfo } from "../Data/PersonMappings";
 
 /** Model of the properties of the component */
 type HomePageProps = {
-  dailyQuotes: { person: Person; conversation: ConversationTemplate }[];
+  dailyQuotes: ConversationTemplate[];
 };
 
 /**
@@ -18,10 +16,7 @@ type HomePageProps = {
  */
 export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
   // Get the daily quote for each character
-  const dailyQuotes = DailyCharactersInfo.map((characterInfo) => ({
-    person: characterInfo.person,
-    conversation: getDeterministicArrayItems(1, characterInfo.array)[0],
-  }));
+  const dailyQuotes = DailyCharactersInfo.map((person) => getDeterministicArrayItems(1, person.array)[0]);
 
   return { props: { dailyQuotes: dailyQuotes } };
 };
@@ -32,11 +27,6 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
  * @returns The home page.
  */
 const Home: NextPage<HomePageProps> = (props) => {
-  const [selectedCharacters, setSelectedCharacters] = useState<Person[]>(
-    // By default, all characters are shown
-    DailyCharactersInfo.map((character) => character.person)
-  );
-
   return (
     <div>
       <Head>
@@ -46,15 +36,12 @@ const Home: NextPage<HomePageProps> = (props) => {
       </Head>
 
       <NavBar />
-      <Settings selectedCharacters={selectedCharacters} setSelectedCharacters={setSelectedCharacters} />
 
       <main>
-        {props.dailyQuotes
-          .filter((quote) => selectedCharacters.includes(quote.person))
-          .map((dailyQuote, index) => {
-            // Display the daily quote of each character
-            return <Conversation key={index} conversation={dailyQuote.conversation} />;
-          })}
+        {props.dailyQuotes.map((dailyQuote, index) => {
+          // Display the daily quote of each character
+          return <Conversation key={index} conversation={dailyQuote} />;
+        })}
       </main>
     </div>
   );
