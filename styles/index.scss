@@ -1,6 +1,5 @@
 @import "./quote.scss";
 @import "./conversation.scss";
-@import "./Button.scss";
 
 html {
     display: flex;
@@ -21,14 +20,21 @@ body {
 
     header {
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-grow: 1;
         background-color: #496b86;
         padding: 1em;
 
-        h1 {
+        h1, h2 {
             color: white;
             margin: 0;
             font-weight: normal;
+        }
+
+        h2 {
+            margin-left: 1em;
+            opacity: 0.5;
         }
     }
 
