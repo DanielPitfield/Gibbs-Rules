@@ -3,11 +3,11 @@ import Head from "next/head";
 import { NavBar } from "../Components/NavBar";
 import Conversation, { ConversationTemplate } from "../Components/Conversation";
 import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
-import { DailyCharactersInfo } from "../Data/PersonMappings";
+import { DailyCharactersInfo, Person } from "../Data/PersonMappings";
 
 /** Model of the properties of the component */
 type HomePageProps = {
-  dailyQuotes: ConversationTemplate[];
+  dailyQuotes: { person: Person; conversation: ConversationTemplate }[];
 };
 
 /**
@@ -16,7 +16,10 @@ type HomePageProps = {
  */
 export const getServerSideProps: GetServerSideProps<HomePageProps> = async () => {
   // Get the daily quote for each character
-  const dailyQuotes = DailyCharactersInfo.map((person) => getDeterministicArrayItems(1, person.array)[0]);
+  const dailyQuotes = DailyCharactersInfo.map((characterInfo) => ({
+    person: characterInfo.person,
+    conversation: getDeterministicArrayItems(1, characterInfo.array)[0],
+  }));
 
   return { props: { dailyQuotes: dailyQuotes } };
 };
@@ -40,7 +43,7 @@ const Home: NextPage<HomePageProps> = (props) => {
       <main>
         {props.dailyQuotes.map((dailyQuote, index) => {
           // Display the daily quote of each character
-          return <Conversation key={index} conversation={dailyQuote} />;
+          return <Conversation key={index} conversation={dailyQuote.conversation} person={dailyQuote.person} />;
         })}
       </main>
     </div>
