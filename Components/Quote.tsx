@@ -5,42 +5,43 @@ export type Flair = "emergency" | "golden";
 export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
 
 interface QuoteProps {
-  person: Person;
-  image?: StaticImageData;
+  template: QuoteTemplate;
   showImage: boolean;
-  title?: string;
-  flair?: Flair;
-  message: string;
 }
 
 const Quote = (props: QuoteProps) => {
   const getImage = (): StaticImageData | undefined => {
+    // No image to be shown, early return
     if (!props.showImage) {
       return;
     }
 
-    if (!props.image) {
-      const imageArray = PersonMappings.find((mapping) => props.person === mapping.person)?.images;
+    // If an image is not provided, but an image is to be shown
+    if (!props.template.image) {
+      const imageArray = PersonMappings.find((mapping) => props.template.person === mapping.person)?.images;
+      // Randomly select an image of the person
       return imageArray?.[Math.floor(Math.random() * imageArray.length)];
     }
 
-    return props.image;
+    // Otherwise, use the provided image
+    return props.template.image;
   };
 
   const image = getImage();
 
   return (
-    <div className="quote-wrapper" data-flair={props.flair}>
+    <div className="quote-wrapper" data-flair={props.template.flair}>
       <div className="quote-container">
-        {props.title && <div className="quote-title">{props.title}</div>}
+        {props.template.title && <div className="quote-title">{props.template.title}</div>}
         <div className="quote-image">
           {image ? (
-            <Image src={image} alt={props.person} width={550} height={270} layout="fixed" />
+            <Image src={image} alt={props.template.person} width={550} height={270} layout="fixed" />
           ) : (
-            <span>{props.person}</span>
+            // No image, just show the name of the person within the image container
+            <span>{props.template.person}</span>
           )}
         </div>
-        <div className="quote-message">{props.message}</div>
+        <div className="quote-message">{props.template.message}</div>
       </div>
     </div>
   );

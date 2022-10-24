@@ -10,17 +10,7 @@ const Conversation = (props: ConversationProps) => {
   return (
     <>
       {props.conversation.map((quoteTemplate, index) => {
-        return (
-          <Quote
-            key={index}
-            person={quoteTemplate.person}
-            image={quoteTemplate.image}
-            showImage
-            title={quoteTemplate.title}
-            flair={quoteTemplate.flair}
-            message={quoteTemplate.message}
-          />
-        );
+        return <Quote key={index} template={quoteTemplate} showImage />;
       })}
     </>
   );
