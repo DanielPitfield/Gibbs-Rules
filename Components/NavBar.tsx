@@ -1,10 +1,14 @@
 import React from "react";
 
-export const NavBar = () => {
+interface NavBarProps {
+  formattedDate: string;
+}
+
+export const NavBar = (props: NavBarProps) => {
   return (
     <header>
       <h1>NCIS Daily Quotes</h1>
-      <h2>{new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "2-digit"})}</h2>
+      <h2>{props.formattedDate}</h2>
     </header>
   );
 };
