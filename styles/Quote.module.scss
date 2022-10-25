@@ -1,63 +1,73 @@
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em;
-    width: 450px;
-    background-color: #222;
-    box-shadow: -2px 2px 10px #444;
-    color: #ddd;
-    margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  width: 450px;
+  background-color: #222;
+  box-shadow: -2px 2px 10px #444;
+  color: #ddd;
+  margin: 0.5em;
+
+  .container {
+    border: 0.2em solid #888;
+
+    .title {
+      padding: 0.5em;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .image {
+      display: flex;
+    }
+
+    .message {
+      padding: 0.5em;
+      font-size: 1.3em;
+    }
+  }
+
+  &[data-flair="golden"] {
+    background-color: goldenrod;
+    color: #f8f7bf;
 
     .container {
-        border: 0.2em solid #888;
+      border-color: #444311;
+      mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
+      animation: shimmer 4s infinite;
 
-        .title {
-            padding: 0.5em;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
+      .title {
+        background-color: darken(goldenrod, 10%);
+      }
 
-        .image {
-            display: flex;
-        }
-
-        .message {
-            padding: 0.5em;
-            font-size: 1.3em;
-        }
+      .message {
+        background-color: darken(#daa520aa, 10%);
+      }
     }
+  }
 
-    &[data-flair="golden"] {
-        background-color: goldenrod;
-        color: #f8f7bf;
+  &[data-flair="emergency"] {
+    background-color: darkred;
+    color: #f5c0c0;
 
-        .container {
-            border-color: #444311;
+    .container {
+      border-color: #441111;
+      mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
+      animation: shimmer 4s infinite;
 
-            .title {
-                background-color: darken(goldenrod, 10%);
-            }
+      .title {
+        background-color: darken(darkred, 10%);
+      }
 
-            .message {
-                background-color: darken(#daa520aa, 10%);
-            }
-        }
+      .message {
+        background-color: darken(#8b0000aa, 10%);
+      }
     }
+  }
+}
 
-    &[data-flair="emergency"] {
-        background-color: darkred;
-        color: #f5c0c0;
-
-        .container {
-            border-color: #441111;
-
-            .title {
-                background-color: darken(darkred, 10%);
-            }
-
-            .message {
-                background-color: darken(#8b0000aa, 10%);
-            }
-        }
-    }
+@keyframes shimmer {
+  100% {
+    mask-position: left;
+  }
 }
