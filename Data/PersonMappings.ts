@@ -8,7 +8,7 @@ import { gibbsRules } from "./QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "./QuoteArrays/ZivaMisquotes";
 import { tonyJokes } from "./QuoteArrays/TonyJokes";
 
-export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee" | "Ducky" | "Jenny" | "Fornell" | "Liat" | "Eli";
+export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee" | "Ducky" | "Shannon" | "Jenny" | "Fornell" | "Liat" | "Eli";
 
 export const GibbsImages = {
   DEFAULT: GibbsImg,
