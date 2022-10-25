@@ -9,6 +9,11 @@ import { ZivaImages } from "./Images/Ziva/ZivaImages";
 import { TonyImages } from "./Images/Tony/TonyImages";
 import { McGeeImages } from "./Images/McGee/McGeeImages";
 import { ShannonImages } from "./Images/Shannon/ShannonImages";
+import { DuckyImages } from "./Images/Ducky/DuckyImages";
+import { JennyImages } from "./Images/Jenny/JennyImages";
+import { FornellImages } from "./Images/Fornell/FornellImages";
+import { LiatImages } from "./Images/Liat/LiatImages";
+import { EliImages } from "./Images/Eli/EliImages";
 
 export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee" | "Shannon" | "Ducky" | "Jenny" | "Fornell" | "Liat" | "Eli";
 
@@ -22,11 +27,11 @@ export const PersonMappings: {
   { person: "Tony", images: Object.values(TonyImages), array: tonyJokes },
   { person: "McGee", images: Object.values(McGeeImages), array: [] },
   { person: "Shannon", images: Object.values(ShannonImages), array: [] },
-  { person: "Ducky", images: [], array: [] }, //TODO: Add images
-  { person: "Jenny", images: [], array: [] }, //TODO: Add images
-  { person: "Fornell", images: [], array: [] }, //TODO: Add images
-  { person: "Liat", images: [], array: [] }, //TODO: Add images
-  { person: "Eli", images: [], array: [] }, //TODO: Add images
+  { person: "Ducky", images: Object.values(DuckyImages), array: [] },
+  { person: "Jenny", images: Object.values(JennyImages), array: [] },
+  { person: "Fornell", images: Object.values(FornellImages), array: [] },
+  { person: "Liat", images: Object.values(LiatImages), array: [] },
+  { person: "Eli", images: Object.values(EliImages), array: [] },
 ];
 
 export const DailyCharactersInfo = PersonMappings.filter((person) => person.array.length > 0);
