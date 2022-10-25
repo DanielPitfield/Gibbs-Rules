@@ -31,8 +31,6 @@ const Share = (props: ShareProps) => {
 
   const conversationText = props.conversation.map((quote) => `${quote.person}: "${quote.message}"`).join("\n");
 
-  // TODO: Pinterest sharing, text within an image of the character
-
   return (
     <div className={styles.container}>
       <div className={styles.button}>

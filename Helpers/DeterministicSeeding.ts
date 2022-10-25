@@ -18,15 +18,14 @@ function todaySeed(): number {
 
 /**
  * Gets an item from an array, guaranteed to be deterministic based on the seed.
- * @param seed Seed of the returned item.
  * @param array Array of possible items.
  * @returns Deterministic item from array as per the seed.
  */
 export function getDeterministicArrayItem<T>(array: T[]): T {
   const seedValue = todaySeed();
 
-  //const chance = new Chance(seedValue); TODO: Uncomment after testing
-  const chance = new Chance();
+  // TODO: Add ability to force refresh, show random
+  const chance = new Chance(seedValue);
 
   return chance.shuffle(array)[0];
 }

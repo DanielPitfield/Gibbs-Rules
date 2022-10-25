@@ -1,8 +1,6 @@
 import { ConversationTemplate } from "../../Components/Conversation";
 import { GibbsImages } from "../Images/Gibbs/GibbsImages";
 
-// TODO: Add the episode(s) in which the rule was said?
-
 export const gibbsRules: ConversationTemplate[] = [
   [{ person: "Gibbs", title: "Rule #1", message: "Never let suspects stay together." }],
   [{ person: "Gibbs", title: "Rule #1", message: "Never screw over your partner." }],

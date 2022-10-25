@@ -22,7 +22,11 @@ export const PersonMappings: {
   { person: "Tony", images: Object.values(TonyImages), array: tonyJokes },
   { person: "McGee", images: Object.values(McGeeImages), array: [] },
   { person: "Shannon", images: Object.values(ShannonImages), array: [] },
-  { person: "Ducky", images: [], array: [] },
+  { person: "Ducky", images: [], array: [] }, //TODO: Add images
+  { person: "Jenny", images: [], array: [] }, //TODO: Add images
+  { person: "Fornell", images: [], array: [] }, //TODO: Add images
+  { person: "Liat", images: [], array: [] }, //TODO: Add images
+  { person: "Eli", images: [], array: [] }, //TODO: Add images
 ];
 
 export const DailyCharactersInfo = PersonMappings.filter((person) => person.array.length > 0);
