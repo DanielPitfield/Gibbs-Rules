@@ -2,6 +2,8 @@ import { Person } from "../Data/PersonMappings";
 import Quote, { QuoteTemplate } from "./Quote";
 import Share from "./Share";
 
+import styles from "../styles/Conversation.module.scss";
+
 export type ConversationTemplate = QuoteTemplate[];
 
 interface ConversationProps {
@@ -19,8 +21,8 @@ const Conversation = (props: ConversationProps) => {
   const conversationTitle = converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? "";
 
   return (
-    <div className="conversation" data-person={props.person}>
-      <h2 className="conversation-title">{conversationTitle}</h2>
+    <div className={styles.wrapper} data-person={props.person}>
+      <h2 className={styles.title}>{conversationTitle}</h2>
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}

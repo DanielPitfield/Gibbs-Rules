@@ -1,4 +1,4 @@
-.quote-wrapper {
+.wrapper {
     display: flex;
     flex-direction: column;
     padding: 0.5em;
@@ -8,20 +8,20 @@
     color: #ddd;
     margin: 0.5em;
 
-    .quote-container {
+    .container {
         border: 0.2em solid #888;
 
-        .quote-title {
+        .title {
             padding: 0.5em;
             font-size: 1.5em;
             font-weight: bold;
         }
 
-        .quote-image {
+        .image {
             display: flex;
         }
 
-        .quote-message {
+        .message {
             padding: 0.5em;
             font-size: 1.3em;
         }
@@ -31,14 +31,14 @@
         background-color: goldenrod;
         color: #f8f7bf;
 
-        .quote-container {
+        .container {
             border-color: #444311;
 
-            .quote-title {
+            .title {
                 background-color: darken(goldenrod, 10%);
             }
 
-            .quote-message {
+            .message {
                 background-color: darken(#daa520aa, 10%);
             }
         }
@@ -48,14 +48,14 @@
         background-color: darkred;
         color: #f5c0c0;
 
-        .quote-container {
+        .container {
             border-color: #441111;
 
-            .quote-title {
+            .title {
                 background-color: darken(darkred, 10%);
             }
 
-            .quote-message {
+            .message {
                 background-color: darken(#8b0000aa, 10%);
             }
         }

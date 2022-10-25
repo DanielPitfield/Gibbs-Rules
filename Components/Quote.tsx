@@ -1,6 +1,8 @@
 import { Person, PersonMappings } from "../Data/PersonMappings";
 import Image, { StaticImageData } from "next/image";
 
+import styles from "../styles/Quote.module.scss";
+
 export type Flair = "emergency" | "golden";
 export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
 
@@ -30,10 +32,10 @@ const Quote = (props: QuoteProps) => {
   const image = getImage();
 
   return (
-    <div className="quote-wrapper" data-flair={props.template.flair}>
-      <div className="quote-container">
-        {props.template.title && <div className="quote-title">{props.template.title}</div>}
-        <div className="quote-image">
+    <div className={styles.wrapper} data-flair={props.template.flair}>
+      <div className={styles.container}>
+        {props.template.title && <div className={styles.title}>{props.template.title}</div>}
+        <div className={styles.image}>
           {image ? (
             <Image src={image} alt={props.template.person} width={550} height={270} layout="fixed" />
           ) : (
@@ -41,7 +43,7 @@ const Quote = (props: QuoteProps) => {
             <span>{props.template.person}</span>
           )}
         </div>
-        <div className="quote-message">{props.template.message}</div>
+        <div className={styles.message}>{props.template.message}</div>
       </div>
     </div>
   );

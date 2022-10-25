@@ -1,4 +1,4 @@
-.conversation {
+.wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +18,7 @@
     background-color: #a8af83;
   }
 
-  .conversation-title {
+  .title {
     margin: 0.3em;
     text-align: center;
     color: white;

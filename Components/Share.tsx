@@ -8,6 +8,8 @@ import {
 } from "react-share";
 import { ConversationTemplate } from "./Conversation";
 
+import styles from "../styles/Share.module.scss";
+
 interface ShareProps {
   conversationTitle: string;
   conversation: ConversationTemplate;
@@ -32,20 +34,20 @@ const Share = (props: ShareProps) => {
   // TODO: Pinterest sharing, text within an image of the character
 
   return (
-    <div className="social-media-buttons-container">
-      <div className="social-media-button">
+    <div className={styles.container}>
+      <div className={styles.button}>
         <FacebookShareButton {...commonButtonProps} quote={conversationText} hashtag={DEFAULT_HASHTAG}>
           <FacebookIcon {...commonIconProps} />
         </FacebookShareButton>
       </div>
 
-      <div className="social-media-button">
+      <div className={styles.button}>
         <TwitterShareButton {...commonButtonProps} hashtags={[DEFAULT_HASHTAG, props.conversationTitle]}>
           <TwitterIcon {...commonIconProps} />
         </TwitterShareButton>
       </div>
 
-      <div className="social-media-button">
+      <div className={styles.button}>
         <LinkedinShareButton {...commonButtonProps} summary={conversationText} source={PAGE_URL}>
           <LinkedinIcon {...commonIconProps} />
         </LinkedinShareButton>
