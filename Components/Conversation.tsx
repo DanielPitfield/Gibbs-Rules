@@ -1,11 +1,12 @@
 import { Person } from "../Data/PersonMappings";
 import Quote, { QuoteTemplate } from "./Quote";
+import SocialMediaButtons from "./SocialMediaButtons";
 
 export type ConversationTemplate = QuoteTemplate[];
 
 interface ConversationProps {
-  conversation: ConversationTemplate;
   person: Person;
+  conversation: ConversationTemplate;
 }
 
 const converstationTitles: { person: Person; converstationTitle: string }[] = [
@@ -15,12 +16,17 @@ const converstationTitles: { person: Person; converstationTitle: string }[] = [
 ];
 
 const Conversation = (props: ConversationProps) => {
+  const conversationTitle = converstationTitles.find((x) => x.person === props.person)?.converstationTitle;
+
   return (
     <div className="conversation" data-person={props.person}>
-      <h2 className="conversation-title">{converstationTitles.find((x) => x.person === props.person)?.converstationTitle}</h2>
+      <h2 className="conversation-title">
+        {conversationTitle}
+      </h2>
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}
+      <SocialMediaButtons conversationTitle={conversationTitle ?? ""} conversation={props.conversation} />
     </div>
   );
 };

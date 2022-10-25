@@ -43,7 +43,7 @@ const Home: NextPage<HomePageProps> = (props) => {
       <main>
         {props.dailyQuotes.map((dailyQuote, index) => {
           // Display the daily quote of each character
-          return <Conversation key={index} conversation={dailyQuote.conversation} person={dailyQuote.person} />;
+          return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
         })}
       </main>
     </>
