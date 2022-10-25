@@ -15,7 +15,7 @@ export const zivaMisquotes: ConversationTemplate[] = [
   ],
   [
     { person: "Tony", message: "I don't know. Look at the guy. He's such a..." },
-    { person: "Ziva", message: "Pimp." },
+    { person: "Ziva", message: "Pimp.", flair: "emergency" },
     { person: "Tony", message: "Wimp." },
   ],
   [
@@ -38,19 +38,23 @@ export const zivaMisquotes: ConversationTemplate[] = [
   ],
   [
     { person: "Tony", message: "I'm not getting any reception. How about you?" },
-    { person: "Ziva", message: "No, I'm braless." },
-    { person: "Tony", message: "I noticed that earlier. But on your phone they're bars." },
+    { person: "Ziva", message: "No, I'm braless.", flair: "emergency" },
+    { person: "Tony", message: "I noticed that earlier. But on your phone they're bars.", flair: "emergency" },
     { person: "Ziva", message: "Don't you have anything better to do than correct my English?" },
   ],
   [
     { person: "Ziva", message: "If the... glue sticks?" },
-    { person: "McGee", message: "Show fits." },
+    { person: "McGee", message: "Shoe fits." },
   ],
   [
-    { person: "Ziva", message: "Landis asked me out tonight. I said no. I don't want him to think I'm sleazy." },
+    {
+      person: "Ziva",
+      message: "Landis asked me out tonight. I said no. I don't want him to think I'm sleazy.",
+      flair: "emergency",
+    },
     { person: "Tony", message: "The term is easy." },
     { person: "Ziva", message: "What's the difference?" },
-    { person: "Tony", message: "Mostly the makeup." },
+    { person: "Tony", message: "Mostly the makeup.", flair: "emergency" },
   ],
   [
     { person: "Ziva", message: "Great! He'll be like finding a pin in a haystack." },
@@ -67,17 +71,18 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Tony", message: "Cojones." },
   ],
   [
-    { person: "Ziva", message: "I think Tony is jerking your brain." },
+    { person: "Ziva", message: "I think Tony is jerking your brain.", flair: "emergency" },
     { person: "McGee", message: "Chain? Jerking my chain?" },
   ],
   [
-    { person: "Ziva", message: "This woman is a total turd! A geek, yes?" },
+    { person: "Ziva", message: "This woman is a total turd! A geek, yes?", flair: "emergency" },
     { person: "Tony", message: "The term is nerd." },
   ],
   [
     {
       person: "Ziva",
       message: "And your lawyer is going to try and use her bad taste in men to impregnate her credibility.",
+      flair: "emergency",
     },
     { person: "Tony", message: "Impugn, Ziva!" },
   ],
@@ -135,7 +140,7 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Ziva", message: "I like mine better." },
   ],
   [
-    { person: "Ziva", message: "Tagged their luggage? Oh, that's when Jenny had you under covers." },
+    { person: "Ziva", message: "Tagged their luggage? Oh, that's when Jenny had you under covers.", flair: "emergency" },
     { person: "Tony", message: "Undercover. Not under covers." },
   ],
   [
@@ -146,7 +151,7 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Tony", message: "Um... that's a good point." },
   ],
   [
-    { person: "Ziva", message: "Why haven't you breasted them?" },
+    { person: "Ziva", message: "Why haven't you breasted them?", flair: "emergency" },
     { person: "Tony", message: "She means busted." },
   ],
   [
@@ -193,7 +198,7 @@ export const zivaMisquotes: ConversationTemplate[] = [
     {
       person: "Tony",
       message:
-        "No, I said black ship. Not sheep. Clearly the U.S. Navy is still intent on pulling the wool over the eyes of the American people.",
+        "No, I said black ship. Not sheep. Clearly the U.S. Navy is still intent on pulling the wool over the eyes of the American people.", flair: "golden"
     },
   ],
   [
@@ -205,9 +210,9 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Tony", message: "Is your question, did I wake up on the wrong side of the bed?" },
   ],
   [
-    { person: "Ziva", message: "I would hate to be misunderstood." },
+    { person: "Ziva", message: "I would hate to be misunderstood.", flair: "golden" },
     { person: "Fornell", message: "Does that happen often?" },
-    { person: "Ziva", message: "Once in a blue lagoon" },
+    { person: "Ziva", message: "Once in a blue lagoon", flair: "golden" },
   ],
   [
     { person: "Ziva", message: "Well it would not be the first time a murder tried to throw us up that way." },
@@ -234,7 +239,7 @@ export const zivaMisquotes: ConversationTemplate[] = [
       message: "Are you getting so hot and bothersome because uh, you think I may be having a little fun?",
     },
   ],
-  [{ person: "Ziva", message: "No wonder he's keeping his cards so close to his breasts." }],
+  [{ person: "Ziva", message: "No wonder he's keeping his cards so close to his breasts.", flair: "emergency" }],
   [
     {
       person: "Ziva",
@@ -258,9 +263,9 @@ export const zivaMisquotes: ConversationTemplate[] = [
     },
   ],
   [
-    { person: "Ziva", message: "My citizenship test is coming up, and I wish to pass with swimming colors." },
+    { person: "Ziva", message: "My citizenship test is coming up, and I wish to pass with swimming colors.", flair: "golden"},
     { person: "McGee", message: "Flying colours." },
-    { person: "Ziva", message: " Any colors will do, McGee." },
+    { person: "Ziva", message: "Any colors will do, McGee.", flair: "golden" },
   ],
   [
     { person: "Ziva", message: "I heard about that. The shooter was really in the book suppository." },
@@ -268,8 +273,8 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Ziva", message: "That's what I said." },
   ],
   [
-    { person: "McGee", message: "I have hung a net!" },
-    { person: "Ziva", message: "I do not know who Annette is, or why you are so proud of killing her." },
+    { person: "McGee", message: "I have hung a net!"},
+    { person: "Ziva", message: "I do not know who Annette is, or why you are so proud of killing her.", flair: "golden" },
   ],
   [
     { person: "Ziva", message: "And she just gets off Scotch-free?" },
