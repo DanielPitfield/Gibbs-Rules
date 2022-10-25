@@ -8,7 +8,7 @@ import { gibbsRules } from "./QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "./QuoteArrays/ZivaMisquotes";
 import { tonyJokes } from "./QuoteArrays/TonyJokes";
 
-export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee";
+export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee" | "Ducky" | "Jenny" | "Fornell" | "Liat" | "Eli";
 
 export const GibbsImages = {
   DEFAULT: GibbsImg,
@@ -31,6 +31,7 @@ export const PersonMappings: { person: Person; images: StaticImageData[]; array:
   { person: "Ziva", images: Object.values(ZivaImages), array: zivaMisquotes },
   { person: "Tony", images: Object.values(TonyImages), array: tonyJokes },
   { person: "McGee", images: Object.values(McgeeImages), array: [] },
+  { person: "Ducky", images: [], array: [] },
 ];
 
 export const DailyCharactersInfo = PersonMappings.filter((person) => person.array.length > 0);
