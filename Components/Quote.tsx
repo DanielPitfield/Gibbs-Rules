@@ -21,6 +21,7 @@ const Quote = (props: QuoteProps) => {
     // If an image is not provided, but an image is to be shown
     if (!props.template.image) {
       const imageArray = PersonMappings.find((mapping) => props.template.person === mapping.person)?.images;
+      // TODO: Randomly chose an image from the images which can be randomly selected
       // Randomly select an image of the person
       return imageArray?.[Math.floor(Math.random() * imageArray.length)];
     }

@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../Components/Conversation";
+import { GibbsImages } from "../PersonMappings";
 
 // TODO: Add the episode(s) in which the rule was said?
 
@@ -77,6 +78,6 @@ export const gibbsRules: ConversationTemplate[] = [
   [{ person: "Gibbs", title: "Rule #73", message: "Never meet your heroes." }],
   [{ person: "Gibbs", title: "Rule #91", message: "When you decide to walk away, don't look back." }],
   [{ person: "Gibbs", title: "Rule #99", message: "Never tell Gibbs he's being audited." }],
-  [{ person: "Gibbs", title: "Special Rule", message: "You do what you have to do for family.", flair: "golden" }],
+  [{ person: "Gibbs", /* TODO: image: GibbsImages.SNIPER ,*/ title: "Special Rule", message: "You do what you have to do for family.", flair: "golden" }],
   [{ person: "Shannon", title: "Rule #1 or Rule #3", message: "Never date a lumberjack.", flair: "golden" }],
 ];
