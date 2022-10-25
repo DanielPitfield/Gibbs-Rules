@@ -8,15 +8,24 @@ import {
 } from "react-share";
 import { ConversationTemplate } from "./Conversation";
 
-interface SocialMediaButtonsProps {
+interface ShareProps {
   conversationTitle: string;
   conversation: ConversationTemplate;
 }
 
-const SocialMediaButtons = (props: SocialMediaButtonsProps) => {
+const Share = (props: ShareProps) => {
   const PAGE_URL = "test.com";
-  const DEFAULT_TITLE = "NCIS Daily Quotes";
   const DEFAULT_HASHTAG = "NCISDailyQuotes";
+
+  const commonButtonProps = {
+    url: PAGE_URL,
+    title: "NCIS Daily Quotes",
+  };
+
+  const commonIconProps = {
+    size: 40,
+    borderRadius: 10,
+  };
 
   const conversationText = props.conversation.map((quote) => `${quote.person}: "${quote.message}"`).join("\n");
 
@@ -25,24 +34,24 @@ const SocialMediaButtons = (props: SocialMediaButtonsProps) => {
   return (
     <div className="social-media-buttons-container">
       <div className="social-media-button">
-        <FacebookShareButton url={PAGE_URL} quote={conversationText} hashtag={DEFAULT_HASHTAG}>
-          <FacebookIcon />
+        <FacebookShareButton {...commonButtonProps} quote={conversationText} hashtag={DEFAULT_HASHTAG}>
+          <FacebookIcon {...commonIconProps} />
         </FacebookShareButton>
       </div>
 
       <div className="social-media-button">
-        <TwitterShareButton url={PAGE_URL} title={DEFAULT_TITLE} hashtags={[DEFAULT_HASHTAG, props.conversationTitle]}>
-          <TwitterIcon />
+        <TwitterShareButton {...commonButtonProps} hashtags={[DEFAULT_HASHTAG, props.conversationTitle]}>
+          <TwitterIcon {...commonIconProps} />
         </TwitterShareButton>
       </div>
 
       <div className="social-media-button">
-        <LinkedinShareButton url={PAGE_URL} title={DEFAULT_TITLE} summary={conversationText} source={PAGE_URL}>
-          <LinkedinIcon />
+        <LinkedinShareButton {...commonButtonProps} summary={conversationText} source={PAGE_URL}>
+          <LinkedinIcon {...commonIconProps} />
         </LinkedinShareButton>
       </div>
     </div>
   );
 };
 
-export default SocialMediaButtons;
+export default Share;
