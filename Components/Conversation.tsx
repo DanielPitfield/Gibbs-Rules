@@ -23,11 +23,13 @@ const Conversation = (props: ConversationProps) => {
 
   return (
     <div className={styles.wrapper} data-person={props.person}>
+      <div className={styles.header}>
       <h2 className={styles.title}>{conversationTitle}</h2>
+      <Share conversationTitle={conversationTitle} conversation={props.conversation} />
+      </div>
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}
-      <Share conversationTitle={conversationTitle} conversation={props.conversation} />
     </div>
   );
 };

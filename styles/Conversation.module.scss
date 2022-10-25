@@ -1,6 +1,5 @@
 .wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   padding: 1em 3em;
   flex-grow: 1;
@@ -19,11 +18,17 @@
   }
 
   .title {
-    margin: 0.3em;
-    text-align: center;
+    min-width: 7em;
+    text-align: left;
     color: white;
     font-size: 2.3em;
     font-weight: normal;
+    margin-bottom: 0.4em;
     font-style: italic;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
   }
 }

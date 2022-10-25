@@ -8,6 +8,11 @@ html {
   height: 100%;
 }
 
+#__next {
+  display: flex;
+  flex-grow: 1;
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -19,28 +24,29 @@ body {
   header {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    flex-grow: 1;
+    flex-grow: 0;
     background-color: lighten(black, 20%);
     padding: 1em;
-    flex-basis: 8em;
+    flex-basis: 18em;
+    flex-shrink: 0;
 
     h1,
     h2 {
       color: white;
       margin: 0;
       font-weight: normal;
+      text-align: center;
     }
 
     h2 {
-      margin-left: 1em;
       opacity: 0.5;
     }
   }
 
   main {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
   }
