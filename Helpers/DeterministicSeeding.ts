@@ -17,20 +17,16 @@ function todaySeed(): number {
 }
 
 /**
- * Gets a number of items from an array, guaranteed to be deterministic based on the seed.
- * @param seed Seed of the returned items.
- * @param numItems Number of items to return.
+ * Gets an item from an array, guaranteed to be deterministic based on the seed.
+ * @param seed Seed of the returned item.
  * @param array Array of possible items.
- * @returns Deterministic items from array as per the seed.
+ * @returns Deterministic item from array as per the seed.
  */
-export function getDeterministicArrayItems<T>(
-  numItems: number,
-  array: T[]
-): T[] {
+export function getDeterministicArrayItem<T>(array: T[]): T {
   const seedValue = todaySeed();
 
   //const chance = new Chance(seedValue); TODO: Uncomment after testing
   const chance = new Chance();
 
-  return chance.shuffle(array.slice()).slice(0, numItems);
+  return chance.shuffle(array)[0];
 }

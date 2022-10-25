@@ -2,7 +2,7 @@ import type { GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 import { NavBar } from "../Components/NavBar";
 import Conversation, { ConversationTemplate } from "../Components/Conversation";
-import { getDeterministicArrayItems } from "../Helpers/DeterministicSeeding";
+import { getDeterministicArrayItem } from "../Helpers/DeterministicSeeding";
 import { DailyCharactersInfo, Person } from "../Data/PersonMappings";
 
 /** Model of the properties of the component */
@@ -18,7 +18,7 @@ export const getServerSideProps: GetServerSideProps<HomePageProps> = async () =>
   // Get the daily quote for each character
   const dailyQuotes = DailyCharactersInfo.map((characterInfo) => ({
     person: characterInfo.person,
-    conversation: getDeterministicArrayItems(1, characterInfo.array)[0],
+    conversation: getDeterministicArrayItem(characterInfo.array),
   }));
 
   return { props: { dailyQuotes: dailyQuotes } };
