@@ -8,6 +8,7 @@ import { tonyJokes } from "./QuoteArrays/TonyJokes";
 // TODO: Import all from folder statically?
 import GibbsImg1 from "./images/Gibbs/default.jpg";
 import GibbsImg2 from "./images/Gibbs/sniper.png";
+import GibbsImg3 from "./images/Gibbs/family.jpg"
 
 import ZivaImg1 from "./images/Ziva/default.jpg";
 
@@ -24,6 +25,7 @@ export type Person = "Gibbs" | "Ziva" | "Tony" | "McGee" | "Shannon" | "Ducky" |
 export const GibbsImages = {
   DEFAULT: GibbsImg1,
   SNIPER: GibbsImg2,
+  FAMILY: GibbsImg3,
 };
 
 export const ZivaImages = {

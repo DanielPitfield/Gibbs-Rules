@@ -15,6 +15,7 @@ const converstationTitles: { person: Person; converstationTitle: string }[] = [
   { person: "Gibbs", converstationTitle: "Gibbs Rule" },
   { person: "Ziva", converstationTitle: "Ziva Misquote" },
   { person: "Tony", converstationTitle: "Tony Joke" },
+  { person: "Shannon", converstationTitle: "Shannon Rule" },
 ];
 
 const Conversation = (props: ConversationProps) => {
