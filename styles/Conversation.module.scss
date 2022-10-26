@@ -4,7 +4,12 @@
   align-items: center;
   padding: 1em 3em;
   flex-grow: 1;
-  box-shadow: 0 0 0.7em #727171;
+  border-bottom: 3px solid #4444;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
 
   &[data-person="Gibbs"] {
     background-color: #9eb1c5;
