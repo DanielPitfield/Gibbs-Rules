@@ -35,7 +35,7 @@ const Home: NextPage<HomePageProps> = (props) => {
   return (
     <>
       <Head>
-        <title>NCIS Daily Quotes | {formattedDate}</title>
+        <title>{`NCIS Daily Quotes | ${formattedDate}`}</title>
         <meta name="description" content="Daily NCIS quotes" />
 
         {/* TODO: Update favicon */}
