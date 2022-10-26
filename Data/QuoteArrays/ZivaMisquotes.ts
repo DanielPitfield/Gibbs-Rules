@@ -1,4 +1,4 @@
-import { ConversationTemplate } from "../../Components/Conversation";
+import { ConversationTemplate } from "../../app/Conversation";
 
 export const zivaMisquotes: ConversationTemplate[] = [
   [
@@ -140,7 +140,11 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Ziva", message: "I like mine better." },
   ],
   [
-    { person: "Ziva", message: "Tagged their luggage? Oh, that's when Jenny had you under covers.", flair: "emergency" },
+    {
+      person: "Ziva",
+      message: "Tagged their luggage? Oh, that's when Jenny had you under covers.",
+      flair: "emergency",
+    },
     { person: "Tony", message: "Undercover. Not under covers." },
   ],
   [
@@ -198,7 +202,8 @@ export const zivaMisquotes: ConversationTemplate[] = [
     {
       person: "Tony",
       message:
-        "No, I said black ship. Not sheep. Clearly the U.S. Navy is still intent on pulling the wool over the eyes of the American people.", flair: "golden"
+        "No, I said black ship. Not sheep. Clearly the U.S. Navy is still intent on pulling the wool over the eyes of the American people.",
+      flair: "golden",
     },
   ],
   [
@@ -263,7 +268,11 @@ export const zivaMisquotes: ConversationTemplate[] = [
     },
   ],
   [
-    { person: "Ziva", message: "My citizenship test is coming up, and I wish to pass with swimming colors.", flair: "golden"},
+    {
+      person: "Ziva",
+      message: "My citizenship test is coming up, and I wish to pass with swimming colors.",
+      flair: "golden",
+    },
     { person: "McGee", message: "Flying colours." },
     { person: "Ziva", message: "Any colors will do, McGee.", flair: "golden" },
   ],
@@ -273,8 +282,12 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Ziva", message: "That's what I said." },
   ],
   [
-    { person: "McGee", message: "I have hung a net!"},
-    { person: "Ziva", message: "I do not know who Annette is, or why you are so proud of killing her.", flair: "golden" },
+    { person: "McGee", message: "I have hung a net!" },
+    {
+      person: "Ziva",
+      message: "I do not know who Annette is, or why you are so proud of killing her.",
+      flair: "golden",
+    },
   ],
   [
     { person: "Ziva", message: "And she just gets off Scotch-free?" },

@@ -1,4 +1,4 @@
-import { ConversationTemplate } from "../../Components/Conversation";
+import { ConversationTemplate } from "../../app/Conversation";
 import { GibbsImages } from "../Images/Gibbs/GibbsImages";
 
 export const gibbsRules: ConversationTemplate[] = [

@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image";
 
-import { ConversationTemplate } from "../Components/Conversation";
+import { ConversationTemplate } from "../app/Conversation";
 import { gibbsRules } from "./QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "./QuoteArrays/ZivaMisquotes";
 import { tonyJokes } from "./QuoteArrays/TonyJokes";

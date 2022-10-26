@@ -1,4 +1,4 @@
-import { ConversationTemplate } from "../../Components/Conversation";
+import { ConversationTemplate } from "../../app/Conversation";
 
 export const tonyJokes: ConversationTemplate[] = [
   [
