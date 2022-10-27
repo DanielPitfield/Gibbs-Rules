@@ -1,5 +1,4 @@
 import "../styles/index.scss";
-import Head from "next/head";
 import { NavBar } from "./NavBar";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -7,17 +6,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <title>{`NCIS Daily Quotes | ${formattedDate}`}</title>
         <meta name="description" content="Daily NCIS quotes" />
 
         {/* TODO: Update favicon */}
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
 
-      <NavBar formattedDate={formattedDate} />
-
-      <body>{children}</body>
+      <body>
+        <NavBar formattedDate={formattedDate} />
+        {children}
+      </body>
     </html>
   );
 }
