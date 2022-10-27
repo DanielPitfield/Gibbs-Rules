@@ -1,5 +1,3 @@
-// TODO: Must use pure selectors (contain at least one local class or id)
-
 html {
   display: flex;
   flex-direction: column;
@@ -23,7 +21,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-grow: 1;
     background-color: lighten(black, 20%);
     padding: 1em;
     flex-basis: 4em;
