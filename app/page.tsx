@@ -1,27 +1,41 @@
+"use client";
+
 import { DailyCharactersInfo } from "../Data/PersonMappings";
-import { getDeterministicArrayItem } from "../Helpers/DeterministicSeeding";
-import HomePage from "./HomePage";
+import Conversation from "./Conversation";
+import { getRandomArrayItem } from "../Helpers/DeterministicSeeding";
+import { useState } from "react";
 
-/* TODO: Data fetching
-This is a server component, if the daily quotes need to be fetched...
-Declare an async function within this file:
-SSG using { cache: 'force-cache' } (default)
-SSR using { cache: 'no-store' }
-ISR using { next: { revalidate: 10 } }
-Forward the data as a prop of <HomePage />
-*/
+// Provide all the modules for the server-rendering
+import "../styles/index.scss";
+import "../styles/Conversation.module.scss";
+import "../styles/Quote.module.scss";
+import "../styles/Share.module.scss";
 
-async function getDailyQuotes() {
-  // Get the daily quote for each character
-  return DailyCharactersInfo.map((characterInfo) => ({
-    person: characterInfo.person,
-    conversation: getDeterministicArrayItem(characterInfo.array),
-  }));
-}
+export default function Page() {
+  const [isDeterministic, setIsDeterministic] = useState(true);
+  const [dailyQuotes, setDailyQuotes] = useState(getDailyQuotes(isDeterministic));
 
-export default async function Page() {
-  // Fetch data directly in a Server Component
-  const dailyQuotes = await getDailyQuotes();
-  // Forward fetched data to your Client Component
-  return <HomePage dailyQuotes={dailyQuotes} />;
+  function getDailyQuotes(isDeterministic: boolean) {
+    // Get the daily quote for each character
+    return DailyCharactersInfo.map((characterInfo) => ({
+      person: characterInfo.person,
+      conversation: getRandomArrayItem(characterInfo.array, isDeterministic),
+    }));
+  }
+
+  return (
+    <main>
+      <label>
+        Deterministic
+        <input type="checkbox" checked={isDeterministic} onChange={() => setIsDeterministic(!isDeterministic)} />
+      </label>
+
+      <button onClick={() => setDailyQuotes(getDailyQuotes(isDeterministic))}>Refresh</button>
+
+      {dailyQuotes.map((dailyQuote, index) => {
+        // Display the daily quote of each character
+        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
+      })}
+    </main>
+  );
 }
