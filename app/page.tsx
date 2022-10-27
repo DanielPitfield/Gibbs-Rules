@@ -3,6 +3,7 @@
 import { DailyCharactersInfo } from "../Data/PersonMappings";
 import Conversation from "./Conversation";
 import { getRandomArrayItem } from "../Helpers/DeterministicSeeding";
+import DeterministicSelection from "./DeterministicSelection";
 import { useState } from "react";
 
 // Provide all the modules for the server-rendering
@@ -13,9 +14,9 @@ import "../styles/Share.module.scss";
 
 export default function Page() {
   const [isDeterministic, setIsDeterministic] = useState(true);
-  const [dailyQuotes, setDailyQuotes] = useState(getDailyQuotes(isDeterministic));
+  const [dailyQuotes, setDailyQuotes] = useState(getDailyQuotes());
 
-  function getDailyQuotes(isDeterministic: boolean) {
+  function getDailyQuotes() {
     // Get the daily quote for each character
     return DailyCharactersInfo.map((characterInfo) => ({
       person: characterInfo.person,
@@ -25,12 +26,11 @@ export default function Page() {
 
   return (
     <main>
-      <label>
-        Deterministic
-        <input type="checkbox" checked={isDeterministic} onChange={() => setIsDeterministic(!isDeterministic)} />
-      </label>
-
-      <button onClick={() => setDailyQuotes(getDailyQuotes(isDeterministic))}>Refresh</button>
+      <DeterministicSelection
+        isDeterministic={isDeterministic}
+        setIsDeterministic={setIsDeterministic}
+        onRefresh={() => setDailyQuotes(getDailyQuotes())}
+      />
 
       {dailyQuotes.map((dailyQuote, index) => {
         // Display the daily quote of each character
