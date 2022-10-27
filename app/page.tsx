@@ -1,27 +1,27 @@
-// Client component
-"use client";
-
-import { DailyCharactersInfo, Person } from "../Data/PersonMappings";
+import { DailyCharactersInfo } from "../Data/PersonMappings";
 import { getDeterministicArrayItem } from "../Helpers/DeterministicSeeding";
-import Conversation, { ConversationTemplate } from "./Conversation";
+import HomePage from "./HomePage";
 
-const Page = () => {
-  // Get the daily quote of each character
-  const dailyQuotes: { person: Person; conversation: ConversationTemplate }[] = DailyCharactersInfo.map(
-    (characterInfo) => ({
-      person: characterInfo.person,
-      conversation: getDeterministicArrayItem(characterInfo.array),
-    })
-  );
+/* TODO: Data fetching
+This is a server component, if the daily quotes need to be fetched...
+Declare an async function within this file:
+SSG using { cache: 'force-cache' } (default)
+SSR using { cache: 'no-store' }
+ISR using { next: { revalidate: 10 } }
+Forward the data as a prop of <HomePage />
+*/
 
-  return (
-    <main>
-      {dailyQuotes.map((dailyQuote, index) => {
-        // Display each quote
-        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
-      })}
-    </main>
-  );
-};
+async function getDailyQuotes() {
+  // Get the daily quote for each character
+  return DailyCharactersInfo.map((characterInfo) => ({
+    person: characterInfo.person,
+    conversation: getDeterministicArrayItem(characterInfo.array),
+  }));
+}
 
-export default Page;
+export default async function Page() {
+  // Fetch data directly in a Server Component
+  const dailyQuotes = await getDailyQuotes();
+  // Forward fetched data to your Client Component
+  return <HomePage dailyQuotes={dailyQuotes} />;
+}
