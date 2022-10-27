@@ -40,7 +40,7 @@ const Quote = (props: QuoteProps) => {
         {props.template.title && <div className={styles.title}>{props.template.title}</div>}
         <div className={styles.image}>
           {image ? (
-            <Image src={image} alt={props.template.person} width={550} height={270} />
+            <Image src={image} alt={props.template.person} fill />
           ) : (
             // No image, just show the name of the person within the image container
             <span>{props.template.person}</span>
