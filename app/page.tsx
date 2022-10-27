@@ -1,16 +1,27 @@
-import HomePage from "./HomePage";
+// Client component
+"use client";
 
-/* TODO: Data fetching
-This is a server component, if the daily quotes need to be fetched...
+import { DailyCharactersInfo, Person } from "../Data/PersonMappings";
+import { getDeterministicArrayItem } from "../Helpers/DeterministicSeeding";
+import Conversation, { ConversationTemplate } from "./Conversation";
 
-Declare an async function within this file:
-SSG using { cache: 'force-cache' } (default)
-SSR using { cache: 'no-store' }
-ISR using { next: { revalidate: 10 } }
+const Page = () => {
+  // Get the daily quote of each character
+  const dailyQuotes: { person: Person; conversation: ConversationTemplate }[] = DailyCharactersInfo.map(
+    (characterInfo) => ({
+      person: characterInfo.person,
+      conversation: getDeterministicArrayItem(characterInfo.array),
+    })
+  );
 
-Forward the data as a prop of <HomePage />
-*/
+  return (
+    <main>
+      {dailyQuotes.map((dailyQuote, index) => {
+        // Display each quote
+        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
+      })}
+    </main>
+  );
+};
 
-export default async function Page() {
-  return <HomePage />;
-}
+export default Page;
