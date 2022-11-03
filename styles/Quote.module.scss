@@ -48,6 +48,25 @@
     }
   }
 
+  &[data-flair="iconic"] {
+    background-color: #3f025c;
+    color: #debff8;
+
+    .container {
+      border-color: #8a03c9;
+      mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
+      animation: shimmer 1.5s infinite;
+
+      .title {
+        background-color: darken(#8400c2, 10%);
+      }
+
+      .message {
+        background-color: darken(#8400c2, 10%);
+      }
+    }
+  }
+
   &[data-flair="emergency"] {
     background-color: darkred;
     color: #f5c0c0;
