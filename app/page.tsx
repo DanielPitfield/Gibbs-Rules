@@ -6,11 +6,7 @@ import { getRandomArrayItem } from "../Helpers/DeterministicSeeding";
 import DeterministicSelection from "./DeterministicSelection";
 import { useState } from "react";
 
-// Provide all the modules for the server-rendering
 import "../styles/index.scss";
-import "../styles/Conversation.module.scss";
-import "../styles/Quote.module.scss";
-import "../styles/Share.module.scss";
 
 export default function Page() {
   const [isDeterministic, setIsDeterministic] = useState(true);
