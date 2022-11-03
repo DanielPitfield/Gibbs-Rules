@@ -7,6 +7,7 @@ import { gibbsRules } from "./QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "./QuoteArrays/ZivaMisquotes";
 import { tonyJokes } from "./QuoteArrays/TonyJokes";
 import { duckyQuotes } from "./QuoteArrays/DuckyQuotes";
+import { abbyQuotes } from "./QuoteArrays/AbbyQuotes";
 
 // Images
 import { GibbsImages } from "./Images/Gibbs/GibbsImages";
@@ -20,12 +21,14 @@ import { FornellImages } from "./Images/Fornell/FornellImages";
 import { LiatImages } from "./Images/Liat/LiatImages";
 import { EliImages } from "./Images/Eli/EliImages";
 import { BodnarImages } from "./Images/Bodnar/BodnarImages";
+import { AbbyImages } from "./Images/Abby/AbbyImages";
 
 export type Person =
   | "Gibbs"
   | "Ziva"
   | "Tony"
   | "McGee"
+  | "Abby"
   | "Shannon"
   | "Ducky"
   | "Jenny"
@@ -46,6 +49,7 @@ export const PersonMappings: PersonMapping[] = [
   { person: "Ziva", images: Object.values(ZivaImages), array: zivaMisquotes, isPermanentDailyCharacter: true },
   { person: "Tony", images: Object.values(TonyImages), array: tonyJokes, isPermanentDailyCharacter: false },
   { person: "McGee", images: Object.values(McGeeImages), array: [], isPermanentDailyCharacter: false },
+  { person: "Abby", images: Object.values(AbbyImages), array: abbyQuotes, isPermanentDailyCharacter: false },
   { person: "Shannon", images: Object.values(ShannonImages), array: [], isPermanentDailyCharacter: false },
   { person: "Ducky", images: Object.values(DuckyImages), array: duckyQuotes, isPermanentDailyCharacter: false },
   { person: "Jenny", images: Object.values(JennyImages), array: [], isPermanentDailyCharacter: false },
