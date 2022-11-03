@@ -39,6 +39,11 @@ body {
     }
   }
 
+  [data-nextjs-scroll-focus-boundary] {
+    display: flex;
+    flex-grow: 1;
+  }
+
   main {
     display: flex;
     justify-content: space-evenly;
