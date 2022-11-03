@@ -11,17 +11,17 @@
     opacity: 1;
   }
 
+  // This colour when anyone other than Gibbs or Ziva
+  &[data-person] {
+    background-color: #a8af83;
+  }
+
   &[data-person="Gibbs"] {
     background-color: #9eb1c5;
   }
 
   &[data-person="Ziva"] {
     background-color: #bba2d1;
-  }
-
-  // TODO: This colour when anyone other than Gibbs or Ziva
-  &[data-person="Tony"] {
-    background-color: #a8af83;
   }
 
   .title {
