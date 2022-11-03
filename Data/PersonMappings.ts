@@ -5,7 +5,7 @@ import { ConversationTemplate } from "../app/Conversation";
 // Quote arrays
 import { gibbsRules } from "./QuoteArrays/GibbsRules";
 import { zivaMisquotes } from "./QuoteArrays/ZivaMisquotes";
-import { tonyJokes } from "./QuoteArrays/TonyJokes";
+import { tonyQuotes } from "./QuoteArrays/TonyQuotes";
 import { duckyQuotes } from "./QuoteArrays/DuckyQuotes";
 import { abbyQuotes } from "./QuoteArrays/AbbyQuotes";
 import { kateQuotes } from "./QuoteArrays/KateQuotes";
@@ -25,6 +25,7 @@ import { EliImages } from "./Images/Eli/EliImages";
 import { BodnarImages } from "./Images/Bodnar/BodnarImages";
 import { AbbyImages } from "./Images/Abby/AbbyImages";
 import { KateImages } from "./Images/Kate/KateImages";
+import { SaleemImages } from "./Images/Saleem/SaleemImages";
 
 export type Person =
   | "Gibbs"
@@ -39,7 +40,8 @@ export type Person =
   | "Fornell"
   | "Liat"
   | "Eli"
-  | "Bodnar";
+  | "Bodnar"
+  | "Saleem";
 
 export type PersonMapping = {
   person: Person;
@@ -52,7 +54,7 @@ export const PersonMappings: PersonMapping[] = [
   { person: "Gibbs", images: Object.values(GibbsImages), array: gibbsRules, isPermanentDailyCharacter: true },
   { person: "Ziva", images: Object.values(ZivaImages), array: zivaMisquotes, isPermanentDailyCharacter: true },
   { person: "Kate", images: Object.values(KateImages), array: kateQuotes, isPermanentDailyCharacter: false },
-  { person: "Tony", images: Object.values(TonyImages), array: tonyJokes, isPermanentDailyCharacter: false },
+  { person: "Tony", images: Object.values(TonyImages), array: tonyQuotes, isPermanentDailyCharacter: false },
   { person: "McGee", images: Object.values(McGeeImages), array: mcGeeQuotes, isPermanentDailyCharacter: false },
   { person: "Abby", images: Object.values(AbbyImages), array: abbyQuotes, isPermanentDailyCharacter: false },
   { person: "Shannon", images: Object.values(ShannonImages), array: [], isPermanentDailyCharacter: false },
@@ -62,6 +64,7 @@ export const PersonMappings: PersonMapping[] = [
   { person: "Liat", images: Object.values(LiatImages), array: [], isPermanentDailyCharacter: false },
   { person: "Eli", images: Object.values(EliImages), array: [], isPermanentDailyCharacter: false },
   { person: "Bodnar", images: Object.values(BodnarImages), array: [], isPermanentDailyCharacter: false },
+  { person: "Saleem", images: Object.values(SaleemImages), array: [], isPermanentDailyCharacter: false },
 ];
 
 // These characters are always shown every day
