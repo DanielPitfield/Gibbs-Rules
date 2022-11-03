@@ -24,7 +24,7 @@ export const tonyQuotes: ConversationTemplate[] = [
       person: "Tony",
       message:
         "I can't lie and I didn't say I was gonna be the one to kill you. Remember when I told you my boss was a sniper?",
-      flair: /* TODO: Mega-rare flair */ "golden",
+      flair: "golden",
     },
     { person: "Gibbs", image: GibbsImages.SNIPER.image, message: "(* Snipes Saleem in the head *)", flair: "golden" },
     { person: "Tony", message: "Look out!" },
@@ -43,4 +43,5 @@ export const tonyQuotes: ConversationTemplate[] = [
       flair: "golden",
     },
   ],
+  [{person: "Tony", message: "Never bring a knife to a gunfight. James Bond."}]
 ];

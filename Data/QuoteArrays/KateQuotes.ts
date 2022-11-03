@@ -83,4 +83,9 @@ export const kateQuotes: ConversationTemplate[] = [
       flair: "golden",
     },
   ],
+  [
+    { person: "Kate", message: "Damnit Tony, I should just take you home and get you in bed." },
+    { person: "Tony", message: "..." },
+    { person: "Kate", message: "Ok, that didn't come out the way I intended." },
+  ],
 ];
