@@ -1,6 +1,5 @@
 import { Person } from "../Data/PersonMappings";
 import Quote, { QuoteTemplate } from "./Quote";
-import Share from "./Share";
 
 import styles from "../styles/Conversation.module.scss";
 
@@ -27,7 +26,6 @@ const Conversation = (props: ConversationProps) => {
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}
-      <Share conversationTitle={conversationTitle} conversation={props.conversation} />
     </div>
   );
 };
