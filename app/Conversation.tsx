@@ -18,7 +18,7 @@ const converstationTitles: { person: Person; converstationTitle: string }[] = [
 ];
 
 const Conversation = (props: ConversationProps) => {
-  const conversationTitle = converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? "";
+  const conversationTitle = converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? `${props.person} Quote`;
 
   return (
     <div className={styles.wrapper} data-person={props.person}>
