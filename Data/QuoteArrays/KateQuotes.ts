@@ -19,7 +19,7 @@ export const kateQuotes: ConversationTemplate[] = [
     {
       person: "Kate",
       message: "Wow! I'd thought I die before I ever heard a compliment.. (* Kate gets shot in the head *)",
-      flair: "emergency",
+      flair: "iconic",
     },
   ],
   [
