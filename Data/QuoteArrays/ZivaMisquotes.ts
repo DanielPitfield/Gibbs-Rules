@@ -38,8 +38,8 @@ export const zivaMisquotes: ConversationTemplate[] = [
   ],
   [
     { person: "Tony", message: "I'm not getting any reception. How about you?" },
-    { person: "Ziva", message: "No, I'm braless.", flair: "emergency" },
-    { person: "Tony", message: "I noticed that earlier. But on your phone they're bars.", flair: "emergency" },
+    { person: "Ziva", message: "No, I'm bra-less.", flair: "emergency" },
+    { person: "Tony", message: "I noticed that earlier. But on your phone they're *bars.*", flair: "emergency" },
     { person: "Ziva", message: "Don't you have anything better to do than correct my English?" },
   ],
   [

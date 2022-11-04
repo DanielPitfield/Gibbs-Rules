@@ -10,6 +10,7 @@ import { duckyQuotes } from "./QuoteArrays/DuckyQuotes";
 import { abbyQuotes } from "./QuoteArrays/AbbyQuotes";
 import { kateQuotes } from "./QuoteArrays/KateQuotes";
 import { mcGeeQuotes } from "./QuoteArrays/McGeeQuotes";
+import { palmerQuotes } from "./QuoteArrays/PalmerQuotes";
 
 // Images
 import { GibbsImages } from "./Images/Gibbs/GibbsImages";
@@ -26,6 +27,7 @@ import { BodnarImages } from "./Images/Bodnar/BodnarImages";
 import { AbbyImages } from "./Images/Abby/AbbyImages";
 import { KateImages } from "./Images/Kate/KateImages";
 import { SaleemImages } from "./Images/Saleem/SaleemImages";
+import { PalmerImages } from "./Images/Palmer/PalmerImages";
 
 export type Person =
   | "Gibbs"
@@ -36,6 +38,7 @@ export type Person =
   | "Abby"
   | "Shannon"
   | "Ducky"
+  | "Palmer"
   | "Jenny"
   | "Fornell"
   | "Liat"
@@ -59,6 +62,7 @@ export const PersonMappings: PersonMapping[] = [
   { person: "Abby", images: Object.values(AbbyImages), array: abbyQuotes, isPermanentDailyCharacter: false },
   { person: "Shannon", images: Object.values(ShannonImages), array: [], isPermanentDailyCharacter: false },
   { person: "Ducky", images: Object.values(DuckyImages), array: duckyQuotes, isPermanentDailyCharacter: false },
+  { person: "Palmer", images: Object.values(PalmerImages), array: palmerQuotes, isPermanentDailyCharacter: false },
   { person: "Jenny", images: Object.values(JennyImages), array: [], isPermanentDailyCharacter: false },
   { person: "Fornell", images: Object.values(FornellImages), array: [], isPermanentDailyCharacter: false },
   { person: "Liat", images: Object.values(LiatImages), array: [], isPermanentDailyCharacter: false },

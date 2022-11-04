@@ -43,5 +43,65 @@ export const tonyQuotes: ConversationTemplate[] = [
       flair: "golden",
     },
   ],
-  [{person: "Tony", message: "Never bring a knife to a gunfight. James Bond."}]
+  [{ person: "Tony", message: "Never bring a knife to a gunfight. James Bond." }],
+  [
+    { person: "Tony", message: "How can you work with someone for three years and not know they have a kid?" },
+    {
+      person: "Ziva",
+      message: "Just because you work with somebody everyday does not mean that you know *everything* about them.",
+    },
+    {
+      person: "Tony",
+      message: "Really? So I shouldn't know about that tattoo on the inside of your...",
+      flair: "emergency",
+    },
+  ],
+  [
+    { person: "Tony", message: "If things get hairy, just follow my lead." },
+    { person: "Ziva", message: "I don't need a babysitter, Tony, I have been in hundreds of these situations." },
+    { person: "Tony", message: "Never with me. As far as I'm concerned, you're a probie." },
+    {
+      person: "Ziva",
+      message: "I've never had sex with you either - does that mean I'm a virgin?",
+      flair: "emergency",
+    },
+  ],
+  [
+    {
+      person: "Tony",
+      message:
+        "It's like when you bring a date home you want them to like you. You don't introduce them to your weird uncle Jethro till like the fifth date!",
+    },
+    { person: "Gibbs", message: "Since when are you an expert on fifth dates, DiNozzo?" },
+    { person: "Tony", message: "You are very right, boss." },
+  ],
+  [
+    { person: "Gibbs", message: "Tail her. I want you on Ziva's ass." },
+    { person: "Tony", message: "She's not really my type boss.", flair: "emergency" },
+  ],
+  [
+    { person: "Tony", message: "Nice girl, wasn't my type though." },
+    { person: "Ziva", message: "Really? She was breathing." },
+    { person: "Tony", message: "Oh, I have standards, Ziva, otherwise I'd be dating you." },
+  ],
+  [
+    { person: "Tony", message: "That's kinda touching, Gibbs, remembering the day you hired me." },
+    { person: "Gibbs", message: "Yeah, well, it seemed like a good idea at the time.", flair: "golden" },
+  ],
+  [
+    { person: "Tony", message: "Are we fighting?" },
+    { person: "Ziva", message: "If we were you would be on the floor bleeding.", flair: "emergency" },
+    { person: "Tony", message: "Okay, I accept that as a likely outcome." },
+  ],
+  [
+    { person: "Tony", message: "Aren't you hot?" },
+    { person: "Ziva", message: "I've been told that before.", flair: "emergency" },
+    { person: "Tony", message: "I'm talking about temperature." },
+  ],
+  [
+    { person: "Gibbs", message: "You'll do, it's your team now. (* hands Tony his badge *)", flair: "iconic" },
+    { person: "Tony", message: "..." },
+    { person: "Gibbs", message: "Tim, you're a good agent, don't let him tell you otherwise." },
+    { person: "McGee", message: "I won't boss." },
+  ],
 ];
