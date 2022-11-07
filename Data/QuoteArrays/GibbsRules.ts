@@ -107,5 +107,4 @@ export const gibbsRules: ConversationTemplate[] = [
       flair: "iconic",
     },
   ],
-  [{ person: "Shannon", title: "Rule #1 or Rule #3", message: "Never date a lumberjack.", flair: "iconic" }],
 ];
