@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../app/Conversation";
+import { GibbsImages } from "../Images/Gibbs/GibbsImages";
 
 export const abbyQuotes: ConversationTemplate[] = [
   [
@@ -43,6 +44,20 @@ export const abbyQuotes: ConversationTemplate[] = [
   ],
   [
     { person: "Gibbs", message: "Rule #40, Abby...", flair: "emergency" },
-    { person: "Abby", message: "If it seems like someone is out to get you, they are...", flair: "emergency"},
+    { person: "Abby", message: "If it seems like someone is out to get you, they are...", flair: "emergency" },
+  ],
+  [
+    {
+      person: "Abby",
+      message: "I matched the bullet in Pedro Hernandez's head to your sniper rifle. You killed him in cold blood.",
+      flair: "iconic",
+    },
+    { person: "Gibbs", image: GibbsImages.SNIPER.image, message: "" },
+    {
+      person: "Abby",
+      message: "I mean I know what he did Gibbs, he killed your wife and your daughter. But Gibbs...",
+      flair: "iconic",
+    },
+    { person: "Gibbs", image: GibbsImages.DEFAULT.image, message: "I know." },
   ],
 ];
