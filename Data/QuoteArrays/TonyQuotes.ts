@@ -9,7 +9,7 @@ export const tonyQuotes: ConversationTemplate[] = [
   [{ person: "Tony", message: "My name is Anthony. Friends call me Tony, which backwards is 'Y Not'" }],
   [{ person: "Tony", message: "Big 'D', little 'i', Big 'N', little 'ozzo'" }],
   [
-    { person: "Kate", message: "(* Wears high heels to crime scene *)" },
+    { person: "Kate", title: "Wears high heels to crime scene", message: "" },
     { person: "Gibbs", message: "Can't work a field in high heels." },
     { person: "Tony", message: "Depends what field.", flair: "emergency" },
   ],
@@ -26,14 +26,21 @@ export const tonyQuotes: ConversationTemplate[] = [
         "I can't lie and I didn't say I was gonna be the one to kill you. Remember when I told you my boss was a sniper?",
       flair: "iconic",
     },
-    { person: "Gibbs", image: GibbsImages.SNIPER.image, message: "(* Snipes Saleem in the head *)", flair: "golden" },
+    {
+      person: "Gibbs",
+      title: "Snipes Saleem in the head",
+      image: GibbsImages.SNIPER.image,
+      message: "",
+      flair: "golden",
+    },
     { person: "Tony", message: "Look out!" },
-    { person: "Gibbs", image: GibbsImages.SNIPER.image, message: "(* Snipes armed guard *)", flair: "golden" },
+    { person: "Gibbs", title: "Snipes armed guard", image: GibbsImages.SNIPER.image, message: "", flair: "golden" },
     { person: "Tony", message: "Come on, alright Ziva, let's go!" },
     {
       person: "Gibbs",
+      title: "Shoots second armed guard close range with sniper rifle",
       image: GibbsImages.SNIPER.image,
-      message: "(* Shoots second armed guard close range with sniper rifle *)",
+      message: "",
       flair: "golden",
     },
     {
@@ -99,7 +106,7 @@ export const tonyQuotes: ConversationTemplate[] = [
     { person: "Tony", message: "I'm talking about temperature." },
   ],
   [
-    { person: "Gibbs", message: "You'll do, it's your team now. (* hands Tony his badge *)", flair: "iconic" },
+    { person: "Gibbs", title: "Hands Tony his badge", message: "You'll do, it's your team now.", flair: "iconic" },
     { person: "Tony", message: "..." },
     { person: "Gibbs", message: "Tim, you're a good agent, don't let him tell you otherwise." },
     { person: "McGee", message: "I won't boss." },
@@ -121,5 +128,34 @@ export const tonyQuotes: ConversationTemplate[] = [
       message: "That's #12, #11 - When the job is done, walk away.",
       flair: "golden",
     },
+  ],
+  [
+    { person: "Tony", message: "I don't know what I'm going to do. Maybe being a cop isn't for me." },
+    {
+      person: "Tony",
+      title: "Gibbs slaps Tony on the back of the head",
+      message: "Did you just physically assault me?",
+    },
+    {
+      person: "Gibbs",
+      message: "I don't have alot of rules, but Rule #5 is you don't waste good, you're good.",
+      flair: "iconic",
+    },
+  ],
+  [
+    { person: "Gibbs", message: "That's a good question, boss..." },
+    {
+      person: "Tony",
+      message: "Boss?",
+    },
+    { person: "Gibbs", message: "It was your case, wasn't it?" },
+    {
+      person: "Tony",
+      title: "Gibbs hands Tony the case file",
+      message: "Yeah... You're not going back to Mexico are you?",
+    },
+    { person: "Gibbs", message: "Your case, you're lead.", flair: "iconic" },
+    { person: "Tony", message: "Really?" },
+    { person: "Gibbs", message: "Yeah, I think it's even a rule...", flair: "iconic" },
   ],
 ];

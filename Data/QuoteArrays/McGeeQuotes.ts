@@ -10,7 +10,7 @@ export const mcGeeQuotes: ConversationTemplate[] = [
     { person: "Tony", message: "Nice? I don't want nice! It's not Gibbs if he's nice!" },
   ],
   [
-    { person: "McGee", message: "(* Hesitates to shoot a criminal reaching for his gun *)" },
+    { person: "McGee", title: "Hesitates to shoot a criminal reaching for his gun", message: "" },
     {
       person: "Gibbs",
       message: "Don't ever hesitate because you second guessed yourself again. I'll take your badge. We clear?",

@@ -80,8 +80,8 @@ export const kateQuotes: ConversationTemplate[] = [
     { person: "Kate", message: "Because he probably killed them." },
   ],
   [
-    { person: "Tony", message: "I'll take it. I've always wanted a dog. ( * The dog growls and tries to bite him. *)" },
-    { person: "Kate", message: "Good dog. I think I'll call you Tony." },
+    { person: "Tony", message: "I'll take it. I've always wanted a dog." },
+    { person: "Kate", title: "The dog growls and bites Tony", message: "Good dog. I think I'll call you Tony." },
     { person: "Gibbs", message: "It's a bitch, Kate.", flair: "golden" },
     { person: "Kate", message: "I know." },
   ],
