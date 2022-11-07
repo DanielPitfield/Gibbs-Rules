@@ -9,8 +9,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       <head>
         <title>{`NCIS Daily Quotes | ${formattedDate}`}</title>
         <meta name="description" content="Daily NCIS quotes" />
-
-        {/* TODO: Update favicon */}
         <link rel="icon" href="/favicon.ico" />
       </head>
 
