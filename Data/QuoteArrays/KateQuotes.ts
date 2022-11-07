@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../app/Conversation";
+import { KateImages } from "../Images/Kate/KateImages";
 
 export const kateQuotes: ConversationTemplate[] = [
   [
@@ -8,17 +9,28 @@ export const kateQuotes: ConversationTemplate[] = [
     { person: "Gibbs", message: "Yeah! That's what they all tell me!", flair: "emergency" },
   ],
   [
-    { person: "Kate", message: "Shooter! (* Kate gets shot in body armour *)", flair: "emergency" },
+    {
+      person: "Kate",
+      image: KateImages.SHOOTER.image,
+      message: "Shooter!",
+      flair: "emergency",
+    },
     { person: "Gibbs", message: "Kate!", flair: "emergency" },
     { person: "Tony", message: "You ok?" },
-    { person: "Kate", message: "I just got shot at point blank range DiNozzo! What do you think?", flair: "golden" },
+    {
+      person: "Kate",
+      image: KateImages.SHOTBODY.image,
+      message: "I just got shot at point blank range DiNozzo! What do you think?",
+      flair: "golden",
+    },
     { person: "Tony", message: "You're not gonna be going to that Pilates class tomorrow?", flair: "golden" },
     { person: "Gibbs", message: "Protection detail is over Kate." },
     { person: "Tony", message: "You did good!" },
     { person: "Gibbs", message: "For once, DiNozzo's right!" },
     {
       person: "Kate",
-      message: "Wow! I'd thought I die before I ever heard a compliment.. (* Kate gets shot in the head *)",
+      image: KateImages.SHOTHEAD.image,
+      message: "Wow! I'd thought I die before I ever heard a compliment...",
       flair: "iconic",
     },
   ],

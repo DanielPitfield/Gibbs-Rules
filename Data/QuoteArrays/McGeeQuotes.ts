@@ -11,7 +11,21 @@ export const mcGeeQuotes: ConversationTemplate[] = [
   ],
   [
     { person: "McGee", message: "(* Hesitates to shoot a criminal reaching for his gun *)" },
-    { person: "Gibbs", message: "Don't ever hesitate because you second guessed yourself again. I'll take your badge. We clear?", flair: "iconic" },
+    {
+      person: "Gibbs",
+      message: "Don't ever hesitate because you second guessed yourself again. I'll take your badge. We clear?",
+      flair: "iconic",
+    },
     { person: "McGee", message: "Clear." },
+  ],
+  [
+    { person: "Gibbs", message: "Two ways to follow." },
+    {
+      person: "Tony",
+      message: "Rule #27",
+      flair: "golden",
+    },
+    { person: "McGee", message: "First way, they never notice you." },
+    { person: "Ziva", message: "Second way, they only notice you." },
   ],
 ];

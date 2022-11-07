@@ -35,7 +35,14 @@ export const gibbsRules: ConversationTemplate[] = [
   [{ person: "Gibbs", title: "Rule #15", message: "Always work as a team." }],
   [{ person: "Gibbs", title: "Rule #16", message: "If someone thinks they have the upper hand, break it." }],
   [{ person: "Gibbs", title: "Rule #17", message: "Never, ever interrupt Gibbs during an interrogation." }],
-  [{ person: "Gibbs", title: "Rule #18", message: "It's better to seek forgiveness than ask permission.", flair: "golden" }],
+  [
+    {
+      person: "Gibbs",
+      title: "Rule #18",
+      message: "It's better to seek forgiveness than ask permission.",
+      flair: "golden",
+    },
+  ],
   [{ person: "Gibbs", title: "Rule #20", message: "Always look under." }],
   [{ person: "Gibbs", title: "Rule #22", message: "Never, ever bother Gibbs in interrogation." }],
   [{ person: "Gibbs", title: "Rule #23", message: "Never mess with a Marine's coffee if you want to live." }],
@@ -76,7 +83,15 @@ export const gibbsRules: ConversationTemplate[] = [
     },
   ],
   [{ person: "Gibbs", title: "Rule #45", message: "Clean up your own mess.", flair: "emergency" }],
-  [{ person: "Gibbs", title: "Rule #51", message: "Sometimes you're wrong.", flair: "iconic" }],
+  [
+    {
+      person: "Gibbs",
+      title: "Rule #51",
+      image: GibbsImages.RULE51.image,
+      message: "Sometimes you're wrong.",
+      flair: "iconic",
+    },
+  ],
   [{ person: "Gibbs", title: "Rule #62", message: "Always give people space when they get off an elevator." }],
   [{ person: "Gibbs", title: "Rule #69", message: "Never trust a woman who doesn't trust her man." }],
   [{ person: "Gibbs", title: "Rule #72", message: "Always be open to new things." }],
@@ -86,7 +101,7 @@ export const gibbsRules: ConversationTemplate[] = [
   [
     {
       person: "Gibbs",
-      image: GibbsImages.SNIPER.image,
+      image: GibbsImages.FAMILY.image,
       title: "Special Rule",
       message: "You do what you have to do for family.",
       flair: "iconic",

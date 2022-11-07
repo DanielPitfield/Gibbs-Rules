@@ -104,4 +104,22 @@ export const tonyQuotes: ConversationTemplate[] = [
     { person: "Gibbs", message: "Tim, you're a good agent, don't let him tell you otherwise." },
     { person: "McGee", message: "I won't boss." },
   ],
+  [
+    { person: "Tony", message: "I broke rule #10, again. Never get personally involved on a case.", flair: "golden" },
+    { person: "Gibbs", message: "Yeah, it's the rule I've always had the most trouble with.", flair: "golden" },
+  ],
+  [
+    { person: "Gibbs", message: "Rule #11, DiNozzo" },
+    {
+      person: "Tony",
+      message: "I would never date a coworker boss. Trust me, I mean why would you even...",
+      flair: "golden",
+    },
+    { person: "Gibbs", message: "..." },
+    {
+      person: "Tony",
+      message: "That's #12, #11 - When the job is done, walk away.",
+      flair: "golden",
+    },
+  ],
 ];

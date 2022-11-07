@@ -362,4 +362,12 @@ export const zivaMisquotes: ConversationTemplate[] = [
     { person: "Eli", message: "As your Agent Gibbs would say, this is not my first radio." },
     { person: "Ziva", message: "Rodeo.", flair: "golden" },
   ],
+  [
+    { person: "Ziva", message: "Are there any more of these rules I should be aware of?" },
+    { person: "Gibbs", message: "About 50 of them." },
+    { person: "Ziva", message: "And I don't suppose they're written down anywhere that I could..." },
+    { person: "Gibbs", message: "No." },
+    { person: "Ziva", message: "Then how am I supposed to remember..." },
+    { person: "Gibbs", message: "My job is to teach them to you.", flair: "iconic" },
+  ],
 ];
