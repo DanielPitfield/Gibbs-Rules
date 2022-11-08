@@ -1,5 +1,7 @@
 "use client";
 
+import "../styles/index.scss";
+
 import {
   permanentDailyCharacterMappings,
   temporaryDailyCharacterMappings,
@@ -8,13 +10,14 @@ import {
 import Conversation from "./Conversation";
 import DeterministicSelection from "./DeterministicSelection";
 import { useState } from "react";
-
-import "../styles/index.scss";
 import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
+import HelpInformation from "./HelpInformation";
+import HelpButton from "./HelpButton";
 
 export default function Page() {
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [dailyQuotes, setDailyQuotes] = useState(getDailyQuotes());
+  const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
 
   function getDailyCharacters(): PersonMapping[] {
     // How many quotes/characters to show?
@@ -61,6 +64,10 @@ export default function Page() {
         // Display the daily quote of each character
         return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
       })}
+
+      <HelpButton onClick={() => setIsHelpInfoShown(true)} />
+
+      {isHelpInfoShown && <HelpInformation onClose={() => setIsHelpInfoShown(false)} />}
     </main>
   );
 }
