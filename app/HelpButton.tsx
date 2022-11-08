@@ -6,7 +6,7 @@ interface HelpButtonProps {
   onClick: () => void;
 }
 
-export default function HelpButton(props: HelpButtonProps) {
+const HelpButton = (props: HelpButtonProps) => {
   return (
     <div className={styles.wrapper}>
       <button onClick={props.onClick}>
@@ -14,4 +14,6 @@ export default function HelpButton(props: HelpButtonProps) {
       </button>
     </div>
   );
-}
+};
+
+export default HelpButton;

@@ -7,7 +7,7 @@ import styles from "../styles/QuoteFlairs.module.scss";
 import { StaticImageData } from "next/image";
 import { Person } from "../Data/PersonMappings";
 
-export default function QuoteFlairs() {
+const QuoteFlairs = () => {
   const flairDescriptionMappings: { flair: Flair; description: string }[] = [
     { flair: "emergency", description: "Danger is implied or just something controversial!" },
     { flair: "golden", description: "Rare - special, noteworthy quotes" },
@@ -47,4 +47,6 @@ export default function QuoteFlairs() {
       })}
     </div>
   );
-}
+};
+
+export default QuoteFlairs;

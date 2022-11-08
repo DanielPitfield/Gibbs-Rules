@@ -7,7 +7,7 @@ interface DeterministicSelectionProps {
   onRefresh: () => void;
 }
 
-export default function DeterministicSelection(props: DeterministicSelectionProps) {
+const DeterministicSelection = (props: DeterministicSelectionProps) => {
   return (
     <div className={styles.wrapper}>
       <label>
@@ -24,4 +24,6 @@ export default function DeterministicSelection(props: DeterministicSelectionProp
       </button>
     </div>
   );
-}
+};
+
+export default DeterministicSelection;
