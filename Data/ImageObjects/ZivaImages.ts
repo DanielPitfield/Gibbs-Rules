@@ -1,10 +1,10 @@
-import ZivaDefaultImg from "./default.jpg";
-import ZivaGlareImg from "./glare.jpg";
-import ZivaGlare2Img from "./glare2.jpg";
-import ZivaLaughGif from "./laugh.gif";
-import ZivaGunImg from "./gun.jpg";
-import ZivaWorriedImg from "./worried.jpg";
-import ZivaLaugh2Img from "./laugh2.webp";
+import ZivaDefaultImg from "/Images/Ziva/default.jpg";
+import ZivaGlareImg from "/Images/Ziva/glare.jpg";
+import ZivaGlare2Img from "/Images/Ziva/glare2.jpg";
+import ZivaLaughGif from "/Images/Ziva/laugh.gif";
+import ZivaGunImg from "/Images/Ziva/gun.jpg";
+import ZivaWorriedImg from "/Images/Ziva/worried.jpg";
+import ZivaLaugh2Img from "/Images/Ziva/laugh2.webp";
 
 export const ZivaImages = {
   DEFAULT: { image: ZivaDefaultImg, isRandomlySelectable: true },

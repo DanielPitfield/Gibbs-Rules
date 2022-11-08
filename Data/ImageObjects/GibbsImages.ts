@@ -1,12 +1,12 @@
-import GibbsDefaultImg from "./default.jpg";
-import GibbsSniperImg from "./sniper.png";
-import GibbsFamilyImg from "./family.jpg";
-import GibbsAngryGif from "./angry.gif";
-import GibbsGlareImg from "./glare.jpg";
-import GibbsRule51Img from "./rule51.png";
-import GibbsYoungImg from "./young.png";
-import GibbsYoung2Img from "./young2.png";
-import GibbsYoung3Img from "./young3.png";
+import GibbsDefaultImg from "/Images/Gibbs/default.jpg";
+import GibbsSniperImg from "/Images/Gibbs/sniper.png";
+import GibbsFamilyImg from "/Images/Gibbs/family.jpg";
+import GibbsAngryGif from "/Images/Gibbs/angry.gif";
+import GibbsGlareImg from "/Images/Gibbs/glare.jpg";
+import GibbsRule51Img from "/Images/Gibbs/rule51.png";
+import GibbsYoungImg from "/Images/Gibbs/young.png";
+import GibbsYoung2Img from "/Images/Gibbs/young2.png";
+import GibbsYoung3Img from "/Images/Gibbs/young3.png";
 
 export const GibbsImages = {
   DEFAULT: { image: GibbsDefaultImg, isRandomlySelectable: true },

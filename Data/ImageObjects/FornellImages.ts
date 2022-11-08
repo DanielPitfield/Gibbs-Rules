@@ -1,4 +1,4 @@
-import FornellDefaultImg from "./default.webp";
+import FornellDefaultImg from "/Images/Fornell/default.webp";
 
 export const FornellImages = {
   DEFAULT: { image: FornellDefaultImg, isRandomlySelectable: true },

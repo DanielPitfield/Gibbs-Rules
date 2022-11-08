@@ -1,4 +1,4 @@
-import AbbyDefaultImg from "./default.jpg";
+import AbbyDefaultImg from "/Images/Abby/default.jpg";
 
 export const AbbyImages = {
   DEFAULT: { image: AbbyDefaultImg, isRandomlySelectable: true },

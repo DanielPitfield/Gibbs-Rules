@@ -1,8 +1,8 @@
-import KateDefaultImg from "./default.jpg";
-import KateGunImg from "./gun.jpg";
-import KateShooterGif from "./shooter.gif";
-import KateShotBodyGif from "./shot.jpg";
-import KateShotHeadGif from "./shothead.gif";
+import KateDefaultImg from "/Images/Kate/default.jpg";
+import KateGunImg from "/Images/Kate/gun.jpg";
+import KateShooterGif from "/Images/Kate/shooter.gif";
+import KateShotBodyGif from "/Images/Kate/shot.jpg";
+import KateShotHeadGif from "/Images/Kate/shothead.gif";
 
 export const KateImages = {
   DEFAULT: { image: KateDefaultImg, isRandomlySelectable: true },

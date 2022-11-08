@@ -1,9 +1,9 @@
-import McGeeDefaultImg from "./default.jpg";
-import McGeeLaughImg from "./laugh.webp";
-import McGeeGlareImg from "./glare.webp";
-import McGeeGlare2Img from "./glare2.jpg";
-import McGeeGlare3Img from "./glare3.jpg";
-import McGeeGlare4Img from "./glare4.jpg";
+import McGeeDefaultImg from "/Images/McGee/default.jpg";
+import McGeeLaughImg from "/Images/McGee/laugh.webp";
+import McGeeGlareImg from "/Images/McGee/glare.webp";
+import McGeeGlare2Img from "/Images/McGee/glare2.jpg";
+import McGeeGlare3Img from "/Images/McGee/glare3.jpg";
+import McGeeGlare4Img from "/Images/McGee/glare4.jpg";
 
 export const McGeeImages = {
   DEFAULT: { image: McGeeDefaultImg, isRandomlySelectable: true },

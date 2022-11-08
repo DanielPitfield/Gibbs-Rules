@@ -1,5 +1,5 @@
-import TonyDefaultImg from "./default.jpg";
-import TonySmileImg from "./smile.jpg";
+import TonyDefaultImg from "/Images/Tony/default.jpg";
+import TonySmileImg from "/Images/Tony/smile.jpg";
 
 export const TonyImages = {
   DEFAULT: { image: TonyDefaultImg, isRandomlySelectable: true },

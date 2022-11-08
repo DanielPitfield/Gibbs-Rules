@@ -1,4 +1,4 @@
-import PalmerDefaultImg from "./default.jpg";
+import PalmerDefaultImg from "/Images/Palmer/default.jpg";
 
 export const PalmerImages = {
   DEFAULT: { image: PalmerDefaultImg, isRandomlySelectable: true },
