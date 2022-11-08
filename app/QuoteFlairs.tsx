@@ -1,4 +1,4 @@
-import { KateImages } from "../Data/Images/Kate/KateImages";
+import { KateImages } from "../Data/ImageObjects/KateImages";
 import { getPrettyText } from "../Helpers/getPrettyText";
 import Conversation from "./Conversation";
 import { Flair, QuoteTemplate } from "./Quote";

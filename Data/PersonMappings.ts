@@ -13,21 +13,21 @@ import { mcGeeQuotes } from "./QuoteArrays/McGeeQuotes";
 import { palmerQuotes } from "./QuoteArrays/PalmerQuotes";
 
 // Images
-import { GibbsImages } from "./Images/Gibbs/GibbsImages";
-import { ZivaImages } from "./Images/Ziva/ZivaImages";
-import { TonyImages } from "./Images/Tony/TonyImages";
-import { McGeeImages } from "./Images/McGee/McGeeImages";
-import { ShannonImages } from "./Images/Shannon/ShannonImages";
-import { DuckyImages } from "./Images/Ducky/DuckyImages";
-import { JennyImages } from "./Images/Jenny/JennyImages";
-import { FornellImages } from "./Images/Fornell/FornellImages";
-import { LiatImages } from "./Images/Liat/LiatImages";
-import { EliImages } from "./Images/Eli/EliImages";
-import { BodnarImages } from "./Images/Bodnar/BodnarImages";
-import { AbbyImages } from "./Images/Abby/AbbyImages";
-import { KateImages } from "./Images/Kate/KateImages";
-import { SaleemImages } from "./Images/Saleem/SaleemImages";
-import { PalmerImages } from "./Images/Palmer/PalmerImages";
+import { GibbsImages } from "./ImageObjects/GibbsImages";
+import { ZivaImages } from "./ImageObjects/ZivaImages";
+import { TonyImages } from "./ImageObjects/TonyImages";
+import { McGeeImages } from "./ImageObjects/McGeeImages";
+import { ShannonImages } from "./ImageObjects/ShannonImages";
+import { DuckyImages } from "./ImageObjects/DuckyImages";
+import { JennyImages } from "./ImageObjects/JennyImages";
+import { FornellImages } from "./ImageObjects/FornellImages";
+import { LiatImages } from "./ImageObjects/LiatImages";
+import { EliImages } from "./ImageObjects/EliImages";
+import { BodnarImages } from "./ImageObjects/BodnarImages";
+import { AbbyImages } from "./ImageObjects/AbbyImages";
+import { KateImages } from "./ImageObjects/KateImages";
+import { SaleemImages } from "./ImageObjects/SaleemImages";
+import { PalmerImages } from "./ImageObjects/PalmerImages";
 import { shannonRules } from "./QuoteArrays/ShannonRules";
 import { jennyQuotes } from "./QuoteArrays/JennyQuotes";
 

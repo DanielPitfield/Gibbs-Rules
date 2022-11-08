@@ -1,5 +1,5 @@
 import { ConversationTemplate } from "../../app/Conversation";
-import { GibbsImages } from "../Images/Gibbs/GibbsImages";
+import { GibbsImages } from "../ImageObjects/GibbsImages";
 
 export const tonyQuotes: ConversationTemplate[] = [
   [

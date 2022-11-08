@@ -1,6 +1,6 @@
 import { ConversationTemplate } from "../../app/Conversation";
-import { GibbsImages } from "../Images/Gibbs/GibbsImages";
-import { ShannonImages } from "../Images/Shannon/ShannonImages";
+import { GibbsImages } from "../ImageObjects/GibbsImages";
+import { ShannonImages } from "../ImageObjects/ShannonImages";
 import { gibbsRules } from "./GibbsRules";
 
 export const shannonRules: ConversationTemplate[] = [
