@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 2em;
+
+  button {
+    margin-left: 2em;
+    padding: 0.5em 1em;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: #2d76a0;
+    color: white;
+    box-shadow: 1px 1px 1px black;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(#2d76a0, 10%);
+    }
+  }
+}

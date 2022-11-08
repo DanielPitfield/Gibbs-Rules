@@ -3,7 +3,9 @@ import Image, { StaticImageData } from "next/image";
 
 import styles from "../styles/Quote.module.scss";
 
-export type Flair = "emergency" | "golden" | "iconic";
+export const flairs = ["emergency" , "golden" , "iconic"] as const;
+export type Flair = typeof flairs[number];
+
 export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
 
 interface QuoteProps {
