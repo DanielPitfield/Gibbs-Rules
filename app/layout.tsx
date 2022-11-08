@@ -1,5 +1,6 @@
-import "../styles/index.scss";
 import { NavBar } from "./NavBar";
+
+import "styles/index.scss";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   const formattedDate = new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "2-digit" });

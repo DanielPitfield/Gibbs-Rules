@@ -1,7 +1,5 @@
 "use client";
 
-import "../styles/index.scss";
-
 import {
   permanentDailyCharacterMappings,
   temporaryDailyCharacterMappings,
@@ -13,6 +11,8 @@ import { useState } from "react";
 import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
 import HelpInformation from "./HelpInformation";
 import HelpButton from "./HelpButton";
+
+import "/styles/index.scss";
 
 export default function Page() {
   const [isDeterministic, setIsDeterministic] = useState(true);

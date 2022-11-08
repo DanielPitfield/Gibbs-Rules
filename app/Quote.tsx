@@ -1,7 +1,7 @@
 import { Person, PersonMappings } from "../Data/PersonMappings";
 import Image, { StaticImageData } from "next/image";
 
-import styles from "../styles/Quote.module.scss";
+import styles from "/styles/Quote.module.scss";
 
 export type Flair = "emergency" | "golden" | "iconic";
 export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
