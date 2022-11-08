@@ -10,7 +10,7 @@ export default function HelpButton(props: HelpButtonProps) {
   return (
     <div className={styles.wrapper}>
       <button onClick={props.onClick}>
-        <FiHelpCircle /> Help
+        <FiHelpCircle /> Help Information
       </button>
     </div>
   );
