@@ -26,8 +26,6 @@ export default function QuoteFlairs() {
 
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.title}>Quote Flairs</h2>
-
       <Conversation key={"default"} person={defaultPerson} conversation={[defaultQuoteTemplate]} showTitle={false} />
 
       {flairDescriptionMappings.map((mapping) => {
