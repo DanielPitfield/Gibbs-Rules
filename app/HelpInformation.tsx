@@ -1,18 +1,39 @@
+import { KateImages } from "../Data/Images/Kate/KateImages";
+import { getPrettyText } from "../Helpers/getPrettyText";
+import Conversation from "./Conversation";
 import { Modal } from "./Modal";
-import Quote, { flairs, QuoteTemplate } from "./Quote";
+import { flairs, QuoteTemplate } from "./Quote";
 
 interface HelpInformationProps {
   onClose: () => void;
 }
 
 export default function HelpInformation(props: HelpInformationProps) {
+  const mockQuoteTemplate: QuoteTemplate = {
+    person: "Kate",
+    image: KateImages.DEFAULT.image,
+    title: "Default",
+    message: "",
+  };
+
   return (
     <Modal mode="default" name="helpInfo" title="Help Information" onClose={props.onClose}>
-      <Quote key={"default"} template={{ person: "Gibbs", title: "Default", message: "" }} showImage={false} />
+      <Conversation key={"default"} person={"Kate"} conversation={[mockQuoteTemplate]} />
 
       {flairs.map((flair) => {
-        const mockQuoteTemplate: QuoteTemplate = { person: "Gibbs", title: flair, message: "" };
-        return <Quote key={flair} template={mockQuoteTemplate} showImage={false} />;
+        return (
+          <Conversation
+            key={flair}
+            person={"Kate"}
+            conversation={[
+              {
+                ...mockQuoteTemplate,
+                title: getPrettyText(flair),
+                flair: flair,
+              },
+            ]}
+          />
+        );
       })}
     </Modal>
   );
