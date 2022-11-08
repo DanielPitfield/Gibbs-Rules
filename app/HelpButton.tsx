@@ -9,7 +9,7 @@ interface HelpButtonProps {
 export default function HelpButton(props: HelpButtonProps) {
   return (
     <div className={styles.wrapper}>
-      <button onClick={() => props.onClick}>
+      <button onClick={props.onClick}>
         <FiHelpCircle /> Help
       </button>
     </div>
