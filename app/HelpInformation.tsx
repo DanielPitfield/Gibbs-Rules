@@ -18,7 +18,7 @@ export default function HelpInformation(props: HelpInformationProps) {
 
   return (
     <Modal mode="default" name="helpInfo" title="Help Information" onClose={props.onClose}>
-      <Conversation key={"default"} person={"Kate"} conversation={[mockQuoteTemplate]} />
+      <Conversation key={"default"} person={"Kate"} conversation={[mockQuoteTemplate]} showTitle={false} />
 
       {flairs.map((flair) => {
         return (
@@ -32,6 +32,7 @@ export default function HelpInformation(props: HelpInformationProps) {
                 flair: flair,
               },
             ]}
+            showTitle={false}
           />
         );
       })}

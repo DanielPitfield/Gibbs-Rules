@@ -62,7 +62,7 @@ export default function Page() {
 
       {dailyQuotes.map((dailyQuote, index) => {
         // Display the daily quote of each character
-        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} />;
+        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} showTitle={true} />;
       })}
 
       <HelpButton onClick={() => setIsHelpInfoShown(true)} />

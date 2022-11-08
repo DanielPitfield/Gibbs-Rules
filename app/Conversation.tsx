@@ -8,6 +8,7 @@ export type ConversationTemplate = QuoteTemplate[];
 interface ConversationProps {
   person: Person;
   conversation: ConversationTemplate;
+  showTitle: boolean;
 }
 
 const converstationTitles: { person: Person; converstationTitle: string }[] = [
@@ -17,11 +18,12 @@ const converstationTitles: { person: Person; converstationTitle: string }[] = [
 ];
 
 const Conversation = (props: ConversationProps) => {
-  const conversationTitle = converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? `${props.person} Quote`;
+  const conversationTitle =
+    converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? `${props.person} Quote`;
 
   return (
     <div className={styles.wrapper} data-person={props.person}>
-      <h2 className={styles.title}>{conversationTitle}</h2>
+      {props.showTitle && <h2 className={styles.title}>{conversationTitle}</h2>}
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} showImage />;
       })}
