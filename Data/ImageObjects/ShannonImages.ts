@@ -4,6 +4,6 @@ import ShannonSmileImg from "/Images/Shannon/smile.png";
 
 export const ShannonImages = {
   DEFAULT: { image: ShannonDefaultImg, isRandomlySelectable: true },
-  TALKING: { image: ShannonTalkingImg, isRandomlySelctable: false },
-  SMILE: { image: ShannonSmileImg, isRandomlySelctable: false },
+  TALKING: { image: ShannonTalkingImg, isRandomlySelectable: false },
+  SMILE: { image: ShannonSmileImg, isRandomlySelectable: false },
 };
