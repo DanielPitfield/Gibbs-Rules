@@ -5,7 +5,7 @@ import { Flair, QuoteTemplate } from "./Quote";
 import { StaticImageData } from "next/image";
 import { Person } from "../Data/PersonMappings";
 
-import styles from "/styles/QuoteFlairs.module.scss";
+import styles from "../public/styles/QuoteFlairs.module.scss";
 
 const QuoteFlairs = () => {
   const flairDescriptionMappings: { flair: Flair; description: string }[] = [

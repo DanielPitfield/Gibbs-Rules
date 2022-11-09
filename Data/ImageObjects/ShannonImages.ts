@@ -1,6 +1,6 @@
-import ShannonDefaultImg from "/Images/Shannon/default.png";
-import ShannonTalkingImg from "/Images/Shannon/talking.png";
-import ShannonSmileImg from "/Images/Shannon/smile.png";
+import ShannonDefaultImg from "../../public/Images/Shannon/default.png";
+import ShannonTalkingImg from "../../public/Images/Shannon/talking.png";
+import ShannonSmileImg from "../../public/Images/Shannon/smile.png";
 
 export const ShannonImages = {
   DEFAULT: { image: ShannonDefaultImg, isRandomlySelectable: true },

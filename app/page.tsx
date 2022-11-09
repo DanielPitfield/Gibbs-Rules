@@ -12,7 +12,7 @@ import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
 import HelpInformation from "./HelpInformation";
 import HelpButton from "./HelpButton";
 
-import "/styles/index.scss";
+import "../public/styles/index.scss";
 
 export default function Page() {
   const [isDeterministic, setIsDeterministic] = useState(true);
@@ -62,7 +62,14 @@ export default function Page() {
 
       {dailyQuotes.map((dailyQuote, index) => {
         // Display the daily quote of each character
-        return <Conversation key={index} person={dailyQuote.person} conversation={dailyQuote.conversation} showTitle={true} />;
+        return (
+          <Conversation
+            key={index}
+            person={dailyQuote.person}
+            conversation={dailyQuote.conversation}
+            showTitle={true}
+          />
+        );
       })}
 
       <HelpButton onClick={() => setIsHelpInfoShown(true)} />

@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "/styles/Modal.module.scss";
+import styles from "../public/styles/Modal.module.scss";
 
 interface ModalProps {
   name: string;
@@ -16,9 +16,7 @@ export const Modal = (props: ModalProps) => {
       <div className={styles.innerWrapper}>
         <div className={styles.header} data-mode={props.mode}>
           <h3 className={styles.title}>{props.title}</h3>
-          <button onClick={props.onClose}>
-            X
-          </button>
+          <button onClick={props.onClose}>X</button>
         </div>
         <div className={styles.body}>{props.children}</div>
       </div>
