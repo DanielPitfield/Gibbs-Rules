@@ -101,7 +101,7 @@ export const gibbsRules: ConversationTemplate[] = [
   [
     {
       person: "Gibbs",
-      image: GibbsImages.FAMILY.image,
+      image: GibbsImages.SNIPER.image,
       title: "Special Rule",
       message: "You do what you have to do for family.",
       flair: "iconic",
