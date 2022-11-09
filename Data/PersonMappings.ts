@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image";
-
 import { ConversationTemplate } from "../app/Conversation";
 
 // Quote arrays
@@ -11,6 +10,8 @@ import { abbyQuotes } from "./QuoteArrays/AbbyQuotes";
 import { kateQuotes } from "./QuoteArrays/KateQuotes";
 import { mcGeeQuotes } from "./QuoteArrays/McGeeQuotes";
 import { palmerQuotes } from "./QuoteArrays/PalmerQuotes";
+import { jennyQuotes } from "./QuoteArrays/JennyQuotes";
+import { shannonRules } from "./QuoteArrays/ShannonRules";
 
 // Images
 import { GibbsImages } from "./ImageObjects/GibbsImages";
@@ -28,8 +29,6 @@ import { AbbyImages } from "./ImageObjects/AbbyImages";
 import { KateImages } from "./ImageObjects/KateImages";
 import { SaleemImages } from "./ImageObjects/SaleemImages";
 import { PalmerImages } from "./ImageObjects/PalmerImages";
-import { shannonRules } from "./QuoteArrays/ShannonRules";
-import { jennyQuotes } from "./QuoteArrays/JennyQuotes";
 
 export type Person =
   | "Gibbs"
