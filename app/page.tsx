@@ -14,20 +14,18 @@ import HelpButton from "./HelpButton";
 
 import "../public/styles/index.scss";
 
-export default function Page() {
+// How many quotes/characters to show?
+const NUM_DAILY_QUOTES = 3;
+
+const Page = () => {
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [dailyQuotes, setDailyQuotes] = useState(getDailyQuotes());
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
 
   function getDailyCharacters(): PersonMapping[] {
-    // How many quotes/characters to show?
-    const NUM_DAILY_QUOTES = 3;
-
-    const dailyCharacterMappings: PersonMapping[] = permanentDailyCharacterMappings;
-
-    // Already have enough characters to show
+    // Already have enough (or more than enough) characters to show
     if (permanentDailyCharacterMappings.length >= NUM_DAILY_QUOTES) {
-      return dailyCharacterMappings;
+      return permanentDailyCharacterMappings.slice(0, NUM_DAILY_QUOTES);
     }
 
     // How many more temporary characters are required?
@@ -39,14 +37,12 @@ export default function Page() {
       isDeterministic
     );
 
-    return dailyCharacterMappings.concat(chosenTemporaryCharacterMappings);
+    return permanentDailyCharacterMappings.concat(chosenTemporaryCharacterMappings);
   }
 
   function getDailyQuotes() {
-    const dailyCharacterMappings = getDailyCharacters();
-
     // Get the daily quote for each character
-    return dailyCharacterMappings.map((mapping) => ({
+    return getDailyCharacters().map((mapping) => ({
       person: mapping.person,
       conversation: getRandomArrayItems(mapping.array, 1, isDeterministic)[0],
     }));
@@ -77,4 +73,6 @@ export default function Page() {
       {isHelpInfoShown && <HelpInformation onClose={() => setIsHelpInfoShown(false)} />}
     </main>
   );
-}
+};
+
+export default Page;
