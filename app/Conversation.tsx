@@ -1,7 +1,7 @@
-import { Person } from "../Data/PersonMappings";
 import Quote, { QuoteTemplate } from "./Quote";
 
 import styles from "../public/styles/Conversation.module.scss";
+import { Person } from "./page";
 
 export type ConversationTemplate = QuoteTemplate[];
 

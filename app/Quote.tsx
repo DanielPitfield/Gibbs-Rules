@@ -1,10 +1,18 @@
-import { Person, PersonMappings } from "../Data/PersonMappings";
+import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
 import Image, { StaticImageData } from "next/image";
+import { Person } from "./page";
 
 import styles from "../public/styles/Quote.module.scss";
 
 export type Flair = "emergency" | "golden" | "iconic";
-export type QuoteTemplate = { person: Person; image?: StaticImageData; title?: string; flair?: Flair; message: string };
+
+export type QuoteTemplate = {
+  person: Person;
+  image?: StaticImageData;
+  title?: string;
+  flair?: Flair;
+  message: string;
+};
 
 interface QuoteProps {
   template: QuoteTemplate;
@@ -20,9 +28,10 @@ const Quote = (props: QuoteProps) => {
 
     // If an image is not provided, but an image is to be shown
     if (!props.template.image) {
-      const imageArray = PersonMappings.find((mapping) => props.template.person === mapping.person)?.images.filter(
-        (imageInfo) => imageInfo.isRandomlySelectable
-      );
+      // TODO: The mapping of the character's context not always NCIS
+      const imageArray = NCISCharacterMappings.find(
+        (mapping) => props.template.person === mapping.person
+      )?.images.filter((imageInfo) => imageInfo.isRandomlySelectable);
 
       // Randomly select an image of the person
       return imageArray?.[Math.floor(Math.random() * imageArray.length)].image;

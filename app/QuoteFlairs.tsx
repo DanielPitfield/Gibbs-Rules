@@ -1,9 +1,9 @@
-import { KateImages } from "../Data/ImageObjects/KateImages";
+import { KateImages } from "../Data/NCIS/ImageObjects/KateImages";
 import { getPrettyText } from "../Helpers/getPrettyText";
 import Conversation from "./Conversation";
 import { Flair, QuoteTemplate } from "./Quote";
 import { StaticImageData } from "next/image";
-import { Person } from "../Data/PersonMappings";
+import { NCISCharacter } from "../Data/NCIS/NCISCharacterMappings";
 
 import styles from "../public/styles/QuoteFlairs.module.scss";
 
@@ -14,7 +14,7 @@ const QuoteFlairs = () => {
     { flair: "iconic", description: "Very Rare - memorable moments from the show or a defining quote of a character" },
   ];
 
-  const defaultPerson: Person = "Kate";
+  const defaultPerson: NCISCharacter = "Kate";
   const defaultImage: StaticImageData = KateImages.DEFAULT.image;
 
   const defaultQuoteTemplate: QuoteTemplate = {
