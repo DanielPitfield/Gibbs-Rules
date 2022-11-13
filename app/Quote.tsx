@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { Person } from "./page";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import styles from "../public/styles/Quote.module.scss";
+import { useMemo } from "react";
 
 export type Flair = "emergency" | "golden" | "iconic";
 
@@ -45,7 +46,7 @@ const Quote = (props: QuoteProps) => {
     return props.template.image;
   };
 
-  const image = getImage();
+  const image = useMemo(() => getImage(), [props.template.message]);
 
   return (
     <div className={styles.wrapper} data-flair={props.template.flair}>

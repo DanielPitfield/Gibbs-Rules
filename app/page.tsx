@@ -40,6 +40,7 @@ const Page = () => {
 
     const permanentCharacterMappings =
       characterMappings?.filter((person) => person.isPermanentDailyCharacter && person.array.length > 0) ?? [];
+
     const temporaryCharacterMappings =
       characterMappings?.filter((person) => !person.isPermanentDailyCharacter && person.array.length > 0) ?? [];
 
@@ -58,7 +59,7 @@ const Page = () => {
     );
 
     return permanentCharacterMappings.concat(chosenTemporaryCharacterMappings);
-  }, [selectedQuoteContext, isDeterministic, refresh]);
+  }, [selectedQuoteContext, refresh]);
 
   //
   const dailyQuotes = useMemo(() => {
