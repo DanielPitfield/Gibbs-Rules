@@ -19,24 +19,50 @@ body {
 
   header {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: lighten(black, 20%);
     padding: 1em;
     flex-basis: 4em;
 
-    h1,
-    h2 {
-      color: white;
-      margin: 0;
-      font-weight: normal;
-    }
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
 
-    h2 {
-      margin-left: 1em;
-      opacity: 0.5;
+      h1,
+      h2 {
+        color: white;
+        margin: 0;
+        font-weight: normal;
+      }
+
+      h1 {
+        select {
+          font-size: inherit;
+          background: none;
+          color: inherit;
+          text-align: right;
+          margin-right: 0.08em;
+          option {
+            background-color: lighten(black, 20%);
+          }
+        }
+      }
+
+      h2 {
+        margin-left: 1em;
+        opacity: 0.5;
+      }
     }
+  }
+
+  .conversations {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
   }
 
   [data-nextjs-scroll-focus-boundary] {
@@ -46,7 +72,7 @@ body {
 
   main {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
     flex-grow: 1;
   }
 }

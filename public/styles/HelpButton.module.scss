@@ -1,10 +1,9 @@
 .wrapper {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 2em;
+  justify-content: flex-end;
+  margin: 1em;
+  width: 18em;
 
   button {
     margin-left: 2em;

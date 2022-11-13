@@ -1,5 +1,3 @@
-import { NavBar } from "./NavBar";
-
 import "../public/styles/index.scss";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -14,7 +12,6 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </head>
 
       <body>
-        <NavBar formattedDate={formattedDate} />
         {children}
       </body>
     </html>
