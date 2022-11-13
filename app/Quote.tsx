@@ -1,7 +1,6 @@
-import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
 import Image, { StaticImageData } from "next/image";
 import { Person } from "./page";
-
+import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import styles from "../public/styles/Quote.module.scss";
 
 export type Flair = "emergency" | "golden" | "iconic";
@@ -17,6 +16,7 @@ export type QuoteTemplate = {
 interface QuoteProps {
   template: QuoteTemplate;
   showImage: boolean;
+  context: QuoteContext;
 }
 
 const Quote = (props: QuoteProps) => {
@@ -28,10 +28,14 @@ const Quote = (props: QuoteProps) => {
 
     // If an image is not provided, but an image is to be shown
     if (!props.template.image) {
-      // TODO: The mapping of the character's context not always NCIS
-      const imageArray = NCISCharacterMappings.find(
-        (mapping) => props.template.person === mapping.person
-      )?.images.filter((imageInfo) => imageInfo.isRandomlySelectable);
+      // Find the character mappings for the selected quoteContext
+      const characterMappings =
+        quoteContextMappings.find((x) => x.quoteContext === props.context)?.characterMappings ?? [];
+
+      // Find the image array of the current character
+      const imageArray = characterMappings
+        .find((mapping) => props.template.person === mapping.person)
+        ?.images.filter((imageInfo) => imageInfo.isRandomlySelectable);
 
       // Randomly select an image of the person
       return imageArray?.[Math.floor(Math.random() * imageArray.length)].image;

@@ -96,6 +96,7 @@ const Page = () => {
             person={dailyQuote.person}
             conversation={dailyQuote.conversation}
             showTitle={true}
+            context={selectedQuoteContext}
           />
         );
       })}

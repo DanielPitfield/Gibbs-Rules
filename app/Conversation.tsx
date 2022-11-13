@@ -2,6 +2,7 @@ import Quote, { QuoteTemplate } from "./Quote";
 
 import styles from "../public/styles/Conversation.module.scss";
 import { Person } from "./page";
+import { QuoteContext } from "../Data/QuoteContextMappings";
 
 export type ConversationTemplate = QuoteTemplate[];
 
@@ -9,6 +10,7 @@ interface ConversationProps {
   person: Person;
   conversation: ConversationTemplate;
   showTitle: boolean;
+  context: QuoteContext;
 }
 
 const converstationTitles: { person: Person; converstationTitle: string }[] = [
@@ -25,7 +27,7 @@ const Conversation = (props: ConversationProps) => {
     <div className={styles.wrapper} data-person={props.person}>
       {props.showTitle && <h2 className={styles.title}>{conversationTitle}</h2>}
       {props.conversation.map((quoteTemplate, index) => {
-        return <Quote key={index} template={quoteTemplate} showImage />;
+        return <Quote key={index} template={quoteTemplate} context={props.context} showImage />;
       })}
     </div>
   );
