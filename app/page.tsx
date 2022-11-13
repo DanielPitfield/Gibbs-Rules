@@ -2,17 +2,14 @@
 
 import { NCISCharacter } from "../Data/NCIS/NCISCharacterMappings";
 import Conversation, { ConversationTemplate } from "./Conversation";
-import DeterministicSelection from "./DeterministicSelection";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
 import HelpInformation from "./HelpInformation";
-import HelpButton from "./HelpButton";
+import { NavBar } from "./NavBar";
 import { StaticImageData } from "next/image";
 import { F1Character } from "../Data/F1/F1CharacterMappings";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
-
 import "../public/styles/index.scss";
-import { NavBar } from "./NavBar";
 
 // How many quotes/characters to show?
 const NUM_DAILY_QUOTES = 3;
