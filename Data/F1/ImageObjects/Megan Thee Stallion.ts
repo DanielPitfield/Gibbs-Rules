@@ -1,5 +1,5 @@
-import MeganTheeStallionDefaultImg from "../../../public/Images/F1/Megan Thee Stallion/default.png";
+import Default from "../../../public/Images/F1/Megan Thee Stallion/default.png";
 
 export const MeganTheeStallionImages = {
-  DEFAULT: { image: MeganTheeStallionDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };

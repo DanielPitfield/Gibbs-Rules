@@ -1,5 +1,5 @@
-import LiatDefaultImg from "../../../public/Images/NCIS/Liat/default.webp";
+import Default from "../../../public/Images/NCIS/Liat/default.webp";
 
 export const LiatImages = {
-  DEFAULT: { image: LiatDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };

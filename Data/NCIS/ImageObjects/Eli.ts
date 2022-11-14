@@ -1,5 +1,5 @@
-import EliDefaultImg from "../../../public/Images/NCIS/Eli/default.webp";
+import Default from "../../../public/Images/NCIS/Eli/default.webp";
 
 export const EliImages = {
-  DEFAULT: { image: EliDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };

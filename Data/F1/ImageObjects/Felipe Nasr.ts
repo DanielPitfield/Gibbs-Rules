@@ -1,5 +1,5 @@
-import FelipeNasrDefaultImg from "../../../public/Images/F1/Felipe Nasr/default.png";
+import Default from "../../../public/Images/F1/Felipe Nasr/default.png";
 
 export const FelipeNasrImages = {
-  DEFAULT: { image: FelipeNasrDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };

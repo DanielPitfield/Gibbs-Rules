@@ -1,5 +1,5 @@
-import SaleemDefaultImg from "../../../public/Images/NCIS/Saleem/default.jpg";
+import Default from "../../../public/Images/NCIS/Saleem/default.jpg";
 
 export const SaleemImages = {
-  DEFAULT: { image: SaleemDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };

@@ -1,7 +1,7 @@
-import PalmerDefaultImg from "../../../public/Images/NCIS/Palmer/default.jpg";
+import Default from "../../../public/Images/NCIS/Palmer/default.jpg";
 
 export const PalmerImages = {
-  DEFAULT: { image: PalmerDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };
 
 // TODO: More images

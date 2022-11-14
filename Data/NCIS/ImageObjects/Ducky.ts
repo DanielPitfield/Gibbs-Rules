@@ -1,7 +1,7 @@
-import DuckyDefaultImg from "../../../public/Images/NCIS/Ducky/default.webp";
+import Default from "../../../public/Images/NCIS/Ducky/default.webp";
 
 export const DuckyImages = {
-  DEFAULT: { image: DuckyDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };
 
 // TODO: More images

@@ -1,5 +1,5 @@
-import BodnarDefaultImg from "../../../public/Images/NCIS/Bodnar/default.webp";
+import Default from "../../../public/Images/NCIS/Bodnar/default.webp";
 
 export const BodnarImages = {
-  DEFAULT: { image: BodnarDefaultImg, isRandomlySelectable: true },
+  DEFAULT: { image: Default, isRandomlySelectable: true },
 };
