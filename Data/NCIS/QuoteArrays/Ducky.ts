@@ -1,6 +1,6 @@
 import { ConversationTemplate } from "../../../app/Conversation";
 
-export const duckyQuotes: ConversationTemplate[] = [
+export const DuckyQuotes: ConversationTemplate[] = [
   [
     { person: "Bodnar", message: "And whose grandfather would you be?" },
     { person: "Ducky", message: "Well that depends. Who's your grandmother?", flair: "iconic" },

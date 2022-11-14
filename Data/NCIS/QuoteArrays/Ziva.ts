@@ -1,6 +1,6 @@
 import { ConversationTemplate } from "../../../app/Conversation";
 
-export const zivaMisquotes: ConversationTemplate[] = [
+export const ZivaMisquotes: ConversationTemplate[] = [
   [
     { person: "Ziva", message: "You are a broken tape, Gibbs." },
     { person: "Tony", message: "Record. A broken record." },

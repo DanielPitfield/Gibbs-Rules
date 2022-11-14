@@ -1,8 +1,8 @@
 import { ConversationTemplate } from "../../../app/Conversation";
-import { GibbsImages } from "../ImageObjects/GibbsImages";
-import { ShannonImages } from "../ImageObjects/ShannonImages";
+import { GibbsImages } from "../ImageObjects/Gibbs";
+import { ShannonImages } from "../ImageObjects/Shannon";
 
-export const shannonRules: ConversationTemplate[] = [
+export const ShannonRules: ConversationTemplate[] = [
   [{ person: "Shannon", title: "Rule #1 or Rule #3", message: "Never date a lumberjack.", flair: "iconic" }],
   [
     { person: "Gibbs", image: GibbsImages.YOUNG.image, message: "You got a rule for everything?", flair: "iconic" },

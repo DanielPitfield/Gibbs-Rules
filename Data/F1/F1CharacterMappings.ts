@@ -2,13 +2,13 @@ import { StaticImageData } from "next/image";
 import { ConversationTemplate } from "../../app/Conversation";
 
 // Quote arrays
-import { martinBrundleQuotes } from "./QuoteArrays/MartinBrundleQuotes";
+import { MartinBrundleQuotes } from "./QuoteArrays/Martin Brundle";
 
 // Images
-import { MartinBrundleImages } from "./ImageObjects/MartinBrundleImages";
-import { ChristianHornerImages } from "./ImageObjects/ChristianHornerImages";
-import { MeganTheeStallionImages } from "./ImageObjects/MeganTheeStallionImages";
-import { MeganTheeStallionFriendImages } from "./ImageObjects/MeganTheeStallionFriendImages";
+import { MartinBrundleImages } from "./ImageObjects/Martin Brundle";
+import { ChristianHornerImages } from "./ImageObjects/Christian Horner";
+import { MeganTheeStallionImages } from "./ImageObjects/Megan Thee Stallion";
+import { MeganTheeStallionFriendImages } from "./ImageObjects/Megan Thee Stallion Friend";
 
 export type F1Character =
   | "Martin Brundle"
@@ -28,7 +28,7 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
   {
     person: "Martin Brundle",
     images: Object.values(MartinBrundleImages),
-    array: martinBrundleQuotes,
+    array: MartinBrundleQuotes,
     isPermanentDailyCharacter: true,
   },
   { person: "Crofty", images: Object.values([]), array: [], isPermanentDailyCharacter: true },

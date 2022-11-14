@@ -1,7 +1,7 @@
 import { ConversationTemplate } from "../../../app/Conversation";
-import { KateImages } from "../ImageObjects/KateImages";
+import { KateImages } from "../ImageObjects/Kate";
 
-export const kateQuotes: ConversationTemplate[] = [
+export const KateQuotes: ConversationTemplate[] = [
   [
     { person: "Kate", message: "What's happening?" },
     { person: "Gibbs", message: "Emergency blow." },

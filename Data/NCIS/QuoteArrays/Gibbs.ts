@@ -1,7 +1,7 @@
 import { ConversationTemplate } from "../../../app/Conversation";
-import { GibbsImages } from "../ImageObjects/GibbsImages";
+import { GibbsImages } from "../ImageObjects/Gibbs";
 
-export const gibbsRules: ConversationTemplate[] = [
+export const GibbsRules: ConversationTemplate[] = [
   [{ person: "Gibbs", title: "Rule #1", message: "Never let suspects stay together." }],
   [{ person: "Gibbs", title: "Rule #1", message: "Never screw over your partner.", flair: "iconic" }],
   [{ person: "Gibbs", title: "Rule #2", message: "Always wear gloves at a crime scene." }],

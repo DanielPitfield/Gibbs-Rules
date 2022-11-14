@@ -1,7 +1,7 @@
 import { ConversationTemplate } from "../../../app/Conversation";
-import { GibbsImages } from "../ImageObjects/GibbsImages";
+import { GibbsImages } from "../ImageObjects/Gibbs";
 
-export const tonyQuotes: ConversationTemplate[] = [
+export const TonyQuotes: ConversationTemplate[] = [
   [
     { person: "McGee", message: "I've got it! Now my CPU's too small!" },
     { person: "Tony", message: "I'm gonna let that slide" },

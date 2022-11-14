@@ -1,6 +1,6 @@
 import { ConversationTemplate } from "../../../app/Conversation";
 
-export const martinBrundleQuotes: ConversationTemplate[] = [
+export const MartinBrundleQuotes: ConversationTemplate[] = [
   [
     {
       person: "Martin Brundle",

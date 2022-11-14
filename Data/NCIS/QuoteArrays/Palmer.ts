@@ -1,6 +1,6 @@
 import { ConversationTemplate } from "../../../app/Conversation";
 
-export const palmerQuotes: ConversationTemplate[] = [
+export const PalmerQuotes: ConversationTemplate[] = [
   [
     { person: "Palmer", message: "How do you do it?" },
     { person: "Gibbs", message: "Hmm?" },
