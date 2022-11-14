@@ -77,12 +77,52 @@ export const MartinBrundleQuotes: ConversationTemplate[] = [
   [
     {
       person: "Murray Walker",
-      message: "I hate to say this, but alot of people here are really debating whether Ricardo Rosset is Formula One material.",
+      message:
+        "I hate to say this, but alot of people here are really debating whether Ricardo Rosset is Formula One material.",
       flair: "emergency",
     },
     {
       person: "Martin Brundle",
       message: "Well, it's a fairly short debate Murray.",
+      flair: "iconic",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message: "Hug the apex like it is your favourite granny.",
+      flair: "emergency",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message: "Just kiss the apex twice as though you are a continental European.",
+      flair: "emergency",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message:
+        "Well again, Michael Schumacher, very slow, 1:25.9 on that last lap, I wonder if he's got something like a slow puncture or some kind of gear shift problem because Villeneuve is all over him look, he's going through!",
+    },
+    {
+      person: "Murray Walker",
+      message: "He's through!",
+    },
+    {
+      person: "Martin Brundle",
+      message: "Oh yes! I don't think...",
+    },
+    {
+      person: "Murray Walker",
+      message: "Out goes Michael Schumacher!",
+    },
+    {
+      person: "Martin Brundle",
+      image: MartinBrundleImages.JEREZ.image,
+      message: "That didn't work, that didn't work Michael, you hit the wrong part of him my friend!",
       flair: "iconic",
     },
   ],
