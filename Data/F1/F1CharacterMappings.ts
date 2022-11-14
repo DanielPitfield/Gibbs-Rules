@@ -17,6 +17,7 @@ import { CroftyImages } from "./ImageObjects/Crofty";
 import { MaxVerstappenImages } from "./ImageObjects/Max Verstappen";
 import { GPImages } from "./ImageObjects/GP";
 import { SergioPerezImages } from "./ImageObjects/Sergio Perez";
+import { ChristianHornerQuotes } from "./QuoteArrays/Christian Horner";
 
 export type F1Character =
   | "Martin Brundle"
@@ -66,7 +67,7 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
   {
     person: "Christian Horner",
     images: Object.values(ChristianHornerImages),
-    array: [],
+    array: ChristianHornerQuotes,
     isPermanentDailyCharacter: false,
   },
   {
