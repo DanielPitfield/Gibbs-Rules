@@ -9,6 +9,7 @@ import { NavBar } from "./NavBar";
 import { StaticImageData } from "next/image";
 import { F1Character } from "../Data/F1/F1CharacterMappings";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
+
 import "../public/styles/index.scss";
 
 // How many quotes/characters to show?
@@ -29,8 +30,8 @@ const Page = () => {
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
   const [refresh, setRefresh] = useState(false);
 
-  //
-  const dailyCharacters = useMemo(() => {
+  // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
+  const displayedCharacters = useMemo(() => {
     const characterMappings = quoteContextMappings.find(
       (mapping) => mapping.quoteContext === selectedQuoteContext
     )?.characterMappings;
@@ -58,13 +59,13 @@ const Page = () => {
     return permanentCharacterMappings.concat(chosenTemporaryCharacterMappings);
   }, [selectedQuoteContext, refresh]);
 
-  //
-  const dailyQuotes = useMemo(() => {
-    return dailyCharacters.map((mapping) => ({
+  // Get a quote to display for each of the displayed characters (that have been chosen)
+  const displayedQuotes = useMemo(() => {
+    return displayedCharacters.map((mapping) => ({
       person: mapping.person,
       conversation: getRandomArrayItems(mapping.array, 1, isDeterministic)[0],
     }));
-  }, [dailyCharacters]);
+  }, [displayedCharacters]);
 
   const formattedDate = new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "2-digit" });
 
@@ -81,7 +82,7 @@ const Page = () => {
       />
 
       <section className="conversations">
-        {dailyQuotes.map((dailyQuote, index) => {
+        {displayedQuotes.map((dailyQuote, index) => {
           // Display the daily quote of each character
           return (
             <Conversation

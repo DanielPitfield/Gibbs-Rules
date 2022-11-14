@@ -1,8 +1,9 @@
 import Image, { StaticImageData } from "next/image";
 import { Person } from "./page";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
-import styles from "../public/styles/Quote.module.scss";
 import { useMemo } from "react";
+
+import styles from "../public/styles/Quote.module.scss";
 
 export type Flair = "emergency" | "golden" | "iconic";
 
