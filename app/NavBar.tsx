@@ -33,7 +33,7 @@ export const NavBar = (props: NavBarProps) => {
                 {quoteMapping.quoteContext}
               </option>
             ))}
-          </select>{" "}
+          </select>
           Daily Quotes
         </h1>
 

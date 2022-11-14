@@ -6,8 +6,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
-        <title>{`NCIS Daily Quotes | ${formattedDate}`}</title>
-        <meta name="description" content="Daily NCIS quotes" />
+        <title>{`Daily Quotes | ${formattedDate}`}</title>
+        <meta name="description" content="Daily quotes" />
         <link rel="icon" href="/favicon.ico" />
       </head>
 

@@ -13,7 +13,7 @@ import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings
 import "../public/styles/index.scss";
 
 // How many quotes/characters to show?
-const NUM_DAILY_QUOTES = 3;
+const NUM_QUOTES = 3;
 
 export type Person = NCISCharacter | F1Character;
 
@@ -43,12 +43,12 @@ const Page = () => {
       characterMappings?.filter((person) => !person.isPermanentDailyCharacter && person.array.length > 0) ?? [];
 
     // Already have enough (or more than enough) characters to show
-    if (permanentCharacterMappings.length >= NUM_DAILY_QUOTES) {
-      return permanentCharacterMappings.slice(0, NUM_DAILY_QUOTES);
+    if (permanentCharacterMappings.length >= NUM_QUOTES) {
+      return permanentCharacterMappings.slice(0, NUM_QUOTES);
     }
 
     // How many more temporary characters are required?
-    const numTemporaryCharacters = Math.abs(NUM_DAILY_QUOTES - permanentCharacterMappings.length);
+    const numTemporaryCharacters = Math.abs(NUM_QUOTES - permanentCharacterMappings.length);
 
     const chosenTemporaryCharacterMappings: PersonMapping[] = getRandomArrayItems(
       temporaryCharacterMappings,
@@ -82,13 +82,12 @@ const Page = () => {
       />
 
       <section className="conversations">
-        {displayedQuotes.map((dailyQuote, index) => {
-          // Display the daily quote of each character
+        {displayedQuotes.map((quote, index) => {
           return (
             <Conversation
               key={index}
-              person={dailyQuote.person}
-              conversation={dailyQuote.conversation}
+              person={quote.person}
+              conversation={quote.conversation}
               showTitle={true}
               context={selectedQuoteContext}
             />
@@ -96,7 +95,7 @@ const Page = () => {
         })}
       </section>
 
-      {isHelpInfoShown && <HelpInformation onClose={() => setIsHelpInfoShown(false)} />}
+      {isHelpInfoShown && <HelpInformation context={selectedQuoteContext} onClose={() => setIsHelpInfoShown(false)} />}
     </main>
   );
 };
