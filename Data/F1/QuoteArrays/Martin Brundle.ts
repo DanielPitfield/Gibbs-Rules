@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../../app/Conversation";
+import { MartinBrundleImages } from "../ImageObjects/Martin Brundle";
 
 export const MartinBrundleQuotes: ConversationTemplate[] = [
   [
@@ -56,9 +57,21 @@ export const MartinBrundleQuotes: ConversationTemplate[] = [
   [
     {
       person: "Martin Brundle",
+      image: MartinBrundleImages.OUTBRAKE.image,
       message:
         "There's a lady here, who's gonna try and outbrake me. She's obviously from another TV, but we don't normally have that. Felipe? How is it out there? How's the track?",
       title: "Trying to interview a driver at the same time as a rival reporter",
+      flair: "emergency",
+    },
+    {
+      person: "Felipe Nasr",
+      message: "Well, it's been reset this morning, but to be honest, it doesn't feel too bad.",
+    },
+    {
+      person: "Martin Brundle",
+      image: MartinBrundleImages.OUTBRAKE2.image,
+      message: "Okay, good luck, there's a lady here, who thought she was gonna outbrake me. No chance.",
+      flair: "iconic",
     },
   ],
 ];
