@@ -2,15 +2,20 @@ import { StaticImageData } from "next/image";
 import { ConversationTemplate } from "../../app/Conversation";
 
 // Quote arrays
-import { martinQuotes } from "./QuoteArrays/MartinQuotes";
+import { martinBrundleQuotes } from "./QuoteArrays/MartinBrundleQuotes";
 
 // Images
-import { MartinImages } from "./ImageObjects/MartinImages";
-import { HornerImages } from "./ImageObjects/HornerImages";
+import { MartinBrundleImages } from "./ImageObjects/MartinBrundleImages";
+import { ChristianHornerImages } from "./ImageObjects/ChristianHornerImages";
 import { MeganTheeStallionImages } from "./ImageObjects/MeganTheeStallionImages";
 import { MeganTheeStallionFriendImages } from "./ImageObjects/MeganTheeStallionFriendImages";
 
-export type F1Character = "Martin" | "Crofty" | "Horner" | "MeganTheeStallion" | "MeganTheeStallion's Friend";
+export type F1Character =
+  | "Martin Brundle"
+  | "Crofty"
+  | "Christian Horner"
+  | "Megan Thee Stallion"
+  | "Megan Thee Stallion's Friend";
 
 type F1CharacterMapping = {
   person: F1Character;
@@ -20,17 +25,27 @@ type F1CharacterMapping = {
 };
 
 export const F1CharacterMappings: F1CharacterMapping[] = [
-  { person: "Martin", images: Object.values(MartinImages), array: martinQuotes, isPermanentDailyCharacter: true },
-  { person: "Crofty", images: Object.values([]), array: [], isPermanentDailyCharacter: true },
-  { person: "Horner", images: Object.values(HornerImages), array: [], isPermanentDailyCharacter: false },
   {
-    person: "MeganTheeStallion",
+    person: "Martin Brundle",
+    images: Object.values(MartinBrundleImages),
+    array: martinBrundleQuotes,
+    isPermanentDailyCharacter: true,
+  },
+  { person: "Crofty", images: Object.values([]), array: [], isPermanentDailyCharacter: true },
+  {
+    person: "Christian Horner",
+    images: Object.values(ChristianHornerImages),
+    array: [],
+    isPermanentDailyCharacter: false,
+  },
+  {
+    person: "Megan Thee Stallion",
     images: Object.values(MeganTheeStallionImages),
     array: [],
     isPermanentDailyCharacter: false,
   },
   {
-    person: "MeganTheeStallion's Friend",
+    person: "Megan Thee Stallion's Friend",
     images: Object.values(MeganTheeStallionFriendImages),
     array: [],
     isPermanentDailyCharacter: false,
