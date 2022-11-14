@@ -10,22 +10,19 @@ interface HelpInformationProps {
 const HelpInformation = (props: HelpInformationProps) => {
   return (
     <Modal mode="default" name="helpInfo" title="Help Information" onClose={props.onClose}>
+      <p>The quotes reset daily (and are the same for everybody!).</p>
       <p>
-        The quotes <b>reset daily</b> (and are the same for everybody!).
-      </p>
-      <p>
-        The <b>context of the quotes can be changed</b> using the dropdown.
-      </p>
-      <p>
-        A quote from some characters will always be shown whereas quotes from other characters are only sometimes
+        A quote from some characters will always be shown, whereas quotes from other characters are only sometimes
         randomly shown.
       </p>
-      <p>
-        Enabling the <b>Randomise</b> option and using the <b>Refresh</b> button will optionally display a new random
-        set of quotes.
-      </p>
-      <p>Each quote also has a rarity, which can be any of the following:</p>
 
+      <h3>Refreshing quotes</h3>
+      <p>The context of the quotes can be changed using the dropdown.</p>
+      <p>
+        Enabling the Randomise option and using the Refresh button will optionally display a new random set of quotes.
+      </p>
+
+      <h3>Quote Flairs</h3>
       <QuoteFlairs context={props.context} />
     </Modal>
   );
