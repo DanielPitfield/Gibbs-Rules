@@ -126,4 +126,57 @@ export const MartinBrundleQuotes: ConversationTemplate[] = [
       flair: "iconic",
     },
   ],
+  [
+    {
+      person: "Martin Brundle",
+      message: "You'll need to be up early in the morning to pass Max Verstappen on the outside.",
+      flair: "golden",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message:
+        "There are four compounds (of tyre) through the year: hard, medium, soft and supersoft; that's silver, white, yellow and red - not a very sensible progression. I think you've gotta think of it as knife, toast, butter and jam as they get softer through the progression of the rubber.",
+      flair: "golden",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message: "That car seems to be understeering like a cross-channel ferry.",
+      flair: "golden",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message:
+        "You know what really scares me? One day on this gridwalk we're gonna tread on a wing, a car's not gonna start a race and we're gonna get fined millions and millions of pounds.",
+      flair: "golden",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      message:
+        "The McLarens were notably unreliable in the test - they'd barely get you down to the chip shop on some days.",
+      flair: "emergency",
+    },
+  ],
+  [
+    {
+      person: "Martin Brundle",
+      title: "Lewis Hamilton overtakes a slow moving Timo Glock to move into a championship winning position",
+      image: MartinBrundleImages.GLOCK.image,
+      message: "Is that Glock? Is that Glock going slowly? That's Glock!",
+      flair: "iconic",
+    },
+    {
+      person: "Martin Brundle",
+      image: MartinBrundleImages.GLOCK2.image,
+      message: "They both think they've won, but Ferrari are wrong. No! You're wrong guys!",
+      flair: "iconic",
+    },
+  ],
 ];
