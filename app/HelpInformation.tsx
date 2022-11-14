@@ -1,7 +1,9 @@
+import { QuoteContext } from "../Data/QuoteContextMappings";
 import { Modal } from "./Modal";
 import QuoteFlairs from "./QuoteFlairs";
 
 interface HelpInformationProps {
+  context: QuoteContext;
   onClose: () => void;
 }
 
@@ -12,8 +14,11 @@ const HelpInformation = (props: HelpInformationProps) => {
         The quotes <b>reset daily</b> (and are the same for everybody!).
       </p>
       <p>
-        The <i>Gibbs Rule</i> and <i>Ziva Misquote</i> will always be shown whilst the third quote is from another
-        random character.
+        The <b>context of the quotes can be changed</b> using the dropdown.
+      </p>
+      <p>
+        A quote from some characters will always be shown whereas quotes from other characters are only sometimes
+        randomly shown.
       </p>
       <p>
         Enabling the <b>Randomise</b> option and using the <b>Refresh</b> button will optionally display a new random
@@ -21,7 +26,7 @@ const HelpInformation = (props: HelpInformationProps) => {
       </p>
       <p>Each quote also has a rarity, which can be any of the following:</p>
 
-      <QuoteFlairs />
+      <QuoteFlairs context={props.context} />
     </Modal>
   );
 };

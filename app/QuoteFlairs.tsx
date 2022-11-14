@@ -1,46 +1,50 @@
-import { KateImages } from "../Data/NCIS/ImageObjects/KateImages";
 import { getPrettyText } from "../Helpers/getPrettyText";
-import Conversation from "./Conversation";
-import { Flair, QuoteTemplate } from "./Quote";
-import { StaticImageData } from "next/image";
-import { NCISCharacter } from "../Data/NCIS/NCISCharacterMappings";
+import Conversation, { ConversationTemplate } from "./Conversation";
+import { Flair } from "./Quote";
+import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
+import { PersonMapping } from "./page";
+import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
 
 import styles from "../public/styles/QuoteFlairs.module.scss";
 
-const QuoteFlairs = () => {
-  const flairDescriptionMappings: { flair: Flair; description: string }[] = [
+interface QuoteFlairsProps {
+  context: QuoteContext;
+}
+
+const QuoteFlairs = (props: QuoteFlairsProps) => {
+  const flairDescriptionMappings: { flair: Flair | undefined; description: string }[] = [
+    { flair: undefined, description: "Basic character quote" },
     { flair: "emergency", description: "Danger is implied or just something controversial!" },
     { flair: "golden", description: "Rare - special, noteworthy quotes" },
     { flair: "iconic", description: "Very Rare - memorable moments from the show or a defining quote of a character" },
   ];
 
-  const defaultPerson: NCISCharacter = "Kate";
-  const defaultImage: StaticImageData = KateImages.DEFAULT.image;
-
-  const defaultQuoteTemplate: QuoteTemplate = {
-    person: defaultPerson,
-    image: defaultImage,
-    title: "Default",
-    message: "Basic character quote",
-  };
+  // Use the first character within the data for the currently selected quoteContext
+  const defaultPersonMapping: PersonMapping =
+    quoteContextMappings.find((mapping) => mapping.quoteContext === props.context)?.characterMappings[0] ??
+    // Otherwise, use the first NCIS character (Gibbs) as a fallback
+    NCISCharacterMappings[0];
 
   return (
     <div className={styles.wrapper}>
-      <Conversation key={"default"} person={defaultPerson} conversation={[defaultQuoteTemplate]} showTitle={false} />
-
       {flairDescriptionMappings.map((mapping) => {
+        // The name of the flair as the title with the description of the flair as the message (and the flair applied!)
+        const conversationTemplate: ConversationTemplate = [
+          {
+            person: defaultPersonMapping.person,
+            image: defaultPersonMapping.images[0].image,
+            title: getPrettyText(mapping.flair ?? "Default"),
+            flair: mapping.flair,
+            message: mapping.description,
+          },
+        ];
+
         return (
           <Conversation
             key={mapping.flair}
-            person={defaultPerson}
-            conversation={[
-              {
-                ...defaultQuoteTemplate,
-                title: getPrettyText(mapping.flair),
-                flair: mapping.flair,
-                message: mapping.description,
-              },
-            ]}
+            person={defaultPersonMapping.person}
+            context={props.context}
+            conversation={conversationTemplate}
             showTitle={false}
           />
         );
