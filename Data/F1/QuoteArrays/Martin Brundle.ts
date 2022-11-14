@@ -1,5 +1,6 @@
 import { ConversationTemplate } from "../../../app/Conversation";
 import { MartinBrundleImages } from "../ImageObjects/Martin Brundle";
+import { SergioPerezImages } from "../ImageObjects/Sergio Perez";
 
 export const MartinBrundleQuotes: ConversationTemplate[] = [
   [
@@ -177,6 +178,31 @@ export const MartinBrundleQuotes: ConversationTemplate[] = [
       image: MartinBrundleImages.GLOCK2.image,
       message: "They both think they've won, but Ferrari are wrong. No! You're wrong guys!",
       flair: "iconic",
+    },
+  ],
+  [
+    {
+      person: "Crofty",
+      message: "Perez has played the ultimate team game and has really brought his teammate back into play!",
+      flair: "golden",
+    },
+    {
+      person: "Martin Brundle",
+      title: "After holding up Hamilton, Perez backs off to give his teammate DRS",
+      image: SergioPerezImages.DRS.image,
+      message:
+        "And he can give his teammate a bit of DRS for good measure. So great team play. That's the team play we talked about earlier on. Now he gets clean out of the way.",
+      flair: "iconic",
+    },
+    {
+      person: "Max Verstappen",
+      message: "Oh, Checo is a legend.",
+      flair: "golden",
+    },
+    {
+      person: "GP",
+      message: "Absolute animal.",
+      flair: "golden",
     },
   ],
 ];

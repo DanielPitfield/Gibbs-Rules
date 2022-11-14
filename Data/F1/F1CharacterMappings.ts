@@ -3,6 +3,8 @@ import { ConversationTemplate } from "../../app/Conversation";
 
 // Quote arrays
 import { MartinBrundleQuotes } from "./QuoteArrays/Martin Brundle";
+import { MurrayWalkerQuotes } from "./QuoteArrays/Murray Walker";
+import { CroftyQuotes } from "./QuoteArrays/Crofty";
 
 // Images
 import { MartinBrundleImages } from "./ImageObjects/Martin Brundle";
@@ -11,19 +13,17 @@ import { ChristianHornerImages } from "./ImageObjects/Christian Horner";
 import { FelipeNasrImages } from "./ImageObjects/Felipe Nasr";
 import { MeganTheeStallionImages } from "./ImageObjects/Megan Thee Stallion";
 import { MeganTheeStallionFriendImages } from "./ImageObjects/Megan Thee Stallion Friend";
-import { MurrayWalkerQuotes } from "./QuoteArrays/Murray Walker";
-import { CroftyQuotes } from "./QuoteArrays/Crofty";
 import { CroftyImages } from "./ImageObjects/Crofty";
-import { ChristianHornerQuotes } from "./QuoteArrays/Christian Horner";
 import { MaxVerstappenImages } from "./ImageObjects/Max Verstappen";
-import { MaxVerstappenQuotes } from "./QuoteArrays/Max Verstappen";
 import { GPImages } from "./ImageObjects/GP";
+import { SergioPerezImages } from "./ImageObjects/Sergio Perez";
 
 export type F1Character =
   | "Martin Brundle"
   | "Crofty"
   | "Murray Walker"
   | "Max Verstappen"
+  | "Sergio Perez"
   | "Christian Horner"
   | "GP"
   | "Felipe Nasr"
@@ -54,13 +54,19 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
   {
     person: "Max Verstappen",
     images: Object.values(MaxVerstappenImages),
-    array: MaxVerstappenQuotes,
+    array: [],
+    isPermanentDailyCharacter: false,
+  },
+  {
+    person: "Sergio Perez",
+    images: Object.values(SergioPerezImages),
+    array: [],
     isPermanentDailyCharacter: false,
   },
   {
     person: "Christian Horner",
     images: Object.values(ChristianHornerImages),
-    array: ChristianHornerQuotes,
+    array: [],
     isPermanentDailyCharacter: false,
   },
   {
