@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../../app/Conversation";
+import { ChristianHornerImages } from "../ImageObjects/Christian Horner";
 
 // TODO: You are world champion team radio quotes!
 // TODO: Christian vs Toto
@@ -7,6 +8,7 @@ export const ChristianHornerQuotes: ConversationTemplate[] = [
   [
     {
       person: "Christian Horner",
+      image: ChristianHornerImages.RADIO.image,
       message:
         "Max Verstappen, YOU are world champion, WE are world champions! Thank you so much! And thank you Dietrich Mateschitz for everything that you have done, for us, for this team and these championships are for you. Thank you.",
       flair: "iconic",
