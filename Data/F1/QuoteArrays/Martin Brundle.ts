@@ -74,4 +74,16 @@ export const MartinBrundleQuotes: ConversationTemplate[] = [
       flair: "iconic",
     },
   ],
+  [
+    {
+      person: "Murray Walker",
+      message: "I hate to say this, but alot of people here are really debating whether Ricardo Rosset is Formula One material.",
+      flair: "emergency",
+    },
+    {
+      person: "Martin Brundle",
+      message: "Well, it's a fairly short debate Murray.",
+      flair: "iconic",
+    },
+  ],
 ];

@@ -6,14 +6,16 @@ import { MartinBrundleQuotes } from "./QuoteArrays/Martin Brundle";
 
 // Images
 import { MartinBrundleImages } from "./ImageObjects/Martin Brundle";
+import { MurrayWalkerImages } from "./ImageObjects/Murray Walker";
 import { ChristianHornerImages } from "./ImageObjects/Christian Horner";
+import { FelipeNasrImages } from "./ImageObjects/Felipe Nasr";
 import { MeganTheeStallionImages } from "./ImageObjects/Megan Thee Stallion";
 import { MeganTheeStallionFriendImages } from "./ImageObjects/Megan Thee Stallion Friend";
-import { FelipeNasrImages } from "./ImageObjects/Felipe Nasr";
 
 export type F1Character =
   | "Martin Brundle"
   | "Crofty"
+  | "Murray Walker"
   | "Christian Horner"
   | "Felipe Nasr"
   | "Megan Thee Stallion"
@@ -34,6 +36,7 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
     isPermanentDailyCharacter: true,
   },
   { person: "Crofty", images: Object.values([]), array: [], isPermanentDailyCharacter: true },
+  { person: "Murray Walker", images: Object.values(MurrayWalkerImages), array: [], isPermanentDailyCharacter: false },
   {
     person: "Christian Horner",
     images: Object.values(ChristianHornerImages),
