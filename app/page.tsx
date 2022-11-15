@@ -25,7 +25,7 @@ export type PersonMapping = {
 };
 
 const Page = () => {
-  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>("F1");
+  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>("NCIS");
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
   const [refresh, setRefresh] = useState(false);
