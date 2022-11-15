@@ -7,6 +7,7 @@ import styles from "../public/styles/Conversation.module.scss";
 export type ConversationTemplate = QuoteTemplate[];
 
 interface ConversationProps {
+  index: number;
   person: Person;
   conversation: ConversationTemplate;
   showTitle: boolean;
@@ -25,7 +26,7 @@ const Conversation = (props: ConversationProps) => {
     converstationTitles.find((x) => x.person === props.person)?.converstationTitle ?? `${props.person} Quote`;
 
   return (
-    <div className={styles.wrapper} data-person={props.person}>
+    <div className={styles.wrapper} data-index={props.index}>
       {props.showTitle && <h2 className={styles.title}>{conversationTitle}</h2>}
       {props.conversation.map((quoteTemplate, index) => {
         return <Quote key={index} template={quoteTemplate} context={props.context} showImage />;

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -11,17 +13,16 @@
     opacity: 1;
   }
 
-  // This colour when anyone other than Gibbs or Ziva
-  &[data-person] {
-    background-color: #a8af83;
-  }
+  $background-colors: (
+    "0": #9eb1c5,
+    "1": #bba2d1,
+    "2": #a8af83,
+  );
 
-  &[data-person="Gibbs"] {
-    background-color: #9eb1c5;
-  }
-
-  &[data-person="Ziva"] {
-    background-color: #bba2d1;
+  @for $i from 0 through length($background-colors) {
+    &[data-index="#{$i}"] {
+      background-color: map.get($background-colors, #{$i});
+    }
   }
 
   .title {
