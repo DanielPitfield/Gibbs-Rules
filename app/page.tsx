@@ -86,7 +86,7 @@ const Page = () => {
           return (
             <Conversation
               key={index}
-              index={index}
+              position={index + 1}
               person={quote.person}
               conversation={quote.conversation}
               showTitle={true}
