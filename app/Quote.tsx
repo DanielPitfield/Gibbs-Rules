@@ -62,7 +62,7 @@ const Quote = (props: QuoteProps) => {
             <span>{props.template.person}</span>
           )}
         </div>
-        <div className={styles.message}>{props.template.message}</div>
+        {props.template.message && <div className={styles.message}>{props.template.message}</div>}
       </div>
     </div>
   );
