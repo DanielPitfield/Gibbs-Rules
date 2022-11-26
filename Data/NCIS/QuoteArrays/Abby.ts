@@ -1,4 +1,5 @@
 import { ConversationTemplate } from "../../../app/Conversation";
+import { AbbyImages } from "../ImageObjects/Abby";
 import { GibbsImages } from "../ImageObjects/Gibbs";
 
 export const AbbyQuotes: ConversationTemplate[] = [
@@ -59,5 +60,82 @@ export const AbbyQuotes: ConversationTemplate[] = [
       flair: "iconic",
     },
     { person: "Gibbs", image: GibbsImages.DEFAULT.image, message: "I know." },
+  ],
+  [
+    {
+      person: "Abby",
+      message: "I'm trying to figure out a way to be ok with not being enough...",
+      flair: "golden",
+    },
+    {
+      person: "Gibbs",
+      message: "Enough what?",
+    },
+    {
+      person: "Abby",
+      message: "Enough good...",
+      flair: "golden",
+    },
+    {
+      person: "Gibbs",
+      message: "Well, then you're not counting the hits and runs.",
+    },
+    {
+      person: "Abby",
+      message: "The what?",
+    },
+    {
+      person: "Gibbs",
+      message:
+        "The good kind! You do something good now, you're not always around to see the difference it makes later.",
+      flair: "iconic",
+    },
+  ],
+  [
+    {
+      person: "Gibbs",
+      message: "Abby, first day we met...",
+    },
+    {
+      person: "Abby",
+      message: "It was a Thursday. 70 degrees. Mostly sunny. What about it?",
+    },
+    {
+      person: "Gibbs",
+      message: "What did you give me?",
+    },
+    {
+      person: "Abby",
+      message: "I had Chinese food and I gave you the fortune from my cookie.",
+    },
+    {
+      person: "Gibbs",
+      message: "Becuase?",
+    },
+    {
+      person: "Abby",
+      message: "Because, I wanted it to be about you.",
+    },
+    {
+      person: "Gibbs",
+      title: "Opens his wallet and gives the fortune to Abby",
+      message: "",
+    },
+    {
+      person: "Abby",
+      message: "The fortune? You kept it!",
+    },
+    {
+      person: "Gibbs",
+      message: "The things you do, mean something to people.",
+      flair: "iconic",
+    },
+    {
+      person: "Abby",
+      title: "Reads the fortune cookie",
+      message: "Today's new friend is tomorrow's family",
+      image: AbbyImages.FORTUNE.image,
+      flair: "iconic",
+    },
   ],
 ];
