@@ -78,7 +78,7 @@ export const AbbyQuotes: ConversationTemplate[] = [
     },
     {
       person: "Gibbs",
-      message: "Well, then you're not counting the hits and runs.",
+      message: "Well, then you're not counting the hit and runs.",
     },
     {
       person: "Abby",
@@ -120,6 +120,7 @@ export const AbbyQuotes: ConversationTemplate[] = [
       person: "Gibbs",
       title: "Opens his wallet and gives the fortune to Abby",
       message: "",
+      flair: "golden",
     },
     {
       person: "Abby",
@@ -133,7 +134,7 @@ export const AbbyQuotes: ConversationTemplate[] = [
     {
       person: "Abby",
       title: "Reads the fortune cookie",
-      message: "Today's new friend is tomorrow's family",
+      message: "",
       image: AbbyImages.FORTUNE.image,
       flair: "iconic",
     },
