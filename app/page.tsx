@@ -2,7 +2,7 @@
 
 import { NCISCharacter } from "../Data/NCIS/NCISCharacterMappings";
 import Conversation, { ConversationTemplate } from "./Conversation";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
 import HelpInformation from "./HelpInformation";
 import { NavBar } from "./NavBar";
@@ -24,11 +24,16 @@ export type PersonMapping = {
   isPermanentDailyCharacter: boolean;
 };
 
-const Page = () => {
-  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>("NCIS");
+const Page = (props: { initialQuoteContext?: QuoteContext }) => {
+  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(props.initialQuoteContext || "NCIS");
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
   const [refresh, setRefresh] = useState(false);
+
+  // On change of the selectedQuoteContext, update the URL path
+  useEffect(() => {
+    window.history.pushState(undefined, "", `/${selectedQuoteContext}`);
+  }, [selectedQuoteContext]);
 
   // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
   const displayedCharacters = useMemo(() => {
