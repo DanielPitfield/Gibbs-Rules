@@ -16,7 +16,7 @@ const HelpInformation = (props: HelpInformationProps) => {
         randomly shown.
       </p>
 
-      <h3>Refreshing quotes</h3>
+      <h3>How to refresh the quotes?</h3>
       <p>The context of the quotes can be changed using the dropdown.</p>
       <p>
         Enabling the Randomise option and using the Refresh button will optionally display a new random set of quotes.

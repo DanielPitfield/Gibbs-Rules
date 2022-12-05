@@ -27,7 +27,7 @@ const QuoteFlairs = (props: QuoteFlairsProps) => {
 
   return (
     <div className={styles.wrapper}>
-      {flairDescriptionMappings.map((mapping) => {
+      {flairDescriptionMappings.map((mapping, index) => {
         // The name of the flair as the title with the description of the flair as the message (and the flair applied!)
         const conversationTemplate: ConversationTemplate = [
           {
@@ -42,6 +42,7 @@ const QuoteFlairs = (props: QuoteFlairsProps) => {
         return (
           <Conversation
             key={mapping.flair}
+            position={1}
             person={defaultPersonMapping.person}
             context={props.context}
             conversation={conversationTemplate}
