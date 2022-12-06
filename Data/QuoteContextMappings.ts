@@ -1,8 +1,9 @@
-import { PersonMapping } from "../app/page";
+import { PersonMapping } from "../app/[[...quoteContext]]/page";
 import { F1CharacterMappings } from "./F1/F1CharacterMappings";
 import { NCISCharacterMappings } from "./NCIS/NCISCharacterMappings";
 
-export type QuoteContext = "NCIS" | "F1";
+export const quoteContexts = ["NCIS" , "F1"];
+export type QuoteContext = typeof quoteContexts[number] ;
 
 type QuoteContextMapping = {
   quoteContext: QuoteContext;
@@ -11,5 +12,5 @@ type QuoteContextMapping = {
 
 export const quoteContextMappings: QuoteContextMapping[] = [
   { quoteContext: "NCIS", characterMappings: NCISCharacterMappings },
-  { quoteContext: "F1", characterMappings: F1CharacterMappings},
+  { quoteContext: "F1", characterMappings: F1CharacterMappings },
 ];

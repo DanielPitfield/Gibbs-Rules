@@ -1,16 +1,17 @@
 "use client";
 
-import { NCISCharacter } from "../Data/NCIS/NCISCharacterMappings";
-import Conversation, { ConversationTemplate } from "./Conversation";
-import { useMemo, useState, useEffect } from "react";
-import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
-import HelpInformation from "./HelpInformation";
-import { NavBar } from "./NavBar";
+import { useSearchParams } from "next/navigation";
+import { NCISCharacter } from "../../Data/NCIS/NCISCharacterMappings";
+import Conversation, { ConversationTemplate } from "../Conversation";
+import { useMemo, useState } from "react";
+import { getRandomArrayItems } from "../../Helpers/DeterministicSeeding";
+import HelpInformation from "../HelpInformation";
+import { NavBar } from "../NavBar";
 import { StaticImageData } from "next/image";
-import { F1Character } from "../Data/F1/F1CharacterMappings";
-import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
+import { F1Character } from "../../Data/F1/F1CharacterMappings";
+import { QuoteContext, quoteContextMappings, quoteContexts } from "../../Data/QuoteContextMappings";
 
-import "../public/styles/index.scss";
+import "../../public/styles/index.scss";
 
 // How many quotes/characters to show?
 const NUM_QUOTES = 3;
@@ -24,16 +25,20 @@ export type PersonMapping = {
   isPermanentDailyCharacter: boolean;
 };
 
-const Page = (props: { initialQuoteContext?: QuoteContext }) => {
-  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(props.initialQuoteContext || "NCIS");
+const Page = () => {
+  // Optional catch all routes
+  const searchParams = useSearchParams();
+  const quoteContextParam = searchParams.get("quoteContext")?.toString() ?? "";
+
+  // Check dynamic segment is a valid QuoteContext, if not use the fallback value of "NCIS"
+  const defaultQuoteContext: QuoteContext = quoteContexts.includes(quoteContextParam.toUpperCase())
+    ? (quoteContextParam.toUpperCase() as QuoteContext)
+    : "NCIS";
+
+  const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(defaultQuoteContext);
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
   const [refresh, setRefresh] = useState(false);
-
-  // On change of the selectedQuoteContext, update the URL path
-  useEffect(() => {
-    window.history.pushState(undefined, "", `/${selectedQuoteContext}`);
-  }, [selectedQuoteContext]);
 
   // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
   const displayedCharacters = useMemo(() => {

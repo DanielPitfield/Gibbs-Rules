@@ -2,7 +2,7 @@ import { getPrettyText } from "../Helpers/getPrettyText";
 import Conversation, { ConversationTemplate } from "./Conversation";
 import { Flair } from "./Quote";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
-import { PersonMapping } from "./page";
+import { PersonMapping } from "./[[...quoteContext]]/page";
 import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
 
 import styles from "../public/styles/QuoteFlairs.module.scss";

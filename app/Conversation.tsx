@@ -1,5 +1,5 @@
 import Quote, { QuoteTemplate } from "./Quote";
-import { Person } from "./page";
+import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext } from "../Data/QuoteContextMappings";
 
 import styles from "../public/styles/Conversation.module.scss";

@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from "next/image";
-import { Person } from "./page";
+import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import { useMemo } from "react";
 
