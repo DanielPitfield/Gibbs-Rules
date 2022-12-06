@@ -44,7 +44,13 @@ const Page = () => {
 
   // On change of the selectedQuoteContext, update the URL path
   useEffect(() => {
-    router.replace(`?=${selectedQuoteContext}`)
+    // Already at the correct URL path
+    if (quoteContextParam === selectedQuoteContext) {
+      return;
+    }
+
+    // TODO: Changing the context, still the bug of the pictures changing
+    router.replace(`?=${selectedQuoteContext}`);
   }, [selectedQuoteContext]);
 
   // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
