@@ -28,11 +28,11 @@ export type PersonMapping = {
 const Page = () => {
   // Optional catch all routes
   const searchParams = useSearchParams();
-  const quoteContextParam = searchParams.get("quoteContext")?.toString() ?? "";
+  const quoteContextParam = searchParams.get("quoteContext")?.toString().toUpperCase() ?? "";
 
   // Check dynamic segment is a valid QuoteContext, if not use the fallback value of "NCIS"
-  const defaultQuoteContext: QuoteContext = quoteContexts.includes(quoteContextParam.toUpperCase())
-    ? (quoteContextParam.toUpperCase() as QuoteContext)
+  const defaultQuoteContext: QuoteContext = quoteContexts.includes(quoteContextParam)
+    ? (quoteContextParam as QuoteContext)
     : "NCIS";
 
   const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(defaultQuoteContext);
