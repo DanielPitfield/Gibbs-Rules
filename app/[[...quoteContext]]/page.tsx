@@ -51,6 +51,9 @@ const Page = () => {
 
     // TODO: Changing the context, still the bug of the pictures changing
     router.replace(`?=${selectedQuoteContext}`);
+
+    // Preserve toggle status of isDeterministic (even after navigation)
+    setIsDeterministic(isDeterministic);
   }, [selectedQuoteContext]);
 
   // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
