@@ -1,9 +1,9 @@
 "use client";
 
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { NCISCharacter } from "../../Data/NCIS/NCISCharacterMappings";
 import Conversation, { ConversationTemplate } from "../Conversation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { getRandomArrayItems } from "../../Helpers/DeterministicSeeding";
 import HelpInformation from "../HelpInformation";
 import { NavBar } from "../NavBar";
@@ -26,6 +26,8 @@ export type PersonMapping = {
 };
 
 const Page = () => {
+  const router = useRouter();
+
   // Optional catch all routes
   const searchParams = useSearchParams();
   const quoteContextParam = searchParams.get("")?.toString().toUpperCase() ?? "";
@@ -39,6 +41,11 @@ const Page = () => {
   const [isDeterministic, setIsDeterministic] = useState(true);
   const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
   const [refresh, setRefresh] = useState(false);
+
+  // On change of the selectedQuoteContext, update the URL path
+  useEffect(() => {
+    router.replace(`?=${selectedQuoteContext}`)
+  }, [selectedQuoteContext]);
 
   // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
   const displayedCharacters = useMemo(() => {
