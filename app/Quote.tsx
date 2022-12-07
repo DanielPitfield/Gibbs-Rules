@@ -41,7 +41,9 @@ const Quote = (props: QuoteProps) => {
         ?.images.filter((imageInfo) => imageInfo.isRandomlySelectable);
 
       // Randomly select an image of the person
-      return imageArray?.[getDeterministicIndexFromString(props.template.message, imageArray.length - 1)].image;
+      return imageArray?.[
+        getDeterministicIndexFromString(`${props.template.message}-${new Date().toDateString()}`, imageArray.length - 1)
+      ].image;
     }
 
     // Otherwise, use the provided image
