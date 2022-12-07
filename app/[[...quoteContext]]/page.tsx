@@ -49,7 +49,6 @@ const Page = () => {
       return;
     }
 
-    // TODO: Changing the context, still the bug of the pictures changing
     router.replace(`?=${selectedQuoteContext}`);
 
     // Preserve toggle status of isDeterministic (even after navigation)
