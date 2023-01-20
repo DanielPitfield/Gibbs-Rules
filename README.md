@@ -9,17 +9,18 @@ Daily Gibbs rule, Ziva misquote and side character quote (from the TV show NCIS)
 ![Gibbs](./public/Images/NCIS/Gibbs/default.jpg)
 
 ## Usage / Instructions
-By default, the deterministically chosen quotes for the current day will be displayed (these are the same for everybody).
+By default, the deterministically chosen quotes for the current day will be displayed (the same for everybody!).
 
 To view more quotes, check the 'Randomise?' box and click the 'Refresh' button.
 
-Every quote has a 'flair', which can be any of the following:
-* Default - basic character quote
-* Emergency - danger is implied or just something controversial!
-* Golden - special, noteworthy quotes (rare) 
-* Iconic - memorable moments from the show or a defining quote of a character (very rare)
+### Quote Flairs
+* **Default** - basic character quote
+* **Emergency** - danger is implied or just something controversial!
+* **Golden** - special, noteworthy quotes (rare) 
+* **Iconic** - memorable moments from the show or a defining quote of a character (very rare)
 
-Whilst there are more possible quotes for NCIS characters, the context of quotes can be changed using the dropdown in the middle of the header (just above the date). The current quote contexts are:
+### Quote Contexts
+Whilst there are more possible quotes for NCIS characters, the context of quotes can be changed using the dropdown in the middle of the header (just above the date). The currently available quote contexts are the following:
 * NCIS
 * F1
 
