@@ -4,6 +4,7 @@ import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings
 import { useMemo } from "react";
 
 import styles from "../public/styles/Quote.module.scss";
+import { getDeterministicIndexFromString } from "../Helpers/DeterministicIndexFromString";
 
 export type Flair = "emergency" | "golden" | "iconic";
 
@@ -40,7 +41,9 @@ const Quote = (props: QuoteProps) => {
         ?.images.filter((imageInfo) => imageInfo.isRandomlySelectable);
 
       // Randomly select an image of the person
-      return imageArray?.[Math.floor(Math.random() * imageArray.length)].image;
+      return imageArray?.[
+        getDeterministicIndexFromString(`${props.template.message}-${new Date().toDateString()}`, imageArray.length - 1)
+      ].image;
     }
 
     // Otherwise, use the provided image
