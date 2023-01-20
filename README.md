@@ -1,34 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gibbs Rules
+Daily Gibbs rule, Ziva misquote and side character quote (from the TV show NCIS)
 
-## Getting Started
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-First, run the development server:
+![Gibbs](./public/Images/NCIS/Gibbs/default.jpg)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Usage / Instructions
+By default, the deterministically chosen quotes for the current day will be displayed (these are the same for everybody).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To view more quotes, check the 'Randomise?' box and click the 'Refresh' button.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Every quote has a 'flair', which can be any of the following:
+* Default - basic character quote
+* Emergency - danger is implied or just something controversial!
+* Golden - special, noteworthy quotes (rare) 
+* Iconic - memorable moments from the show or a defining quote of a character (very rare)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Whilst there are more possible quotes for NCIS characters, the context of quotes can be changed using the dropdown in the middle of the header (just above the date). The current quote contexts are:
+* NCIS
+* F1
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![Martin Brundle](./public/Images/F1/Martin%20Brundle/default.jpg)
