@@ -6,7 +6,7 @@ Daily Gibbs rule, Ziva misquote and side character quote (from the TV show NCIS)
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
 
-<img src="./public/Images/NCIS/Gibbs/default.jpg" alt="Gibbs" width="650">
+![Gibbs Rules](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/gibbsRules.png)
 
 ## Usage / Instructions
 By default, the deterministically chosen quotes for the current day will be displayed (the same for everybody!).
@@ -24,4 +24,4 @@ Whilst there are more possible quotes for NCIS characters, the context of quotes
 * NCIS
 * F1
 
-<img src="./public/Images/F1/Martin%20Brundle/default.jpg" alt="Martin Brundle" width="650">
+![F1 Quotes](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/f1Quotes.png)
