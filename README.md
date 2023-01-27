@@ -27,4 +27,5 @@ Whilst there are more possible quotes for NCIS characters, the context of quotes
 ![F1 Quotes](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/f1Quotes.png)
 
 ## Known Issues
-Fewer quotes for F1 quote context (when randomly refreshing the quotes, it's common for the same quotes to appear)
+* Fewer quotes for F1 quote context (when randomly refreshing the quotes, it's common for the same quotes to appear)
+* Images not yet cached take noticeably longer to show
