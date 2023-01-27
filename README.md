@@ -17,7 +17,7 @@ To view more quotes, check the 'Randomise?' box and click the 'Refresh' button.
 * **Default** - basic character quote
 * **Emergency** - danger is implied or just something controversial!
 * **Golden** - special, noteworthy quotes (rare) 
-* **Iconic** - memorable moments from the show or a defining quote of a character (very rare)
+* **Iconic** - memorable moments or a defining quote of a character (very rare)
 
 ### Quote Contexts
 Whilst there are more possible quotes for NCIS characters, the context of quotes can be changed using the dropdown in the middle of the header (just above the date). The currently available quote contexts are the following:
@@ -25,3 +25,6 @@ Whilst there are more possible quotes for NCIS characters, the context of quotes
 * F1
 
 ![F1 Quotes](https://raw.githubusercontent.com/DanielPitfield/danielpitfield.github.io/main/public/Images/Projects/f1Quotes.png)
+
+## Known Issues
+Fewer quotes for F1 quote context (when randomly refreshing the quotes, it's common for the same quotes to appear)
