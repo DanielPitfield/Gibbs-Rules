@@ -11,5 +11,3 @@ export const KateImages = {
   SHOTBODY: { image: ShotBodyGif, isRandomlySelectable: false },
   SHOTHEAD: { image: ShotHeadGif, isRandomlySelectable: false },
 };
-
-// TODO: More images

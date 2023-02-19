@@ -5,5 +5,3 @@ export const TonyImages = {
   DEFAULT: { image: Default, isRandomlySelectable: true },
   SMILE: { image: Smile, isRandomlySelectable: true },
 };
-
-// TODO: More images

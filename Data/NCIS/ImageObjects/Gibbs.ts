@@ -17,5 +17,3 @@ export const GibbsImages = {
   YOUNG2: { image: Young2, isRandomlySelectable: false },
   YOUNG3: { image: Young3, isRandomlySelectable: false },
 };
-
-// TODO: More images

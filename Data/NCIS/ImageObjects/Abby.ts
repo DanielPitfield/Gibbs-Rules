@@ -5,5 +5,3 @@ export const AbbyImages = {
   DEFAULT: { image: Default, isRandomlySelectable: true },
   FORTUNE: { image: Fortune, isRandomlySelectable: false },
 };
-
-// TODO: More images
