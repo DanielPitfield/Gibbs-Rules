@@ -2,7 +2,7 @@ import { PersonMapping } from "../app/[[...quoteContext]]/page";
 import { F1CharacterMappings } from "./F1/F1CharacterMappings";
 import { NCISCharacterMappings } from "./NCIS/NCISCharacterMappings";
 
-export const quoteContexts = ["NCIS" , "F1"];
+export const quoteContexts = ["NCIS" , "F1"] as const;
 export type QuoteContext = typeof quoteContexts[number] ;
 
 type QuoteContextMapping = {

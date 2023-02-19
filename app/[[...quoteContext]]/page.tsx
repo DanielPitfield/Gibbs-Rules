@@ -33,7 +33,9 @@ const Page = () => {
   const quoteContextParam = searchParams.get("")?.toString().toUpperCase() ?? "";
 
   // Check dynamic segment is a valid QuoteContext, if not use the fallback value of "NCIS"
-  const defaultQuoteContext: QuoteContext = quoteContexts.includes(quoteContextParam)
+  const defaultQuoteContext: QuoteContext = quoteContexts.some(
+    (quoteContext) => quoteContext === (quoteContextParam as QuoteContext)
+  )
     ? (quoteContextParam as QuoteContext)
     : "NCIS";
 
