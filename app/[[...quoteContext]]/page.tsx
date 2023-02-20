@@ -30,19 +30,17 @@ const Page = () => {
 
   // Optional catch all routes
   const searchParams = useSearchParams();
-  const quoteContextParam = searchParams.get("")?.toString().toUpperCase() ?? "";
+  const quoteContextParam = searchParams.get("")?.toString().toUpperCase() as QuoteContext;
 
   // Check dynamic segment is a valid QuoteContext, if not use the fallback value of "NCIS"
-  const defaultQuoteContext: QuoteContext = quoteContexts.some(
-    (quoteContext) => quoteContext === (quoteContextParam as QuoteContext)
-  )
-    ? (quoteContextParam as QuoteContext)
+  const defaultQuoteContext: QuoteContext = quoteContexts.some((quoteContext) => quoteContext === quoteContextParam)
+    ? quoteContextParam
     : "NCIS";
 
   const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(defaultQuoteContext);
-  const [isDeterministic, setIsDeterministic] = useState(true);
-  const [isHelpInfoShown, setIsHelpInfoShown] = useState(false);
-  const [refresh, setRefresh] = useState(false);
+  const [isDeterministic, setIsDeterministic] = useState<boolean>(true);
+  const [isHelpInfoShown, setIsHelpInfoShown] = useState<boolean>(false);
+  const [refresh, setRefresh] = useState<boolean>(false);
 
   // On change of the selectedQuoteContext, update the URL path
   useEffect(() => {
