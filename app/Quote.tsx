@@ -58,8 +58,14 @@ const Quote = (props: QuoteProps) => {
         {props.template.title && <div className={styles.title}>{props.template.title}</div>}
         <div className={styles.image}>
           {image ? (
-            // The image selected from the server source set, only (rougly) needs to be at most 30vw wide
-            <Image src={image} alt={props.template.person} fill sizes="30vw" />
+            // The image selected from the server source set, only (roughly) needs to be at most 30vw wide
+            <Image
+              src={image}
+              alt={props.template.person}
+              priority={props.template.person === "Gibbs"}
+              fill
+              sizes="30vw"
+            />
           ) : (
             // No image, just show the name of the person within the image container
             <span>{props.template.person}</span>
