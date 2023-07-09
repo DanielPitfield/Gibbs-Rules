@@ -36,4 +36,13 @@ export const ChristianHornerQuotes: ConversationTemplate[] = [
       flair: "golden",
     },
   ],
+  [
+    {
+      person: "Christian Horner",
+      image: ChristianHornerImages.WORLDCHAMPION2013.image,
+      message:
+        "You've done it in style, fantastic! You're a four-time world champion. Brilliant, brilliant drive. You've joined the greats mate, you're up there, there's Fangio, Schumacher, then you.",
+      flair: "iconic",
+    },
+  ],
 ];
