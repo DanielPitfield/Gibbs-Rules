@@ -8,7 +8,7 @@ export const CroftyQuotes: ConversationTemplate[] = [
       person: "Crofty",
       image: MaxVerstappenImages.DEBUTWIN.image,
       message:
-        "The sun is out, the smiles will be out, at 18 years and 227 days old, Max Verstappen wins a Formula One Grand Prix, wins the Spanish Grand Prix and is the youngest driver EVER to win a Formula One World Championship Grand Prix. ",
+        "The sun is out, the smiles will be out, at 18 years and 227 days old, Max Verstappen wins a Formula One Grand Prix, wins the Spanish Grand Prix and is the youngest driver EVER to win a Formula One World Championship Grand Prix.",
       flair: "iconic",
     },
     {

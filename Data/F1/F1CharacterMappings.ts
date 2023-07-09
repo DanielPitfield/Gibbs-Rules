@@ -5,6 +5,8 @@ import { ConversationTemplate } from "../../app/Conversation";
 import { MartinBrundleQuotes } from "./QuoteArrays/Martin Brundle";
 import { MurrayWalkerQuotes } from "./QuoteArrays/Murray Walker";
 import { CroftyQuotes } from "./QuoteArrays/Crofty";
+import { ChristianHornerQuotes } from "./QuoteArrays/Christian Horner";
+import { KevinMagnussenQuotes } from "./QuoteArrays/Kevin Magnussen";
 
 // Images
 import { MartinBrundleImages } from "./ImageObjects/Martin Brundle";
@@ -17,7 +19,8 @@ import { CroftyImages } from "./ImageObjects/Crofty";
 import { MaxVerstappenImages } from "./ImageObjects/Max Verstappen";
 import { GPImages } from "./ImageObjects/GP";
 import { SergioPerezImages } from "./ImageObjects/Sergio Perez";
-import { ChristianHornerQuotes } from "./QuoteArrays/Christian Horner";
+import { KevinMagnussenImages } from "./ImageObjects/Kevin Magnussen";
+import { NicoHulkenbergImages } from "./ImageObjects/Nico Hulkenberg";
 
 export type F1Character =
   | "Martin Brundle"
@@ -25,6 +28,8 @@ export type F1Character =
   | "Murray Walker"
   | "Max Verstappen"
   | "Sergio Perez"
+  | "Kevin Magnussen"
+  | "Nico Hulkenberg"
   | "Christian Horner"
   | "GP"
   | "Felipe Nasr"
@@ -61,6 +66,18 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
   {
     person: "Sergio Perez",
     images: Object.values(SergioPerezImages),
+    array: [],
+    isPermanentDailyCharacter: false,
+  },
+  {
+    person: "Kevin Magnussen",
+    images: Object.values(KevinMagnussenImages),
+    array: KevinMagnussenQuotes,
+    isPermanentDailyCharacter: false,
+  },
+  {
+    person: "Nico Hulkenberg",
+    images: Object.values(NicoHulkenbergImages),
     array: [],
     isPermanentDailyCharacter: false,
   },
