@@ -7,6 +7,7 @@ import { MurrayWalkerQuotes } from "./QuoteArrays/Murray Walker";
 import { CroftyQuotes } from "./QuoteArrays/Crofty";
 import { ChristianHornerQuotes } from "./QuoteArrays/Christian Horner";
 import { KevinMagnussenQuotes } from "./QuoteArrays/Kevin Magnussen";
+import { FernandoAlonsoQuotes } from "./QuoteArrays/Fernando Alonso";
 
 // Images
 import { MartinBrundleImages } from "./ImageObjects/Martin Brundle";
@@ -21,6 +22,7 @@ import { GPImages } from "./ImageObjects/GP";
 import { SergioPerezImages } from "./ImageObjects/Sergio Perez";
 import { KevinMagnussenImages } from "./ImageObjects/Kevin Magnussen";
 import { NicoHulkenbergImages } from "./ImageObjects/Nico Hulkenberg";
+import { FernandoAlonsoImages } from "./ImageObjects/Fernando Alonso";
 
 export type F1Character =
   | "Martin Brundle"
@@ -30,6 +32,7 @@ export type F1Character =
   | "Sergio Perez"
   | "Kevin Magnussen"
   | "Nico Hulkenberg"
+  | "Fernando Alonso"
   | "Christian Horner"
   | "GP"
   | "Felipe Nasr"
@@ -79,6 +82,12 @@ export const F1CharacterMappings: F1CharacterMapping[] = [
     person: "Nico Hulkenberg",
     images: Object.values(NicoHulkenbergImages),
     array: [],
+    isPermanentDailyCharacter: false,
+  },
+  {
+    person: "Fernando Alonso",
+    images: Object.values(FernandoAlonsoImages),
+    array: FernandoAlonsoQuotes,
     isPermanentDailyCharacter: false,
   },
   {
