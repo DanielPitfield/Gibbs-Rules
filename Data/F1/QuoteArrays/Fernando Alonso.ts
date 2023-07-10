@@ -46,7 +46,7 @@ export const FernandoAlonsoQuotes: ConversationTemplate[] = [
     {
       person: "Fernando Alonso",
       image: FernandoAlonsoImages.STUPIDRULE.image,
-      message: "Stupid rule! How the hell you can put a red flag before? Maybe it's because we don't complete a lap, we go back to the same positions. It happened in Silverstone. The car is ok. Check this immediately. They should do it. They should ****ing do it",
+      message: "Stupid rule! How the hell you can put a red flag before? Maybe it's because we don't complete a lap, we go back to the same positions. It happened in Silverstone. The car is ok. Check this immediately. They should do it. They should ****ing do it.",
       flair: "golden",
     },
   ],
