@@ -7,6 +7,7 @@ import Conversation, { ConversationTemplate } from "./Conversation";
 
 interface ConversationSectionProps {
   selectedQuoteContext: QuoteContext;
+  setSelectedQuoteContext: (selectedQuoteContext: QuoteContext) => void;
   isDeterministic: boolean;
   areRulesSorted: boolean;
   refresh: boolean;
@@ -92,10 +93,11 @@ const ConversationSection = (props: ConversationSectionProps) => {
             conversation={quote.conversation}
             // Pass through whether this is the only character (need to know for slightly different styling of the quotes)
             isOnlyCharacter={isOnlyCharacter}
+            context={props.selectedQuoteContext}
+            setContext={props.setSelectedQuoteContext}
             // Only show the title and image for conversation/quotes when there are several characters being shown
             showTitle={!isOnlyCharacter}
             showImage={!isOnlyCharacter}
-            context={props.selectedQuoteContext}
           />
         );
       })}

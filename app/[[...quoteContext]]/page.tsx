@@ -71,12 +71,19 @@ const Page = () => {
 
       <ConversationSection
         selectedQuoteContext={selectedQuoteContext}
+        setSelectedQuoteContext={setSelectedQuoteContext}
         isDeterministic={isDeterministic}
         areRulesSorted={areRulesSorted}
         refresh={refresh}
       />
 
-      {isHelpInfoShown && <HelpInformation context={selectedQuoteContext} onClose={() => setIsHelpInfoShown(false)} />}
+      {isHelpInfoShown && (
+        <HelpInformation
+          context={selectedQuoteContext}
+          setContext={setSelectedQuoteContext}
+          onClose={() => setIsHelpInfoShown(false)}
+        />
+      )}
     </main>
   );
 };

@@ -9,6 +9,7 @@ import styles from "../public/styles/QuoteFlairs.module.scss";
 
 interface QuoteFlairsProps {
   context: QuoteContext;
+  setContext: (context: QuoteContext) => void;
 }
 
 const QuoteFlairs = (props: QuoteFlairsProps) => {
@@ -44,9 +45,12 @@ const QuoteFlairs = (props: QuoteFlairsProps) => {
             key={mapping.flair}
             position={1}
             person={defaultPersonMapping.person}
-            context={props.context}
             conversation={conversationTemplate}
+            isOnlyCharacter={true}
+            context={props.context}
+            setContext={props.setContext}
             showTitle={false}
+            showImage
           />
         );
       })}

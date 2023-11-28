@@ -4,6 +4,7 @@ import QuoteFlairs from "./QuoteFlairs";
 
 interface HelpInformationProps {
   context: QuoteContext;
+  setContext: (context: QuoteContext) => void;
   onClose: () => void;
 }
 
@@ -23,7 +24,7 @@ const HelpInformation = (props: HelpInformationProps) => {
       </p>
 
       <h3>Quote Flairs</h3>
-      <QuoteFlairs context={props.context} />
+      <QuoteFlairs context={props.context} setContext={props.setContext} />
     </Modal>
   );
 };

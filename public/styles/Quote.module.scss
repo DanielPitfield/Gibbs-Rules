@@ -8,6 +8,10 @@
   color: #ddd;
   margin: 0.5em;
 
+  &[data-person="Gibbs"] {
+    cursor: pointer;
+  }
+
   &[data-is-only-character="true"] {
     flex-grow: 1;
   }

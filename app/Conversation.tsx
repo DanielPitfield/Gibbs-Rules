@@ -11,9 +11,10 @@ interface ConversationProps {
   person: Person;
   conversation: ConversationTemplate;
   isOnlyCharacter: boolean;
+  context: QuoteContext;
+  setContext: (context: QuoteContext) => void;  
   showTitle: boolean;
   showImage: boolean;
-  context: QuoteContext;
 }
 
 const converstationTitles: { person: Person; converstationTitle: string }[] = [
@@ -35,6 +36,7 @@ const Conversation = (props: ConversationProps) => {
           <Quote
             key={index}
             context={props.context}
+            setContext={props.setContext}
             template={quoteTemplate}
             isOnlyCharacter={props.isOnlyCharacter}
             showImage={props.showImage}

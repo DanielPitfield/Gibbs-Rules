@@ -1,9 +1,8 @@
+import styles from "../public/styles/Quote.module.scss";
 import Image, { StaticImageData } from "next/image";
 import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import { useMemo } from "react";
-
-import styles from "../public/styles/Quote.module.scss";
 import { getDeterministicIndexFromString } from "../Helpers/DeterministicIndexFromString";
 
 export type Flair = "emergency" | "golden" | "iconic";
@@ -18,6 +17,7 @@ export type QuoteTemplate = {
 
 interface QuoteProps {
   context: QuoteContext;
+  setContext: (context: QuoteContext) => void;
   template: QuoteTemplate;
   isOnlyCharacter: boolean;
   showImage: boolean;
@@ -54,7 +54,19 @@ const Quote = (props: QuoteProps) => {
   const image = useMemo(() => getImage(), [props.template.message]);
 
   return (
-    <div className={styles.wrapper} data-flair={props.template.flair} data-is-only-character={props.isOnlyCharacter}>
+    <div
+      className={styles.wrapper}
+      data-person={props.template.person}
+      data-flair={props.template.flair}
+      data-is-only-character={props.isOnlyCharacter}
+      onClick={() => {
+        if (props.template.person !== "Gibbs") {
+          return;
+        }
+
+        props.setContext("GIBBS");
+      }}
+    >
       <div className={styles.container} data-is-only-character={props.isOnlyCharacter}>
         {props.template.title && <div className={styles.title}>{props.template.title}</div>}
         {props.showImage && (
