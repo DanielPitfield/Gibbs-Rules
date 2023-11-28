@@ -1,20 +1,16 @@
 "use client";
 
+import "../../public/styles/index.scss";
 import { useRouter, useSearchParams } from "next/navigation";
 import { NCISCharacter } from "../../Data/NCIS/NCISCharacterMappings";
-import Conversation, { ConversationTemplate } from "../Conversation";
-import { useEffect, useMemo, useState } from "react";
-import { getRandomArrayItems } from "../../Helpers/DeterministicSeeding";
+import { ConversationTemplate } from "../Conversation";
+import { useEffect, useState } from "react";
 import HelpInformation from "../HelpInformation";
 import { NavBar } from "../NavBar";
 import { StaticImageData } from "next/image";
 import { F1Character } from "../../Data/F1/F1CharacterMappings";
-import { QuoteContext, quoteContextMappings, quoteContexts } from "../../Data/QuoteContextMappings";
-
-import "../../public/styles/index.scss";
-
-// How many quotes/characters to show?
-const NUM_QUOTES = 3;
+import { QuoteContext, quoteContexts } from "../../Data/QuoteContextMappings";
+import ConversationSection from "../ConversationSection";
 
 export type Person = NCISCharacter | F1Character;
 
@@ -39,6 +35,7 @@ const Page = () => {
 
   const [selectedQuoteContext, setSelectedQuoteContext] = useState<QuoteContext>(defaultQuoteContext);
   const [isDeterministic, setIsDeterministic] = useState<boolean>(true);
+  const [areRulesSorted, setAreRulesSorted] = useState<boolean>(false);
   const [isHelpInfoShown, setIsHelpInfoShown] = useState<boolean>(false);
   const [refresh, setRefresh] = useState<boolean>(false);
 
@@ -55,71 +52,29 @@ const Page = () => {
     setIsDeterministic(isDeterministic);
   }, [selectedQuoteContext]);
 
-  // Get the characters to be displayed every time the quoteContext changes (or on a refresh)
-  const displayedCharacters = useMemo(() => {
-    const characterMappings = quoteContextMappings.find(
-      (mapping) => mapping.quoteContext === selectedQuoteContext
-    )?.characterMappings;
-
-    const permanentCharacterMappings =
-      characterMappings?.filter((person) => person.isPermanentDailyCharacter && person.array.length > 0) ?? [];
-
-    const temporaryCharacterMappings =
-      characterMappings?.filter((person) => !person.isPermanentDailyCharacter && person.array.length > 0) ?? [];
-
-    // Already have enough (or more than enough) characters to show
-    if (permanentCharacterMappings.length >= NUM_QUOTES) {
-      return permanentCharacterMappings.slice(0, NUM_QUOTES);
-    }
-
-    // How many more temporary characters are required?
-    const numTemporaryCharacters = Math.abs(NUM_QUOTES - permanentCharacterMappings.length);
-
-    const chosenTemporaryCharacterMappings: PersonMapping[] = getRandomArrayItems(
-      temporaryCharacterMappings,
-      numTemporaryCharacters,
-      isDeterministic
-    );
-
-    return permanentCharacterMappings.concat(chosenTemporaryCharacterMappings);
-  }, [selectedQuoteContext, refresh]);
-
-  // Get a quote to display for each of the displayed characters (that have been chosen)
-  const displayedQuotes = useMemo(() => {
-    return displayedCharacters.map((mapping) => ({
-      person: mapping.person,
-      conversation: getRandomArrayItems(mapping.array, 1, isDeterministic)[0],
-    }));
-  }, [displayedCharacters]);
-
   const formattedDate = new Date().toLocaleDateString("en-GB", { year: "numeric", month: "long", day: "2-digit" });
 
   return (
     <main>
       <NavBar
         formattedDate={formattedDate}
+        selectedQuoteContext={selectedQuoteContext}
         onChangeQuoteContext={setSelectedQuoteContext}
         isDeterministic={isDeterministic}
         onChangeIsDeterministic={setIsDeterministic}
+        areRulesSorted={areRulesSorted}
+        onChangeAreRulesSorted={setAreRulesSorted}
+        onBackNavigation={() => setSelectedQuoteContext("NCIS")}
         onRefresh={() => setRefresh(!refresh)}
         toggleHelpInfo={setIsHelpInfoShown}
-        selectedQuoteContext={selectedQuoteContext}
       />
 
-      <section className="conversations">
-        {displayedQuotes.map((quote, index) => {
-          return (
-            <Conversation
-              key={index}
-              position={index + 1}
-              person={quote.person}
-              conversation={quote.conversation}
-              showTitle={true}
-              context={selectedQuoteContext}
-            />
-          );
-        })}
-      </section>
+      <ConversationSection
+        selectedQuoteContext={selectedQuoteContext}
+        isDeterministic={isDeterministic}
+        areRulesSorted={areRulesSorted}
+        refresh={refresh}
+      />
 
       {isHelpInfoShown && <HelpInformation context={selectedQuoteContext} onClose={() => setIsHelpInfoShown(false)} />}
     </main>

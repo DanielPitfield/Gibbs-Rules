@@ -54,8 +54,15 @@ type NCISCharacterMapping = {
   isPermanentDailyCharacter: boolean;
 };
 
+export const GibbsCharacterMapping: NCISCharacterMapping = {
+  person: "Gibbs",
+  images: Object.values(GibbsImages),
+  array: GibbsRules,
+  isPermanentDailyCharacter: true,
+};
+
 export const NCISCharacterMappings: NCISCharacterMapping[] = [
-  { person: "Gibbs", images: Object.values(GibbsImages), array: GibbsRules, isPermanentDailyCharacter: true },
+  GibbsCharacterMapping,
   { person: "Ziva", images: Object.values(ZivaImages), array: ZivaMisquotes, isPermanentDailyCharacter: true },
   { person: "Kate", images: Object.values(KateImages), array: KateQuotes, isPermanentDailyCharacter: false },
   { person: "Tony", images: Object.values(TonyImages), array: TonyQuotes, isPermanentDailyCharacter: false },

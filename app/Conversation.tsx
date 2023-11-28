@@ -10,7 +10,9 @@ interface ConversationProps {
   position: number;
   person: Person;
   conversation: ConversationTemplate;
+  isOnlyCharacter: boolean;
   showTitle: boolean;
+  showImage: boolean;
   context: QuoteContext;
 }
 
@@ -29,7 +31,15 @@ const Conversation = (props: ConversationProps) => {
     <div className={styles.wrapper} data-position={props.position}>
       {props.showTitle && <h2 className={styles.title}>{conversationTitle}</h2>}
       {props.conversation.map((quoteTemplate, index) => {
-        return <Quote key={index} template={quoteTemplate} context={props.context} showImage />;
+        return (
+          <Quote
+            key={index}
+            context={props.context}
+            template={quoteTemplate}
+            isOnlyCharacter={props.isOnlyCharacter}
+            showImage={props.showImage}
+          />
+        );
       })}
     </div>
   );

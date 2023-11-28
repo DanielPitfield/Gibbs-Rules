@@ -17,9 +17,10 @@ export type QuoteTemplate = {
 };
 
 interface QuoteProps {
-  template: QuoteTemplate;
-  showImage: boolean;
   context: QuoteContext;
+  template: QuoteTemplate;
+  isOnlyCharacter: boolean;
+  showImage: boolean;
 }
 
 const Quote = (props: QuoteProps) => {
@@ -53,25 +54,31 @@ const Quote = (props: QuoteProps) => {
   const image = useMemo(() => getImage(), [props.template.message]);
 
   return (
-    <div className={styles.wrapper} data-flair={props.template.flair}>
-      <div className={styles.container}>
+    <div className={styles.wrapper} data-flair={props.template.flair} data-is-only-character={props.isOnlyCharacter}>
+      <div className={styles.container} data-is-only-character={props.isOnlyCharacter}>
         {props.template.title && <div className={styles.title}>{props.template.title}</div>}
-        <div className={styles.image}>
-          {image ? (
-            // The image selected from the server source set, only (roughly) needs to be at most 30vw wide
-            <Image
-              src={image}
-              alt={props.template.person}
-              priority={props.template.person === "Gibbs"}
-              fill
-              sizes="30vw"
-            />
-          ) : (
-            // No image, just show the name of the person within the image container
-            <span>{props.template.person}</span>
-          )}
-        </div>
-        {props.template.message && <div className={styles.message}>{props.template.message}</div>}
+        {props.showImage && (
+          <div className={styles.image}>
+            {image ? (
+              // The image selected from the server source set, only (roughly) needs to be at most 30vw wide
+              <Image
+                src={image}
+                alt={props.template.person}
+                priority={props.template.person === "Gibbs"}
+                fill
+                sizes="30vw"
+              />
+            ) : (
+              // No image, just show the name of the person within the image container
+              <span>{props.template.person}</span>
+            )}
+          </div>
+        )}
+        {props.template.message && (
+          <div className={styles.message} data-is-only-character={props.isOnlyCharacter}>
+            {props.template.message}
+          </div>
+        )}
       </div>
     </div>
   );

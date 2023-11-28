@@ -8,8 +8,18 @@
   color: #ddd;
   margin: 0.5em;
 
+  &[data-is-only-character="true"] {
+    flex-grow: 1;
+  }
+
   .container {
+    display: flex;
+    flex-direction: column;
     border: 0.2em solid #888;
+
+    &[data-is-only-character="true"] {
+      flex-grow: 1;
+    }
 
     .title {
       padding: 0.5em;
@@ -26,6 +36,10 @@
     .message {
       padding: 0.5em;
       font-size: 1.3em;
+
+      &[data-is-only-character="true"] {
+        flex-grow: 1;
+      }
     }
   }
 
@@ -36,7 +50,10 @@
     .container {
       border-color: #444311;
       mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
-      animation: shimmer 8s infinite;
+
+      &[data-is-only-character="false"] {
+        animation: shimmer 8s infinite;
+      }
 
       .title {
         background-color: darken(goldenrod, 10%);
@@ -55,7 +72,10 @@
     .container {
       border-color: #8a03c9;
       mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
-      animation: shimmer 8s infinite;
+
+      &[data-is-only-character="false"] {
+        animation: shimmer 8s infinite;
+      }
 
       .title {
         background-color: darken(#8400c2, 10%);
@@ -74,7 +94,10 @@
     .container {
       border-color: #441111;
       mask: linear-gradient(-65deg, #000 30%, #0006, #000 75%) right / 300% 100%;
-      animation: shimmer 8s infinite;
+
+      &[data-is-only-character="false"] {
+        animation: shimmer 8s infinite;
+      }
 
       .title {
         background-color: darken(darkred, 10%);
