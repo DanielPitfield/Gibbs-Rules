@@ -2,7 +2,7 @@ import Quote, { QuoteTemplate } from "./Quote";
 import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext } from "../Data/QuoteContextMappings";
 
-import styles from "../public/styles/Conversation.module.scss";
+import styles from "./styles/Conversation.module.scss";
 
 export type ConversationTemplate = QuoteTemplate[];
 

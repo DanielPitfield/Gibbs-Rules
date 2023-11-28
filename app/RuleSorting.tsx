@@ -1,5 +1,5 @@
-import styles from "../public/styles/RuleSorting.module.scss";
-import { FiRefreshCw } from "react-icons/fi";
+import styles from "./styles/RuleSorting.module.scss";
+import { FiArrowLeft } from "react-icons/fi";
 
 interface RuleSortingProps {
   areRulesSorted: boolean;
@@ -11,7 +11,7 @@ const RuleSorting = (props: RuleSortingProps) => {
   return (
     <div className={styles.wrapper}>
       <button onClick={() => props.onBackNavigation()}>
-        <FiRefreshCw /> Back
+        <FiArrowLeft /> Back
       </button>
 
       <label>

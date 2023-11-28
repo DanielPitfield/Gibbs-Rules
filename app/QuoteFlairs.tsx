@@ -5,7 +5,7 @@ import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings
 import { PersonMapping } from "./[[...quoteContext]]/page";
 import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
 
-import styles from "../public/styles/QuoteFlairs.module.scss";
+import styles from "./styles/QuoteFlairs.module.scss";
 
 interface QuoteFlairsProps {
   context: QuoteContext;

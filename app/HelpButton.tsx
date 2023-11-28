@@ -1,6 +1,6 @@
 import { FiHelpCircle } from "react-icons/fi";
 
-import styles from "../public/styles/HelpButton.module.scss";
+import styles from "./styles/HelpButton.module.scss";
 
 interface HelpButtonProps {
   onClick: () => void;

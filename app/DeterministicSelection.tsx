@@ -1,4 +1,4 @@
-import styles from "../public/styles/DeterministicSelection.module.scss";
+import styles from "./styles/DeterministicSelection.module.scss";
 import { FiRefreshCw } from "react-icons/fi";
 
 interface DeterministicSelectionProps {

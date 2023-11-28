@@ -1,6 +1,6 @@
 "use client";
 
-import "../../public/styles/index.scss";
+import ".././styles/index.scss";
 import { useRouter, useSearchParams } from "next/navigation";
 import { NCISCharacter } from "../../Data/NCIS/NCISCharacterMappings";
 import { ConversationTemplate } from "../Conversation";

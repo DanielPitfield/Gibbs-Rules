@@ -1,4 +1,4 @@
-import "../public/styles/index.scss";
+import "./styles/index.scss";
 import { useMemo } from "react";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import { getRandomArrayItems } from "../Helpers/DeterministicSeeding";
