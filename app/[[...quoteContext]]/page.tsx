@@ -1,16 +1,17 @@
 "use client";
 
-import ".././styles/index.scss";
+import "../styles/index.scss";
+
+import ConversationSection from "../ConversationSection";
+import HelpInformation from "../HelpInformation";
 import { useRouter, useSearchParams } from "next/navigation";
 import { NCISCharacter } from "../../Data/NCIS/NCISCharacterMappings";
 import { ConversationTemplate } from "../Conversation";
 import { useEffect, useState } from "react";
-import HelpInformation from "../HelpInformation";
 import { NavBar } from "../NavBar";
 import { StaticImageData } from "next/image";
 import { F1Character } from "../../Data/F1/F1CharacterMappings";
 import { QuoteContext, quoteContexts } from "../../Data/QuoteContextMappings";
-import ConversationSection from "../ConversationSection";
 
 export type Person = NCISCharacter | F1Character;
 
