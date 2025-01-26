@@ -14,7 +14,7 @@
 
   $background-colors: (#9eb1c5, #bba2d1, #a8af83);
 
-  @for $i from 1 through length($background-colors) {
+  @for $i from 1 through list.length($background-colors) {
     &[data-position="#{$i}"] {
       background-color: list.nth($background-colors, $i);
     }

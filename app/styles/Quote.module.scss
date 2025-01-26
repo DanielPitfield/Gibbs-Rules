@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -62,11 +64,11 @@
       }
 
       .title {
-        background-color: darken(goldenrod, 10%);
+        background-color: color.adjust(goldenrod, $lightness: -10%);
       }
 
       .message {
-        background-color: darken(#daa520aa, 10%);
+        background-color: color.adjust(#daa520aa, $lightness: -10%);
       }
     }
   }
@@ -84,11 +86,11 @@
       }
 
       .title {
-        background-color: darken(#8400c2, 10%);
+        background-color: color.adjust(#8400c2, $lightness: -10%);
       }
 
       .message {
-        background-color: darken(#8400c2, 10%);
+        background-color: color.adjust(#8400c2, $lightness: -10%);
       }
     }
   }
@@ -106,11 +108,11 @@
       }
 
       .title {
-        background-color: darken(darkred, 10%);
+        background-color: color.adjust(darkred, $lightness: -10%);
       }
 
       .message {
-        background-color: darken(#8b0000aa, 10%);
+        background-color: color.adjust(#8b0000aa, $lightness: -10%);
       }
     }
   }
