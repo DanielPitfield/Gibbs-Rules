@@ -14,10 +14,11 @@
     font-size: inherit;
     background-color: #2d76a0;
     color: white;
-    box-shadow: 1px 1px 1px black;
     border: none;
-    cursor: pointer;
+    border-radius: 4px;
+
     &:hover {
+      cursor: pointer;
       background-color: color.adjust(#2d76a0, $lightness: -10%);
     }
   }
