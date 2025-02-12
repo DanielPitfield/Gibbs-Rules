@@ -14,14 +14,15 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: white;
     margin: 1em;
     flex-shrink: 0;
     flex-grow: 1;
     max-width: 40em;
+    max-height: 75vh;
+    border-radius: 4px;
+    background-color: white;
     box-shadow: 0 0 3px 3px #333;
     overflow-y: scroll !important;
-    max-height: 75vh;
 
     .header {
       display: flex;
@@ -30,15 +31,19 @@
       background-color: #333;
       padding: 0.4em;
       color: #eee;
+
       &[data-mode="default"] {
         background-color: #333;
       }
+
       &[data-mode="info"] {
         background-color: #0e6a8f;
       }
+
       &[data-mode="success"] {
         background-color: #739673;
       }
+
       &[data-mode="error"] {
         background-color: #912222;
       }
@@ -51,23 +56,40 @@
         margin: 0;
         font-weight: normal;
       }
+
+      .close {
+        padding: 0.25em 0.75em;
+        margin-right: 0.5em;
+        font-size: 1.1em;
+        border: none;
+        border-radius: 2px;
+
+        &:hover {
+          cursor: pointer;
+          color: #aa4646;
+        }
+      }
     }
 
     .body {
       padding: 1em;
+
       & > p {
         margin-top: 0;
       }
+
       label {
         display: flex;
         align-items: center;
         padding: 0.1em;
         color: #333;
         margin: 0.1em;
+
         input[type="checkbox"] {
           margin-right: 0.3em;
         }
       }
+
       pre {
         overflow-x: auto;
         padding: 0.5em;
