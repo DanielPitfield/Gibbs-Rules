@@ -42,7 +42,7 @@ const QuoteFlairs = (props: QuoteFlairsProps) => {
 
         return (
           <Conversation
-            key={mapping.flair}
+            key={mapping.flair ?? "default"}
             position={1}
             person={defaultPersonMapping.person}
             conversation={conversationTemplate}
