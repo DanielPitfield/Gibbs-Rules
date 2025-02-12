@@ -47,8 +47,13 @@ body {
           background: none;
           color: inherit;
           text-align: right;
-          margin-right: 0.2em;
+          padding: 0.1em;
+          margin-right: 0.3em;
+          border-radius: 4px;
+
           option {
+            font-size: 0.8em;
+            text-align: center;
             background-color: color.adjust(black, $lightness: 20%);
           }
         }
