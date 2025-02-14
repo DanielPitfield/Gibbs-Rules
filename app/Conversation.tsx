@@ -1,8 +1,8 @@
+import styles from "./styles/Conversation.module.scss";
+
 import Quote, { QuoteTemplate } from "./Quote";
 import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext } from "../Data/QuoteContextMappings";
-
-import styles from "./styles/Conversation.module.scss";
 
 export type ConversationTemplate = QuoteTemplate[];
 
@@ -12,7 +12,7 @@ interface ConversationProps {
   conversation: ConversationTemplate;
   isOnlyCharacter: boolean;
   context: QuoteContext;
-  setContext: (context: QuoteContext) => void;  
+  setContext: (context: QuoteContext) => void;
   showTitle: boolean;
   showImage: boolean;
 }

@@ -1,11 +1,11 @@
-import { getPrettyText } from "../Helpers/getPrettyText";
+import styles from "./styles/QuoteFlairs.module.scss";
+
 import Conversation, { ConversationTemplate } from "./Conversation";
+import { getPrettyText } from "../Helpers/getPrettyText";
 import { Flair } from "./Quote";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";
 import { PersonMapping } from "./[[...quoteContext]]/page";
 import { NCISCharacterMappings } from "../Data/NCIS/NCISCharacterMappings";
-
-import styles from "./styles/QuoteFlairs.module.scss";
 
 interface QuoteFlairsProps {
   context: QuoteContext;

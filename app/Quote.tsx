@@ -1,4 +1,5 @@
 import styles from "./styles/Quote.module.scss";
+
 import Image, { StaticImageData } from "next/image";
 import { Person } from "./[[...quoteContext]]/page";
 import { QuoteContext, quoteContextMappings } from "../Data/QuoteContextMappings";

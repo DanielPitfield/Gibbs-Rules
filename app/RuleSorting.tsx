@@ -1,4 +1,5 @@
 import styles from "./styles/RuleSorting.module.scss";
+
 import { FiArrowLeft } from "react-icons/fi";
 
 interface RuleSortingProps {

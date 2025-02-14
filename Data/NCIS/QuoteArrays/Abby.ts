@@ -110,7 +110,7 @@ export const AbbyQuotes: ConversationTemplate[] = [
     },
     {
       person: "Gibbs",
-      message: "Becuase?",
+      message: "Because?",
     },
     {
       person: "Abby",

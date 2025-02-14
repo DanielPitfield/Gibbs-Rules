@@ -1,6 +1,6 @@
-import React from "react";
-
 import styles from "./styles/Modal.module.scss";
+
+import React from "react";
 
 interface ModalProps {
   name: string;
